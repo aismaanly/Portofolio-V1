@@ -7,7 +7,7 @@
       "Data Scientist",
       "Business Intelligence"
     ],
-    "heroImage": "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg",
+    "heroImage": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/hero-home.gif",
     "techStackImages": [
       "https://img.icons8.com/color/144/000000/python.png",
       "https://img.icons8.com/color/144/000000/sql.png",
@@ -16,7 +16,7 @@
     ]
   },
   "about": {
-    "aboutImage": "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg",
+    "aboutImage": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/hero-about.png",
     "aboutImageCaption": "Transforming data into insights 📊",
     "title": "Data Analyst",
     "about": "🎓 As an Information Systems undergraduate, I bring a passion for uncovering insights from data to fuel business growth. 💡 With expertise in Python, SQL, and advanced visualization tools 📊, I craft data-driven strategies and actionable dashboards that empower decision making. 🔍 My experience spans data analysis, market research, and engagement optimization delivering measurable outcomes for businesses. 🚀 I'm eager to contribute my analytical mindset and technical skills to drive impactful results! ",
@@ -37,8 +37,8 @@
       "link": "https://www.instagram.com/aismaanly"
     },
     {
-      "icon": "FaTwitter",
-      "link": "https://twitter.com/jhondoe"
+      "icon": "FaYoutube",
+      "link": "https://www.youtube.com/@aismanurlaili7243"
     }
   ],
   "skills": [

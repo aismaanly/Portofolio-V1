@@ -1,0 +1,173 @@
+{
+  "main": {
+    "name": "Aisma Nurlaili",
+    "shortDesc": "I specialize in turning data into powerful insights, creating impactful dashboards, and optimizing strategies to drive business success.",
+    "titles": [
+      "Data Analyst",
+      "Data Scientist",
+      "Business Intelligence"
+    ],
+    "heroImage": "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg",
+    "techStackImages": [
+      "https://img.icons8.com/color/144/000000/python.png",
+      "https://img.icons8.com/color/144/000000/sql.png",
+      "https://img.icons8.com/color/144/000000/tableau-software.png",
+      "https://img.icons8.com/color/144/000000/microsoft-excel-2019.png"
+    ]
+  },
+  "about": {
+    "aboutImage": "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg",
+    "aboutImageCaption": "Transforming data into insights 📊",
+    "title": "Data Analyst",
+    "about": "🎓 As an Information Systems undergraduate, I bring a passion for uncovering insights from data to fuel business growth. 💡 With expertise in Python, SQL, and advanced visualization tools 📊, I craft data-driven strategies and actionable dashboards that empower decision making. 🔍 My experience spans data analysis, market research, and engagement optimization delivering measurable outcomes for businesses. 🚀 I'm eager to contribute my analytical mindset and technical skills to drive impactful results! ",
+    "callUrl": "",
+    "resumeUrl": ""
+  },
+  "socials": [
+    {
+      "icon": "FaLinkedin",
+      "link": "https://www.linkedin.com/in/aisma-nurlaili"
+    },
+    {
+      "icon": "FaGithub",
+      "link": "https://github.com/aismaanly"
+    },
+    {
+      "icon": "FaInstagram",
+      "link": "https://www.instagram.com/aismaanly"
+    },
+    {
+      "icon": "FaTwitter",
+      "link": "https://twitter.com/jhondoe"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Excel",
+      "image": "https://img.icons8.com/color/144/000000/microsoft-excel-2019.png",
+      "category": "Tools"
+    },
+    {
+      "name": "Google Sheets",
+      "image": "https://img.icons8.com/color/144/000000/google-sheets.png",
+      "category": "Tools"
+    },
+    {
+      "name": "Google Colab",
+      "image": "https://img.icons8.com/color/144/000000/google-colab.png",
+      "category": "Tools"
+    },
+    {
+      "name": "Power BI",
+      "image": "https://img.icons8.com/color/144/000000/power-bi.png",  
+      "category": "Tools"
+    },
+    {
+      "name": "Looker Studio",
+      "image": "https://img.icons8.com/color/144/000000/google-data-studio.png",  
+      "category": "Tools"
+    },
+    {
+      "name": "Tableau",
+      "image": "https://img.icons8.com/color/144/000000/tableau-software.png",
+      "category": "Tools"
+    },
+    {
+      "name": "Google Analytics",
+      "image": "https://img.icons8.com/color/144/000000/google-analytics.png", 
+      "category": "Tools"
+    },
+    {
+      "name": "SQL",
+      "image": "https://img.icons8.com/color/144/000000/sql.png",  
+      "category": "Programming"
+    },
+    {
+      "name": "Python",
+      "image": "https://img.icons8.com/color/144/000000/python.png", 
+      "category": "Programming"
+    },    
+    {
+      "name": "GitHub",
+      "image": "https://img.icons8.com/material-outlined/96/000000/github.png",
+      "category": "Others"
+    }    
+  ],
+  "projects": [
+    {
+      "name": "Chatbot Aetheria",
+      "techstack": "Python, EC2, Application Load Balancing, Auto Scaling Group, SQL Alchemy, Qween LLM",
+      "category": "Chatbot",
+      "image": "https://raw.githubusercontent.com/aismaanly/capstone-aetheria/main/mainpage.gif",
+      "links": {
+        "code": "https://github.com/aismaanly/capstone-aetheria",
+        "video": "https://www.youtube.com/watch?si=wY_VbfiLlou8vCiy&v=kmVRFl5SslE&feature=youtu.be",
+        "visit": "https://capstone-aetheria.streamlit.app/"
+      }
+    },    
+    {
+      "name": "Ecommerce Analysis",
+      "techstack": "Python, Google Colab, Streamlit",
+      "category": "Data Analyst",
+      "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210114225740/10-Best-Web-Development-Project-Ideas-For-Beginners-in-2021.png",
+      "links": {
+        "code": "https://github.com/aismaanly/ecommerce_analysis",
+        "video": "",
+        "visit": ""
+      }
+    },
+    {
+      "name": "Bike Sharing Analysis",
+      "techstack": "Python, Google Colab, Streamlit",
+      "category": "Data Analyst",
+      "image": "https://raw.githubusercontent.com/aismaanly/bikesharing-analysis/main/dashboard.gif",
+      "links": {
+        "code": "https://github.com/aismaanly/bikesharing-analysis",
+        "video": "",
+        "visit": "https://bikesharing-analysis-aismaanly.streamlit.app/"
+      }
+    }
+  ],
+  "educations": [
+    {
+      "institute": "REVOU",
+      "degree": "Cloud and Gen AI Machine Learning",
+      "duration": "Sep 2024 - Dec 2024",
+      "desc": [
+        "Studied Cloud Computing on AWS, basic Python, Machine Learning, and Generative AI as part of the Studi Independent - Kampus Merdeka program by the Ministry of Education.",
+        "Developed 'Aetheria', a career-focused chatbot integrated with AWS and using Streamlit, providing personalized resume tips, interview practice, and job suggestions based on user skills."
+      ]
+    },
+    {
+      "institute": "UPN VETERAN JAWA TIMUR",
+      "degree": "Information System",
+      "duration": "Aug 2022 - Present",
+      "desc": [
+        "Current GPA: 3.85/4.00.",
+        "Relevant courses include Computational Statistics, Computational Mathematics, Software Engineering, Database Systems, Database Administration, and Information Systems Analysis and Design."
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "company": "FYPMEDIA.ID",
+      "position": "Social Media Specialist",
+      "duration": "Mar 2024 - Aug 2024",
+      "desc": [
+        "Enhanced content performance and scheduling by conducting engagement analysis with Google Analytics, resulting in a 15% increase in engagement rates.",
+        "Developed and implemented social media strategies that consistently met KPIs by aligning content with audience preferences and industry trends.",
+        "Delivered data-driven reports to stakeholders, enhancing content strategy through actionable insights."
+      ]
+    },
+    {
+      "company": "PT. MEDIA KARYA PRESTIGE INTERNASIONAL",
+      "position": "Data Analyst",
+      "duration": "Aug 2024 - Dec 2024",
+      "desc": [
+        "Conducted competitor analysis and market evaluations using Python and Excel, improving decision-making efficiency by 20% across regions.",
+        "Delivered detailed reports uncovering key market trends and hidden opportunities, supporting strategic company initiatives.",
+        "Managed multiple data analysis projects with a 90% on-time completion rate, showcasing strong time management and project coordination skills."
+      ]
+    }
+  ]
+}

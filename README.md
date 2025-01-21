@@ -13,7 +13,6 @@ This Portfolio is built using Next.js and Tailwind CSS for a modern design and e
 - [TypeScript](https://www.typescriptlang.org)
 - [Tailwind CSS](https://tailwindcss.com)
 - [Firebase](https://firebase.google.com)
-- [SendGrid](https://sendgrid.com)
 - [Framer Motion](https://www.framer.com/motion)
 
 ## Steps to Run the Portofolio 💻
@@ -67,10 +66,7 @@ Here are the steps to run the portfolio locally.
 
 3. Add the following environment variables in the Vercel dashboard:
    ```
-   SENDGRID_API_KEY=XXXXXXXX
    NEXT_PUBLIC_FIREBASE_DATABASE_URL=XXXXXXXXXX
-   MAIL_FROM=YOUR_MAIL_ID
-   MAIL_TO=YOUR_MAIL_ID
    ```
 4. The portfolio has been successfully deployed.
 

@@ -2,7 +2,6 @@ import Image from "next/image"
 import { about } from "@/types/main";
 import Link from "next/link";
 import SectionWrapper from "./SectionWrapper";
-import { BiLinkExternal } from "react-icons/bi";
 
 interface Props {
     aboutData: about,
@@ -11,7 +10,7 @@ interface Props {
 
 const About = ({ aboutData, name }: Props) => {
 
-    const { aboutImage, aboutImageCaption, title, about, resumeUrl, callUrl } = aboutData
+    const { aboutImage, aboutImageCaption, title, about, resumeUrl } = aboutData
 
     return (
         <SectionWrapper id="about" className="min-h-[90vh] pt-12 bg-gradient-to-b from-white to-gray-100/20 dark:from-grey-900 dark:to-grey-900">
@@ -30,7 +29,6 @@ const About = ({ aboutData, name }: Props) => {
                         <p className="text-sm md:text-base my-2 text-gray-600 dark:text-gray-300">{about}</p>
                         <div className="flex items-center gap-4 md:mt-4">
                             {resumeUrl.trim() && <Link href={resumeUrl} target="_blank" className="text-sm md:text-base bg-violet-600 dark:bg-violet-700 text-white w-fit rounded-md py-2 px-6 hover:shadow-xl transition-shadow">Resume</Link>}
-                            {callUrl.trim() && <Link href={callUrl} target="_blank" className="text-violet-600 flex items-center gap-1 hover:bg-violet-50 hover:dark:bg-violet-900/10 py-2 px-4 transition-colors rounded-md">Book a 1:1 call <BiLinkExternal /> </Link>}
                         </div>
                     </div>
                 </div>

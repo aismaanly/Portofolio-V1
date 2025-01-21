@@ -8,9 +8,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // fontFamily: {
-      //   poppins: ['var(--font-poppins)']
-      // },
       colors: {
         grey: {
           800: '#18141c',
@@ -24,6 +21,6 @@ module.exports = {
         heropattern: "url(/herobgc.jpg)",
       }
     },
-    plugins: [],
-  }
+  },
+  plugins: [], 
 }

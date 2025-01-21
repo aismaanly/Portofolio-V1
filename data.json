@@ -41,6 +41,7 @@
     }
   ],
   "skills": [
+
     {
       "name": "Excel",
       "image": "https://img.icons8.com/color/144/000000/microsoft-excel-2019.png",
@@ -94,47 +95,47 @@
   ],
   "projects": [
     {
-      "name": "Belajar Dasar AI",
-      "techstack": "Artificial Intelligence, Machine Learning, Deep Learning",
+      "name": "AWS Knowledge: Cloud Essentials",
+      "techstack": "Amazon Web Services (AWS), AWS Cloud, AWS Compute, AWS Databases, AWS Networking, AWS Security, AWS storage",
       "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-ai.png",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/aws-cloud-essentials.png",
       "links": {
         "code": "",
         "video": "",
-        "visit": "https://www.dicoding.com/certificates/NVP74LJ9OPR0"
+        "visit": "https://www.credly.com/badges/b73011d9-8535-48d7-917a-2942ccd0e97b/linked_in_profile"
+      }
+    },     
+    {
+      "name": "Python for Business",
+      "techstack": "Python, Django, Sqlite",
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/python-for-business.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/file/d/1-TyEgjxCEQq05RoJq6DnKS2liDiPxOTg/view"
       }
     }, 
     {
-      "name": "Belajar Analisis Data dengan Python",
-      "techstack": "Streamlit, Python, Descriptive Statistics, Data Analysis, EDA, Data Wrangling, Data Visualization",
+      "name": "Microsoft Azure Data Fundamentals",
+      "techstack": "Azure, Database",
       "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-analisis-data-dengan-python.png",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/microsoft-azure-data.png",
       "links": {
         "code": "",
         "video": "",
-        "visit": "https://www.dicoding.com/certificates/QLZ9VOL92X5D"
+        "visit": "https://drive.google.com/file/d/1VF4P9itmFortluINEhTUDcUZyDI21ljt/view"
       }
-    }, 
+    },     
     {
-      "name": "Memulai Pemrograman dengan Python",
-      "techstack": "Python, OOP",
+      "name": "Belajar Dasar Visualisasi Data",
+      "techstack": "Google Sheets, Python, Matplotlib/Seaborn",
       "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/memulai-pemrograman-dengan-python.png",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-visualisasi-data.png",
       "links": {
         "code": "",
         "video": "",
-        "visit": "https://www.dicoding.com/certificates/4EXG79YE1PRL"
-      }
-    }, 
-    {
-      "name": "Belajar Dasar Data Science",
-      "techstack": "SQL, NoSQL, Excel/Spreadsheet, SPSS, Tableau, Python, R",
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-data-science.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://www.dicoding.com/certificates/JLX1414N6X72"
+        "visit": "https://www.dicoding.com/certificates/53XENGD89XRN"
       }
     }, 
     {
@@ -149,14 +150,47 @@
       }
     }, 
     {
-      "name": "Belajar Dasar Visualisasi Data",
-      "techstack": "Google Sheets, Python, Matplotlib/Seaborn",
+      "name": "Belajar Dasar Data Science",
+      "techstack": "SQL, NoSQL, Excel/Spreadsheet, SPSS, Tableau, Python, R",
       "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-visualisasi-data.png",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-data-science.png",
       "links": {
         "code": "",
         "video": "",
-        "visit": "https://www.dicoding.com/certificates/53XENGD89XRN"
+        "visit": "https://www.dicoding.com/certificates/JLX1414N6X72"
+      }
+    }, 
+    {
+      "name": "Memulai Pemrograman dengan Python",
+      "techstack": "Python, OOP",
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/memulai-pemrograman-dengan-python.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/4EXG79YE1PRL"
+      }
+    }, 
+    {
+      "name": "Belajar Analisis Data dengan Python",
+      "techstack": "Streamlit, Python, Descriptive Statistics, Data Analysis, EDA, Data Wrangling, Data Visualization",
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-analisis-data-dengan-python.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/QLZ9VOL92X5D"
+      }
+    }, 
+    {
+      "name": "Belajar Dasar AI",
+      "techstack": "Artificial Intelligence, Machine Learning, Deep Learning",
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-ai.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/NVP74LJ9OPR0"
       }
     },  
     {

@@ -17,7 +17,7 @@
   },
   "about": {
     "aboutImage": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/hero-about.png",
-    "aboutImageCaption": "Transforming data into insights 📊",
+    "aboutImageCaption": "I uncover insights 🔍",
     "title": "Data Analyst",
     "about": "🎓 As an Information Systems undergraduate, I bring a passion for uncovering insights from data to fuel business growth. 💡 With expertise in Python, SQL, and advanced visualization tools 📊, I craft data-driven strategies and actionable dashboards that empower decision making. 🔍 My experience spans data analysis, market research, and engagement optimization delivering measurable outcomes for businesses. 🚀 I'm eager to contribute my analytical mindset and technical skills to drive impactful results! ",
     "resumeUrl": "https://docs.google.com/document/d/1BAFN1BOAT8Tn_BX84n7pXQXrZBdaMXx1u8t6ashOp8k/edit?usp=sharing"
@@ -94,9 +94,97 @@
   ],
   "projects": [
     {
+      "name": "Belajar Dasar AI",
+      "techstack": "Artificial Intelligence, Machine Learning, Deep Learning",
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-ai.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/NVP74LJ9OPR0"
+      }
+    }, 
+    {
+      "name": "Belajar Analisis Data dengan Python",
+      "techstack": "Streamlit, Python, Descriptive Statistics, Data Analysis, EDA, Data Wrangling, Data Visualization",
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-analisis-data-dengan-python.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/QLZ9VOL92X5D"
+      }
+    }, 
+    {
+      "name": "Memulai Pemrograman dengan Python",
+      "techstack": "Python, OOP",
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/memulai-pemrograman-dengan-python.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/4EXG79YE1PRL"
+      }
+    }, 
+    {
+      "name": "Belajar Dasar Data Science",
+      "techstack": "SQL, NoSQL, Excel/Spreadsheet, SPSS, Tableau, Python, R",
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-data-science.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/JLX1414N6X72"
+      }
+    }, 
+    {
+      "name": "Belajar Dasar Structured Query Language (SQL)",
+      "techstack": "SQL",
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-structured-query-language.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/0LZ04DL7NP65"
+      }
+    }, 
+    {
+      "name": "Belajar Dasar Visualisasi Data",
+      "techstack": "Google Sheets, Python, Matplotlib/Seaborn",
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-visualisasi-data.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/53XENGD89XRN"
+      }
+    },  
+    {
+      "name": "Cookies Shop App",
+      "techstack": "Flutter, Firebase",
+      "category": "Others",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/cookies-shop.png",
+      "links": {
+        "code": "https://github.com/aismaanly/cookies_shop",
+        "video": "",
+        "visit": "https://www.canva.com/design/DAGbfLLh4D0/iLQCzcbvN6relyZoq4BaXg/view?utm_content=DAGbfLLh4D0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h192770331b"
+      }
+    },        
+    {
+      "name": "Bookshelf App",
+      "techstack": "HTML, CSS, Javascript",
+      "category": "Others",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/bookshelf-app.png",
+      "links": {
+        "code": "https://github.com/aismaanly/bookshelf-app",
+        "video": "",
+        "visit": "https://bookshelf-app-gamma-umber.vercel.app/"
+      }
+    },        
+    {
       "name": "Chatbot Aetheria",
       "techstack": "Python, EC2, Application Load Balancing, Auto Scaling Group, SQL Alchemy, Qween LLM",
-      "category": "Chatbot",
+      "category": "Others",
       "image": "https://raw.githubusercontent.com/aismaanly/capstone-aetheria/main/mainpage.gif",
       "links": {
         "code": "https://github.com/aismaanly/capstone-aetheria",
@@ -108,13 +196,46 @@
       "name": "Ecommerce Analysis",
       "techstack": "Python, Google Colab, Streamlit",
       "category": "Data Analyst",
-      "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210114225740/10-Best-Web-Development-Project-Ideas-For-Beginners-in-2021.png",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/ecommerce-analysis.png",
       "links": {
         "code": "https://github.com/aismaanly/ecommerce_analysis",
         "video": "",
         "visit": ""
       }
     },
+    {
+      "name": "Order Report",
+      "techstack": "Looker Studio, Excel",
+      "category": "Data Analyst",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/order-report.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://lookerstudio.google.com/reporting/c3e7a532-3747-4cf9-9364-73d7555bcdf0/page/mFb2D"
+      }
+    },    
+    {
+      "name": "US Flight Delay",
+      "techstack": "Tableau, Excel",
+      "category": "Data Analyst",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/US-flight-delay.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://public.tableau.com/app/profile/aisma.nurlaili/viz/USFlightDelay_17169101510000/USFlightDelay"
+      }
+    },     
+    {
+      "name": "Covid 19 In Indonesia",
+      "techstack": "Tableau, Excel",
+      "category": "Data Analyst",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/covid-19-in-indonesia.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://public.tableau.com/app/profile/aisma.nurlaili/viz/Covid19inIndonesia_17167034904440/Dashboard1"
+      }
+    },    
     {
       "name": "Bike Sharing Analysis",
       "techstack": "Python, Google Colab, Streamlit",

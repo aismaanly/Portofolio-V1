@@ -1,7 +1,7 @@
 <!-- ![Portfolio](https://image.png) -->
 
 **Website Link:**  
-<!-- [https://vercelapp](https://vercelapp)  -->
+[https://portofolio-aisma-v1.vercel.app/](https://portofolio-aisma-v1.vercel.app/) 
 
 ## Introduction 👋
 
@@ -43,20 +43,15 @@ Here are the steps to run the portfolio locally.
 5. Create an `.env.local` file in the root directory, and add the following variables with your firebase config:
 
    ```
-   SENDGRID_API_KEY=XXXXXXXX
    NEXT_PUBLIC_FIREBASE_DATABASE_URL=XXXXXXXXXX
-   MAIL_FROM=YOUR_MAIL_ID
-   MAIL_TO=YOUR_MAIL_ID
    ```
-
-> **Note**: `SENDGRID_API_KEY` - Create an API key from "Settings" -> "API Keys" with "Restricted Access" to only "Mail Send"
 
 6. Create a `data.json` provided, with your data or directly import the same and edit using firebase later.
 
 7. Import json data
 
    - Go to [Firebase Console](https://console.firebase.google.com) and select your project
-   - Go to "Database" -> "Realtime Database" -> "Import JSON" and import the [data.json](https://github.com/aismaanly/Portofolio-V1/blob/main/data.json) file
+   - Go to "Database" -> "Realtime Database" -> "Import JSON" and import the data.json has been created
 
 8. Run the project
 

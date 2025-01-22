@@ -42,7 +42,6 @@
     }
   ],
   "skills": [
-
     {
       "name": "Excel",
       "image": "https://img.icons8.com/color/144/000000/microsoft-excel-2019.png",
@@ -79,15 +78,35 @@
       "category": "Tools"
     },
     {
-      "name": "SQL",
-      "image": "https://img.icons8.com/color/144/000000/sql.png",  
+      "name": "MySQL",
+      "image": "https://img.icons8.com/color/144/000000/mysql.png",
       "category": "Programming"
     },
     {
       "name": "Python",
       "image": "https://img.icons8.com/color/144/000000/python.png", 
       "category": "Programming"
+    }, 
+    {
+      "name": "Flutter",
+      "image": "https://img.icons8.com/color/144/000000/flutter.png",
+      "category": "Others"
+    },
+    {
+      "name": "Firebase",
+      "image": "https://img.icons8.com/color/144/000000/firebase.png",
+      "category": "Others"
+    },
+    {
+      "name": "AWS",
+      "image": "https://img.icons8.com/color/144/000000/amazon-web-services.png",
+      "category": "Others"
     },    
+    {
+      "name": "Git",
+      "image": "https://img.icons8.com/color/144/000000/git.png",
+      "category": "Others"
+    },        
     {
       "name": "GitHub",
       "image": "https://img.icons8.com/material-outlined/96/000000/github.png",

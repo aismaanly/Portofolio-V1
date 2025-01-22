@@ -9,10 +9,10 @@
     ],
     "heroImage": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/hero-home.gif",
     "techStackImages": [
-      "https://img.icons8.com/color/144/000000/python.png",
-      "https://img.icons8.com/color/144/000000/sql.png",
-      "https://img.icons8.com/color/144/000000/tableau-software.png",
-      "https://img.icons8.com/color/144/000000/microsoft-excel-2019.png"
+      "https://img.icons8.com/color/144/null/python.png",
+      "https://img.icons8.com/color/144/null/sql.png",
+      "https://img.icons8.com/color/144/null/tableau-software.png",
+      "https://img.icons8.com/color/144/null/microsoft-excel-2019.png"
     ]
   },
   "about": {
@@ -44,109 +44,121 @@
   "skills": [
     {
       "name": "Excel",
-      "image": "https://img.icons8.com/color/144/000000/microsoft-excel-2019.png",
+      "image": "https://img.icons8.com/color/144/null/microsoft-excel-2019.png",
       "category": "Tools"
     },
     {
       "name": "Google Sheets",
-      "image": "https://img.icons8.com/color/144/000000/google-sheets.png",
+      "image": "https://img.icons8.com/color/144/null/google-sheets.png",
       "category": "Tools"
     },
     {
       "name": "Google Colab",
-      "image": "https://img.icons8.com/color/144/000000/google-colab.png",
+      "image": "https://img.icons8.com/color/144/null/google-colab.png",
       "category": "Tools"
     },
     {
       "name": "Power BI",
-      "image": "https://img.icons8.com/color/144/000000/power-bi.png",  
+      "image": "https://img.icons8.com/color/144/null/power-bi.png",  
       "category": "Tools"
     },
     {
       "name": "Looker Studio",
-      "image": "https://img.icons8.com/color/144/000000/google-data-studio.png",  
+      "image": "https://img.icons8.com/color/144/null/google-data-studio.png",  
       "category": "Tools"
     },
     {
       "name": "Tableau",
-      "image": "https://img.icons8.com/color/144/000000/tableau-software.png",
+      "image": "https://img.icons8.com/color/144/null/tableau-software.png",
       "category": "Tools"
     },
     {
       "name": "Google Analytics",
-      "image": "https://img.icons8.com/color/144/000000/google-analytics.png", 
+      "image": "https://img.icons8.com/color/144/null/google-analytics.png", 
       "category": "Tools"
     },
     {
-      "name": "MySQL",
-      "image": "https://img.icons8.com/color/144/000000/mysql.png",
-      "category": "Programming"
-    },
-    {
       "name": "Python",
-      "image": "https://img.icons8.com/color/144/000000/python.png", 
+      "image": "https://img.icons8.com/color/144/null/python.png", 
+      "category": "Programming"
+    },     
+    {
+      "name": "MySQL",
+      "image": "https://img.icons8.com/color/144/null/mysql.png",
       "category": "Programming"
     }, 
     {
+      "name": "SQLite",
+      "image": "https://res.cloudinary.com/lifecodes/image/upload/v1677507436/Portfolio/w8ivbwm234wqiphhtldq.png",
+      "category": "Programming"
+    },        
+    {
+        "name": "Java",
+        "image": "https://img.icons8.com/color/144/null/java-coffee-cup-logo.png",
+        "category": "Programming"
+    },
+    {
+      "name": "PHP",
+      "image": "https://img.icons8.com/offices/160/null/php-logo.png",
+      "category": "Programming"
+    },     
+    {
+        "name": "HTML5",
+        "image": "https://img.icons8.com/color/144/null/html-5.png",
+        "category": "Programming"
+    },
+    {
+        "name": "CSS3",
+        "image": "https://img.icons8.com/color/144/null/css3.png",
+        "category": "Programming"
+    },
+    {
+        "name": "JavaScript",
+        "image": "https://img.icons8.com/color/144/null/javascript.png",
+        "category": "Programming"
+    },
+    {
+        "name": "Dart",
+        "image": "https://img.icons8.com/color/144/null/dart.png",
+        "category": "Programming"
+    },
+    {
+        "name": "NodeJS",
+        "image": "https://img.icons8.com/color/144/null/nodejs.png",
+        "category": "Programming"
+    },
+    {
+        "name": "ReactJS",
+        "image": "https://img.icons8.com/color/144/null/react-native.png",
+        "category": "Programming"
+    },   
+    {
       "name": "Flutter",
-      "image": "https://img.icons8.com/color/144/000000/flutter.png",
+      "image": "https://img.icons8.com/color/144/null/flutter.png",
       "category": "Others"
     },
     {
       "name": "Firebase",
-      "image": "https://img.icons8.com/color/144/000000/firebase.png",
+      "image": "https://img.icons8.com/color/144/null/firebase.png",
       "category": "Others"
     },
     {
       "name": "AWS",
-      "image": "https://img.icons8.com/color/144/000000/amazon-web-services.png",
+      "image": "https://img.icons8.com/color/144/null/amazon-web-services.png",
       "category": "Others"
     },    
     {
       "name": "Git",
-      "image": "https://img.icons8.com/color/144/000000/git.png",
+      "image": "https://img.icons8.com/color/144/null/git.png",
       "category": "Others"
     },        
     {
       "name": "GitHub",
-      "image": "https://img.icons8.com/material-outlined/96/000000/github.png",
+      "image": "https://img.icons8.com/material-outlined/96/null/github.png",
       "category": "Others"
     }    
   ],
-  "projects": [
-    {
-      "name": "AWS Knowledge: Cloud Essentials",
-      "techstack": "Amazon Web Services (AWS), AWS Cloud, AWS Compute, AWS Databases, AWS Networking, AWS Security, AWS storage",
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/aws-cloud-essentials.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://www.credly.com/badges/b73011d9-8535-48d7-917a-2942ccd0e97b/linked_in_profile"
-      }
-    },     
-    {
-      "name": "Python for Business",
-      "techstack": "Python, Django, Sqlite",
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/python-for-business.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://drive.google.com/file/d/1-TyEgjxCEQq05RoJq6DnKS2liDiPxOTg/view"
-      }
-    }, 
-    {
-      "name": "Microsoft Azure Data Fundamentals",
-      "techstack": "Azure, Database",
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/microsoft-azure-data.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://drive.google.com/file/d/1VF4P9itmFortluINEhTUDcUZyDI21ljt/view"
-      }
-    },     
+  "projects": [         
     {
       "name": "Belajar Dasar Visualisasi Data",
       "techstack": "Google Sheets, Python, Matplotlib/Seaborn",
@@ -212,18 +224,73 @@
         "video": "",
         "visit": "https://www.dicoding.com/certificates/NVP74LJ9OPR0"
       }
-    },  
+    },
     {
-      "name": "Cookies Shop App",
-      "techstack": "Flutter, Firebase",
-      "category": "Others",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/cookies-shop.png",
+      "name": "Python for Business - Kominfo",
+      "techstack": "Python, Django, Sqlite",
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/python-for-business.png",
       "links": {
-        "code": "https://github.com/aismaanly/cookies_shop",
+        "code": "",
         "video": "",
-        "visit": "https://www.canva.com/design/DAGbfLLh4D0/iLQCzcbvN6relyZoq4BaXg/view?utm_content=DAGbfLLh4D0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h192770331b"
+        "visit": "https://drive.google.com/file/d/1-TyEgjxCEQq05RoJq6DnKS2liDiPxOTg/view"
       }
-    },        
+    }, 
+    {
+      "name": "Microsoft Azure Data Fundamentals",
+      "techstack": "Azure, Database",
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/microsoft-azure-data.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/file/d/1VF4P9itmFortluINEhTUDcUZyDI21ljt/view"
+      }
+    },
+    {
+      "name": "Internship Data Analyst",
+      "techstack": "Data Analysis, Analytical Skills, Market Research, Dashboards, Business Insights, Visualization",
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/intern-data-analyst.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/file/d/1v_kp_khz5pZ4ALYv0DM73qZVlz7U2RST/view?usp=drive_link"
+      }
+    },    
+    {
+      "name": "AWS Knowledge: Cloud Essentials",
+      "techstack": "Amazon Web Services (AWS), AWS Cloud, AWS Compute, AWS Databases, AWS Networking, AWS Security, AWS storage",
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/aws-cloud-essentials.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.credly.com/badges/b73011d9-8535-48d7-917a-2942ccd0e97b/linked_in_profile"
+      }
+    },     
+    {
+      "name": "Cloud an Gen AI Machine Learning",
+      "techstack": "Amazon Web Services (AWS), Artificial Intelligence (AI), Machine Learning, Deep Learning, Cloud Computing",
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/revou.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/file/d/1aatsfJuFsfMhI0e970qpPck-Lfo1kvMR/view?usp=drive_link"
+      }
+    }, 
+    {
+      "name": "Completion from Kampus Merdeka",
+      "techstack": "Amazon Web Services (AWS), Artificial Intelligence (AI), Machine Learning, Deep Learning, Cloud Computing",
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/kampus-merdeka.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/file/d/18Tx98Gkl4XmQ2l13SueHfLpOz-10-qh8/view?usp=drive_link"
+      }
+    },
     {
       "name": "Bookshelf App",
       "techstack": "HTML, CSS, Javascript",
@@ -234,7 +301,29 @@
         "video": "",
         "visit": "https://bookshelf-app-gamma-umber.vercel.app/"
       }
-    },        
+    },            
+    {
+      "name": "AISMACODE",
+      "techstack": "HTML, CSS, Javascript",
+      "category": "Others",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/aismacode.png",
+      "links": {
+        "code": "https://github.com/aismaanly/bookshelf-app",
+        "video": "",
+        "visit": "https://bootcamp-aismacode.vercel.app/"
+      }
+    },
+    {
+      "name": "Cookies Shop App",
+      "techstack": "Mobile Development, Dart, Flutter, Firebase",
+      "category": "Others",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/cookies-shop.png",
+      "links": {
+        "code": "https://github.com/aismaanly/cookies_shop",
+        "video": "",
+        "visit": "https://www.canva.com/design/DAGbfLLh4D0/iLQCzcbvN6relyZoq4BaXg/view?utm_content=DAGbfLLh4D0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h192770331b"
+      }
+    },             
     {
       "name": "Chatbot Aetheria",
       "techstack": "Python, EC2, Application Load Balancing, Auto Scaling Group, SQL Alchemy, Qween LLM",
@@ -243,7 +332,7 @@
       "links": {
         "code": "https://github.com/aismaanly/capstone-aetheria",
         "video": "https://www.youtube.com/watch?si=wY_VbfiLlou8vCiy&v=kmVRFl5SslE&feature=youtu.be",
-        "visit": "https://capstone-aetheria.streamlit.app/"
+        "visit": "https://www.canva.com/design/DAGaHC-APwM/SCuHEvNavNO32AQDL1MSeg/view?utm_content=DAGaHC-APwM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0b21f50050"
       }
     },    
     {
@@ -324,6 +413,28 @@
   ],
   "experiences": [
     {
+      "company": "Open Your Mind Indonesia",
+      "position": "Social Media Officer",
+      "duration": "Feb 2023 - Jul 2023",
+      "desc": [
+        "Identified trends that led to a 15% increase in audience engagement through targeted social media strategies.",
+        "Achieved a 10% boost in search traffic by refining SEO plans and optimizing keyword usage.",
+        "Delivered data-driven recommendations that enhanced overall social media performance, resulting in a 12% growth in follower base.",
+        "Improved the efficiency of social media reporting processes, reducing the time spent on data analysis by 20%."
+      ]
+    },
+    {
+      "company": "Digital Campaign - Novo Club Batch 3",
+      "position": "Campaign Coordinator",
+      "duration": "Jan 2024 - Aug 2024",
+      "desc": [
+        "Increased environmental awareness among 2,000+ participants.",
+        "Achieved 500+ shares on campaign content, boosting engagement.",
+        "Inspired measurable actions, with 70% of viewers committing to small eco-friendly changes.",
+        "Expanded campaign reach through consistent posting on regional and personal accounts."
+      ]
+    },    
+    {
       "company": "FYPMEDIA.ID",
       "position": "Social Media Specialist",
       "duration": "Mar 2024 - Aug 2024",
@@ -334,7 +445,7 @@
       ]
     },
     {
-      "company": "PT. MEDIA KARYA PRESTIGE INTERNASIONAL",
+      "company": "PT. Media Karya Prestige Internasional",
       "position": "Data Analyst",
       "duration": "Aug 2024 - Dec 2024",
       "desc": [

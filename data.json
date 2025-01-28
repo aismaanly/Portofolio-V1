@@ -53,6 +53,11 @@
       "category": "Tools"
     },
     {
+      "name": "Streamlit",
+      "image": "https://img.icons8.com/color/144/null/streamlit.png",
+      "category": "Tools"
+    },  
+    {
       "name": "Google Colab",
       "image": "https://img.icons8.com/color/144/null/google-colab.png",
       "category": "Tools"
@@ -320,7 +325,7 @@
       "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/cookies-shop.png",
       "links": {
         "code": "https://github.com/aismaanly/cookies_shop",
-        "video": "",
+        "video": "https://www.youtube.com/watch?v=MSLb5sH-YQE",
         "visit": "https://www.canva.com/design/DAGbfLLh4D0/iLQCzcbvN6relyZoq4BaXg/view?utm_content=DAGbfLLh4D0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h192770331b"
       }
     },             
@@ -393,7 +398,7 @@
   ],
   "educations": [
     {
-      "institute": "REVOU",
+      "institute": "RevoU",
       "degree": "Cloud and Gen AI Machine Learning",
       "duration": "Sep 2024 - Dec 2024",
       "desc": [
@@ -402,7 +407,7 @@
       ]
     },
     {
-      "institute": "UPN VETERAN JAWA TIMUR",
+      "institute": "UPN Veteran Jawa Timur",
       "degree": "Information System",
       "duration": "Aug 2022 - Present",
       "desc": [
@@ -424,8 +429,8 @@
       ]
     },
     {
-      "company": "Digital Campaign - Novo Club Batch 3",
-      "position": "Campaign Coordinator",
+      "company": "PT Paragon Technology and Innovation - Novo Club Batch 3",
+      "position": "Digital Campaign",
       "duration": "Jan 2024 - Aug 2024",
       "desc": [
         "Increased environmental awareness among 2,000+ participants.",
@@ -445,7 +450,7 @@
       ]
     },
     {
-      "company": "PT. Media Karya Prestige Internasional",
+      "company": "PT Media Karya Prestige Internasional",
       "position": "Data Analyst",
       "duration": "Aug 2024 - Dec 2024",
       "desc": [

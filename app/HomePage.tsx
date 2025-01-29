@@ -9,6 +9,7 @@ import Experiences from "@/components/experiences/Experiences";
 import Contact from "@/components/Contact";
 import Header from "./Header";
 import Footer from "./Footer";
+import Head from "./head";
 
 interface Props {
     data: data,
@@ -17,6 +18,7 @@ interface Props {
 const HomePage = ({ data }: Props) => {
     return (
         <>
+            <Head />
             <Header logo={data.main.name} />
             <Hero mainData={data.main} />
             <Socials socials={data.socials} />

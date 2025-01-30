@@ -10,7 +10,7 @@
     "heroImage": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/hero-home.gif",
     "techStackImages": [
       "https://img.icons8.com/color/144/null/python.png",
-      "https://img.icons8.com/color/144/null/sql.png",
+      "https://img.icons8.com/color/144/null/mysql.png",
       "https://img.icons8.com/color/144/null/tableau-software.png",
       "https://img.icons8.com/color/144/null/microsoft-excel-2019.png"
     ]
@@ -293,7 +293,7 @@
       "links": {
         "code": "",
         "video": "",
-        "visit": "https://drive.google.com/file/d/18Tx98Gkl4XmQ2l13SueHfLpOz-10-qh8/view?usp=drive_link"
+        "visit": "https://www.canva.com/design/DAGb_BorJ4U/QIyXz14owdgDP902Lb1hEQ/view?utm_content=DAGb_BorJ4U&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf788598b42"
       }
     },
     {
@@ -339,27 +339,38 @@
         "video": "https://www.youtube.com/watch?si=wY_VbfiLlou8vCiy&v=kmVRFl5SslE&feature=youtu.be",
         "visit": "https://www.canva.com/design/DAGaHC-APwM/SCuHEvNavNO32AQDL1MSeg/view?utm_content=DAGaHC-APwM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0b21f50050"
       }
-    },    
-    {
-      "name": "Ecommerce Analysis",
-      "techstack": "Python, Google Colab, Streamlit",
-      "category": "Data Analyst",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/ecommerce-analysis.png",
-      "links": {
-        "code": "https://github.com/aismaanly/ecommerce_analysis",
-        "video": "",
-        "visit": ""
-      }
-    },
+    }, 
     {
       "name": "Order Report",
-      "techstack": "Looker Studio, Excel",
+      "techstack": "Looker Studio, Google Spreadsheet",
       "category": "Data Analyst",
       "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/order-report.png",
       "links": {
         "code": "",
         "video": "",
         "visit": "https://lookerstudio.google.com/reporting/c3e7a532-3747-4cf9-9364-73d7555bcdf0/page/mFb2D"
+      }
+    },        
+    {
+      "name": "Credit Card",
+      "techstack": "Looker Studio, Excel",
+      "category": "Data Analyst",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/credit-card.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://lookerstudio.google.com/reporting/eb215ed1-f0d4-40be-a79c-00ef9e93e650"
+      }
+    }, 
+    {
+      "name": "Retail Transaction",
+      "techstack": "Looker Studio, Excel",
+      "category": "Data Analyst",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/retail-transaction.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://lookerstudio.google.com/reporting/b37aa9e9-ba64-40a6-b6bb-d5bf5bd239e6"
       }
     },    
     {
@@ -383,7 +394,18 @@
         "video": "",
         "visit": "https://public.tableau.com/app/profile/aisma.nurlaili/viz/Covid19inIndonesia_17167034904440/Dashboard1"
       }
-    },    
+    },
+    {
+      "name": "Ecommerce Analysis",
+      "techstack": "Python, Google Colab, Streamlit",
+      "category": "Data Analyst",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/ecommerce-analysis.png",
+      "links": {
+        "code": "https://github.com/aismaanly/ecommerce_analysis",
+        "video": "",
+        "visit": ""
+      }
+    },        
     {
       "name": "Bike Sharing Analysis",
       "techstack": "Python, Google Colab, Streamlit",

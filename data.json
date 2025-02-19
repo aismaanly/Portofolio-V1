@@ -140,27 +140,27 @@
     {
       "name": "Flutter",
       "image": "https://img.icons8.com/color/144/null/flutter.png",
-      "category": "Others"
+      "category": "Application"
     },
     {
       "name": "Firebase",
       "image": "https://img.icons8.com/color/144/null/firebase.png",
-      "category": "Others"
+      "category": "Application"
     },
     {
       "name": "AWS",
       "image": "https://img.icons8.com/color/144/null/amazon-web-services.png",
-      "category": "Others"
+      "category": "Application"
     },    
     {
       "name": "Git",
       "image": "https://img.icons8.com/color/144/null/git.png",
-      "category": "Others"
+      "category": "Application"
     },        
     {
       "name": "GitHub",
       "image": "https://img.icons8.com/material-outlined/96/null/github.png",
-      "category": "Others"
+      "category": "Application"
     }    
   ],
   "projects": [         
@@ -297,9 +297,20 @@
       }
     },
     {
+      "name": "SIKOPSI",
+      "techstack": "HTML, CSS, JavaScript, PHP, MySQL",
+      "category": "Application",
+      "image": "https://raw.githubusercontent.com/aismaanly/sikopsi/main/pkk.png",
+      "links": {
+        "code": "https://github.com/aismaanly/sikopsi",
+        "video": "",
+        "visit": ""
+      }
+    },    
+    {
       "name": "Bookshelf App",
-      "techstack": "HTML, CSS, Javascript",
-      "category": "Others",
+      "techstack": "HTML, CSS, JavaScript",
+      "category": "Application",
       "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/bookshelf-app.png",
       "links": {
         "code": "https://github.com/aismaanly/bookshelf-app",
@@ -310,7 +321,7 @@
     {
       "name": "AISMACODE",
       "techstack": "HTML, CSS, Javascript",
-      "category": "Others",
+      "category": "Application",
       "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/aismacode.png",
       "links": {
         "code": "https://github.com/aismaanly/bookshelf-app",
@@ -321,8 +332,8 @@
     {
       "name": "Cookies Shop App",
       "techstack": "Mobile Development, Dart, Flutter, Firebase",
-      "category": "Others",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/cookies-shop.png",
+      "category": "Application",
+      "image": "https://raw.githubusercontent.com/aismaanly/cookies_shop/main/images/thumb.png",
       "links": {
         "code": "https://github.com/aismaanly/cookies_shop",
         "video": "https://www.youtube.com/watch?v=MSLb5sH-YQE",
@@ -332,7 +343,7 @@
     {
       "name": "Chatbot Aetheria",
       "techstack": "Python, EC2, Application Load Balancing, Auto Scaling Group, SQL Alchemy, Qween LLM",
-      "category": "Others",
+      "category": "Application",
       "image": "https://raw.githubusercontent.com/aismaanly/capstone-aetheria/main/mainpage.gif",
       "links": {
         "code": "https://github.com/aismaanly/capstone-aetheria",

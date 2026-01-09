@@ -12,14 +12,18 @@ export default function Header({ logo }: { logo: string }) {
     const [navCollapse, setNavCollapse] = useState(true)
     const [scroll, setScroll] = useState(false)
     const { theme, setTheme } = useTheme()
+        const [mounted, setMounted] = useState(false)
 
     useEffect(() => {
+        setMounted(true)
+
         const updateScroll = () => {
             window.scrollY >= 90 ? setScroll(true) : setScroll(false)
         }
         window.addEventListener('scroll', updateScroll)
-    }, [])
 
+        return () => window.removeEventListener('scroll', updateScroll)
+    }, [])
 
     const navs = ['home', 'about', 'projects', 'experience', 'contact']
 
@@ -46,22 +50,27 @@ export default function Header({ logo }: { logo: string }) {
                             </ScrollLink>
                         </li>
                     ))}
-                    <span
-                        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                        className='hover:bg-gray-100 hover:dark:bg-violet-700 p-1.5 rounded-full cursor-pointer transition-colors'>
-                        {theme === 'dark' ? <FiSun /> : <FiMoon />}
-                    </span>
+
+                    {mounted && (
+                        <span
+                            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                            className='hover:bg-gray-100 hover:dark:bg-violet-700 p-1.5 rounded-full cursor-pointer transition-colors'>
+                            {theme === 'dark' ? <FiSun /> : <FiMoon />}
+                        </span>
+                    )}
                 </ul>
             </nav>
 
             <nav className='p-4 flex sm:hidden items-center justify-between'>
                 {logo === 'Aisma Nurlaili' ? <FaNodeJs size={28} /> : <span className='text-lg font-medium'>{logo.split(' ')[0]}</span>}
                 <div className='flex items-center gap-4'>
-                    <span
-                        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                        className='bg-gray-100 dark:bg-violet-700 p-1.5 rounded-full cursor-pointer transition-colors'>
-                        {theme === 'dark' ? <FiSun /> : <FiMoon />}
-                    </span>
+                    {mounted && (
+                        <span
+                            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                            className='bg-gray-100 dark:bg-violet-700 p-1.5 rounded-full cursor-pointer transition-colors'>
+                            {theme === 'dark' ? <FiSun /> : <FiMoon />}
+                        </span>
+                    )}
                     <CgMenuRight size={20} onClick={() => setNavCollapse(false)} />
                 </div>
             </nav>

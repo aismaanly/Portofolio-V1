@@ -1,28 +1,480 @@
 {
+  "about": {
+    "about": "🎓 As an Information Systems undergraduate, I bring a passion for uncovering insights from data to fuel business growth. 💡 With expertise in Python, SQL, and advanced visualization tools 📊, I craft data-driven strategies and actionable dashboards that empower decision making. 🔍 My experience spans data analysis, market research, and engagement optimization delivering measurable outcomes for businesses. 🚀 I'm eager to contribute my analytical mindset and technical skills to drive impactful results! ",
+    "aboutImage": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/hero-about.png",
+    "aboutImageCaption": "I uncover insights 🔍",
+    "callUrl": "https://www.canva.com/design/DAGGBmD3gaE/VCpAAgrMyUlUNI5AMzU_9w/view?utm_content=DAGGBmD3gaE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4abb49f2cf",
+    "resumeUrl": "https://docs.google.com/document/d/1BAFN1BOAT8Tn_BX84n7pXQXrZBdaMXx1u8t6ashOp8k/edit?usp=sharing",
+    "title": "AI Engineer"
+  },
+  "educations": [
+    {
+      "degree": "Cloud and Gen AI Machine Learning",
+      "desc": [
+        "Studied Cloud Computing on AWS, basic Python, Machine Learning, and Generative AI as part of the Studi Independent - Kampus Merdeka program by the Ministry of Education.",
+        "Developed 'Aetheria', a career-focused chatbot integrated with AWS and using Streamlit, providing personalized resume tips, interview practice, and job suggestions based on user skills."
+      ],
+      "duration": "Sep 2024 - Dec 2024",
+      "institute": "RevoU"
+    },
+    {
+      "degree": "Information System",
+      "desc": [
+        "Current GPA: 3.85/4.00.",
+        "Relevant courses include Computational Statistics, Computational Mathematics, Software Engineering, Database Systems, Database Administration, and Information Systems Analysis and Design."
+      ],
+      "duration": "Aug 2022 - Present",
+      "institute": "UPN Veteran Jawa Timur"
+    }
+  ],
+  "experiences": [
+    {
+      "company": "Open Your Mind Indonesia",
+      "desc": [
+        "Identified trends that led to a 15% increase in audience engagement through targeted social media strategies.",
+        "Achieved a 10% boost in search traffic by refining SEO plans and optimizing keyword usage.",
+        "Delivered data-driven recommendations that enhanced overall social media performance, resulting in a 12% growth in follower base.",
+        "Improved the efficiency of social media reporting processes, reducing the time spent on data analysis by 20%."
+      ],
+      "duration": "Feb 2023 - Jul 2023",
+      "position": "Social Media Officer"
+    },
+    {
+      "company": "PT Paragon Technology and Innovation - Novo Club Batch 3",
+      "desc": [
+        "Increased environmental awareness among 2,000+ participants.",
+        "Achieved 500+ shares on campaign content, boosting engagement.",
+        "Inspired measurable actions, with 70% of viewers committing to small eco-friendly changes.",
+        "Expanded campaign reach through consistent posting on regional and personal accounts."
+      ],
+      "duration": "Jan 2024 - Aug 2024",
+      "position": "Digital Campaign"
+    },
+    {
+      "company": "FYPMEDIA.ID",
+      "desc": [
+        "Enhanced content performance and scheduling by conducting engagement analysis with Google Analytics, resulting in a 15% increase in engagement rates.",
+        "Developed and implemented social media strategies that consistently met KPIs by aligning content with audience preferences and industry trends.",
+        "Delivered data-driven reports to stakeholders, enhancing content strategy through actionable insights."
+      ],
+      "duration": "Mar 2024 - Aug 2024",
+      "position": "Social Media Specialist"
+    },
+    {
+      "company": "PT Media Karya Prestige Internasional",
+      "desc": [
+        "Conducted competitor analysis and market evaluations using Python and Excel, improving decision-making efficiency by 80% across regions.",
+        "Delivered detailed reports uncovering key market trends and hidden opportunities, supporting strategic company initiatives.",
+        "Managed multiple data analysis projects with a 98% on-time completion rate, showcasing strong time management and project coordination skills."
+      ],
+      "duration": "Aug 2024 - Dec 2024",
+      "position": "Data Analyst"
+    }
+  ],
   "main": {
+    "heroImage": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/hero-home.gif",
     "name": "Aisma Nurlaili",
     "shortDesc": "I specialize in turning data into powerful insights, creating impactful dashboards, and optimizing strategies to drive business success.",
-    "titles": [
-      "Data Analyst",
-      "Data Scientist",
-      "Business Intelligence"
-    ],
-    "heroImage": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/hero-home.gif",
     "techStackImages": [
       "https://img.icons8.com/color/144/null/python.png",
       "https://img.icons8.com/color/144/null/mysql.png",
       "https://img.icons8.com/color/144/null/tableau-software.png",
       "https://img.icons8.com/color/144/null/microsoft-excel-2019.png"
+    ],
+    "titles": [
+      "AI Engineer",
+      "Data Analyst",
+      "Data Engineer"
     ]
   },
-  "about": {
-    "aboutImage": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/hero-about.png",
-    "aboutImageCaption": "I uncover insights 🔍",
-    "title": "Data Analyst",
-    "about": "🎓 As an Information Systems undergraduate, I bring a passion for uncovering insights from data to fuel business growth. 💡 With expertise in Python, SQL, and advanced visualization tools 📊, I craft data-driven strategies and actionable dashboards that empower decision making. 🔍 My experience spans data analysis, market research, and engagement optimization delivering measurable outcomes for businesses. 🚀 I'm eager to contribute my analytical mindset and technical skills to drive impactful results! ",
-    "resumeUrl": "https://docs.google.com/document/d/1BAFN1BOAT8Tn_BX84n7pXQXrZBdaMXx1u8t6ashOp8k/edit?usp=sharing",
-    "callUrl": "https://www.canva.com/design/DAGGBmD3gaE/VCpAAgrMyUlUNI5AMzU_9w/view?utm_content=DAGGBmD3gaE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4abb49f2cf"
-  },
+  "projects": [
+    {
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-visualisasi-data.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/53XENGD89XRN"
+      },
+      "name": "Belajar Dasar Visualisasi Data",
+      "techstack": "Google Sheets, Python, Matplotlib/Seaborn"
+    },
+    {
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-structured-query-language.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/0LZ04DL7NP65"
+      },
+      "name": "Belajar Dasar Structured Query Language (SQL)",
+      "techstack": "SQL"
+    },
+    {
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-data-science.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/JLX1414N6X72"
+      },
+      "name": "Belajar Dasar Data Science",
+      "techstack": "SQL, NoSQL, Excel/Spreadsheet, SPSS, Tableau, Python, R"
+    },
+    {
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/memulai-pemrograman-dengan-python.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/4EXG79YE1PRL"
+      },
+      "name": "Memulai Pemrograman dengan Python",
+      "techstack": "Python, OOP"
+    },
+    {
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-analisis-data-dengan-python.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/QLZ9VOL92X5D"
+      },
+      "name": "Belajar Analisis Data dengan Python",
+      "techstack": "Streamlit, Python, Descriptive Statistics, Data Analysis, EDA, Data Wrangling, Data Visualization"
+    },
+    {
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-ai.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/NVP74LJ9OPR0"
+      },
+      "name": "Belajar Dasar AI",
+      "techstack": "Artificial Intelligence, Machine Learning, Deep Learning"
+    },
+    {
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/python-for-business.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/file/d/1-TyEgjxCEQq05RoJq6DnKS2liDiPxOTg/view"
+      },
+      "name": "Python for Business - Kominfo",
+      "techstack": "Python, Django, Sqlite"
+    },
+    {
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/microsoft-azure-data.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/file/d/1VF4P9itmFortluINEhTUDcUZyDI21ljt/view"
+      },
+      "name": "Microsoft Azure Data Fundamentals",
+      "techstack": "Azure, Database"
+    },
+    {
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/intern-data-analyst.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/file/d/1v_kp_khz5pZ4ALYv0DM73qZVlz7U2RST/view?usp=drive_link"
+      },
+      "name": "Internship Data Analyst",
+      "techstack": "Data Analysis, Analytical Skills, Market Research, Dashboards, Business Insights, Visualization"
+    },
+    {
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/aws-cloud-essentials.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.credly.com/badges/b73011d9-8535-48d7-917a-2942ccd0e97b/linked_in_profile"
+      },
+      "name": "AWS Knowledge: Cloud Essentials",
+      "techstack": "Amazon Web Services (AWS), AWS Cloud, AWS Compute, AWS Databases, AWS Networking, AWS Security, AWS storage"
+    },
+    {
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/revou.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/file/d/1aatsfJuFsfMhI0e970qpPck-Lfo1kvMR/view?usp=drive_link"
+      },
+      "name": "Cloud an Gen AI Machine Learning",
+      "techstack": "Amazon Web Services (AWS), Artificial Intelligence (AI), Machine Learning, Deep Learning, Cloud Computing"
+    },
+    {
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/kampus-merdeka.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.canva.com/design/DAGb_BorJ4U/QIyXz14owdgDP902Lb1hEQ/view?utm_content=DAGb_BorJ4U&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf788598b42"
+      },
+      "name": "Completion from Kampus Merdeka",
+      "techstack": "Amazon Web Services (AWS), Artificial Intelligence (AI), Machine Learning, Deep Learning, Cloud Computing"
+    },
+    {
+      "category": "Application",
+      "image": "https://raw.githubusercontent.com/aismaanly/sikopsi/main/pkk.png",
+      "links": {
+        "code": "https://github.com/aismaanly/sikopsi",
+        "video": "",
+        "visit": ""
+      },
+      "name": "SIKOPSI",
+      "techstack": "HTML, CSS, JavaScript, PHP, MySQL"
+    },
+    {
+      "category": "Application",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/bookshelf-app.png",
+      "links": {
+        "code": "https://github.com/aismaanly/bookshelf-app",
+        "video": "",
+        "visit": "https://bookshelf-app-gamma-umber.vercel.app/"
+      },
+      "name": "Bookshelf App",
+      "techstack": "HTML, CSS, JavaScript"
+    },
+    {
+      "category": "Application",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/aismacode.png",
+      "links": {
+        "code": "https://github.com/aismaanly/bookshelf-app",
+        "video": "",
+        "visit": "https://bootcamp-aismacode.vercel.app/"
+      },
+      "name": "AISMACODE",
+      "techstack": "HTML, CSS, Javascript"
+    },
+    {
+      "category": "Application",
+      "image": "https://raw.githubusercontent.com/aismaanly/cookies_shop/main/images/thumb.png",
+      "links": {
+        "code": "https://github.com/aismaanly/cookies_shop",
+        "video": "https://www.youtube.com/watch?v=MSLb5sH-YQE",
+        "visit": "https://www.canva.com/design/DAGbfLLh4D0/iLQCzcbvN6relyZoq4BaXg/view?utm_content=DAGbfLLh4D0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h192770331b"
+      },
+      "name": "Cookies Shop App",
+      "techstack": "Mobile Development, Dart, Flutter, Firebase"
+    },
+    {
+      "category": "Application",
+      "image": "https://raw.githubusercontent.com/aismaanly/capstone-aetheria/main/mainpage.gif",
+      "links": {
+        "code": "https://github.com/aismaanly/capstone-aetheria",
+        "video": "https://www.youtube.com/watch?si=wY_VbfiLlou8vCiy&v=kmVRFl5SslE&feature=youtu.be",
+        "visit": "https://www.canva.com/design/DAGaHC-APwM/SCuHEvNavNO32AQDL1MSeg/view?utm_content=DAGaHC-APwM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0b21f50050"
+      },
+      "name": "Chatbot Aetheria",
+      "techstack": "Python, EC2, Application Load Balancing, Auto Scaling Group, SQL Alchemy, Qween LLM"
+    },
+    {
+      "category": "Data Analyst",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/order-report.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://lookerstudio.google.com/reporting/c3e7a532-3747-4cf9-9364-73d7555bcdf0/page/mFb2D"
+      },
+      "name": "Order Report",
+      "techstack": "Looker Studio, Google Spreadsheet"
+    },
+    {
+      "category": "Data Analyst",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/credit-card.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://lookerstudio.google.com/reporting/eb215ed1-f0d4-40be-a79c-00ef9e93e650"
+      },
+      "name": "Credit Card",
+      "techstack": "Looker Studio, Excel"
+    },
+    {
+      "category": "Data Analyst",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/retail-transaction.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://lookerstudio.google.com/reporting/b37aa9e9-ba64-40a6-b6bb-d5bf5bd239e6"
+      },
+      "name": "Retail Transaction",
+      "techstack": "Looker Studio, Excel"
+    },
+    {
+      "category": "Data Analyst",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/US-flight-delay.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://public.tableau.com/app/profile/aisma.nurlaili/viz/USFlightDelay_17169101510000/USFlightDelay"
+      },
+      "name": "US Flight Delay",
+      "techstack": "Tableau, Excel"
+    },
+    {
+      "category": "Data Analyst",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/covid-19-in-indonesia.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://public.tableau.com/app/profile/aisma.nurlaili/viz/Covid19inIndonesia_17167034904440/Dashboard1"
+      },
+      "name": "Covid 19 In Indonesia",
+      "techstack": "Tableau, Excel"
+    },
+    {
+      "category": "Data Analyst",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/ecommerce-analysis.png",
+      "links": {
+        "code": "https://github.com/aismaanly/ecommerce_analysis",
+        "video": "",
+        "visit": ""
+      },
+      "name": "Ecommerce Analysis",
+      "techstack": "Python, Google Colab, Streamlit"
+    },
+    {
+      "category": "Data Analyst",
+      "image": "https://raw.githubusercontent.com/aismaanly/bikesharing-analysis/main/dashboard.gif",
+      "links": {
+        "code": "https://github.com/aismaanly/bikesharing-analysis",
+        "video": "",
+        "visit": "https://bikesharing-analysis-aismaanly.streamlit.app/"
+      },
+      "name": "Bike Sharing Analysis",
+      "techstack": "Python, Google Colab, Streamlit"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Tools",
+      "image": "https://img.icons8.com/color/144/null/microsoft-excel-2019.png",
+      "name": "Excel"
+    },
+    {
+      "category": "Tools",
+      "image": "https://img.icons8.com/color/144/null/google-sheets.png",
+      "name": "Google Sheets"
+    },
+    {
+      "category": "Tools",
+      "image": "https://img.icons8.com/color/144/null/streamlit.png",
+      "name": "Streamlit"
+    },
+    {
+      "category": "Tools",
+      "image": "https://img.icons8.com/color/144/null/google-colab.png",
+      "name": "Google Colab"
+    },
+    {
+      "category": "Tools",
+      "image": "https://img.icons8.com/color/144/null/power-bi.png",
+      "name": "Power BI"
+    },
+    {
+      "category": "Tools",
+      "image": "https://img.icons8.com/color/144/null/google-data-studio.png",
+      "name": "Looker Studio"
+    },
+    {
+      "category": "Tools",
+      "image": "https://img.icons8.com/color/144/null/tableau-software.png",
+      "name": "Tableau"
+    },
+    {
+      "category": "Tools",
+      "image": "https://img.icons8.com/color/144/null/google-analytics.png",
+      "name": "Google Analytics"
+    },
+    {
+      "category": "Programming",
+      "image": "https://img.icons8.com/color/144/null/python.png",
+      "name": "Python"
+    },
+    {
+      "category": "Programming",
+      "image": "https://img.icons8.com/color/144/null/mysql.png",
+      "name": "MySQL"
+    },
+    {
+      "category": "Programming",
+      "image": "https://res.cloudinary.com/lifecodes/image/upload/v1677507436/Portfolio/w8ivbwm234wqiphhtldq.png",
+      "name": "SQLite"
+    },
+    {
+      "category": "Programming",
+      "image": "https://img.icons8.com/color/144/null/java-coffee-cup-logo.png",
+      "name": "Java"
+    },
+    {
+      "category": "Programming",
+      "image": "https://img.icons8.com/offices/160/null/php-logo.png",
+      "name": "PHP"
+    },
+    {
+      "category": "Programming",
+      "image": "https://img.icons8.com/color/144/null/html-5.png",
+      "name": "HTML5"
+    },
+    {
+      "category": "Programming",
+      "image": "https://img.icons8.com/color/144/null/css3.png",
+      "name": "CSS3"
+    },
+    {
+      "category": "Programming",
+      "image": "https://img.icons8.com/color/144/null/javascript.png",
+      "name": "JavaScript"
+    },
+    {
+      "category": "Programming",
+      "image": "https://img.icons8.com/color/144/null/dart.png",
+      "name": "Dart"
+    },
+    {
+      "category": "Programming",
+      "image": "https://img.icons8.com/color/144/null/nodejs.png",
+      "name": "NodeJS"
+    },
+    {
+      "category": "Programming",
+      "image": "https://img.icons8.com/color/144/null/react-native.png",
+      "name": "ReactJS"
+    },
+    {
+      "category": "Application",
+      "image": "https://img.icons8.com/color/144/null/flutter.png",
+      "name": "Flutter"
+    },
+    {
+      "category": "Application",
+      "image": "https://img.icons8.com/color/144/null/firebase.png",
+      "name": "Firebase"
+    },
+    {
+      "category": "Application",
+      "image": "https://img.icons8.com/color/144/null/amazon-web-services.png",
+      "name": "AWS"
+    },
+    {
+      "category": "Application",
+      "image": "https://img.icons8.com/color/144/null/git.png",
+      "name": "Git"
+    },
+    {
+      "category": "Application",
+      "image": "https://img.icons8.com/material-outlined/96/null/github.png",
+      "name": "GitHub"
+    }
+  ],
   "socials": [
     {
       "icon": "FaLinkedin",
@@ -39,458 +491,6 @@
     {
       "icon": "FaYoutube",
       "link": "https://www.youtube.com/@aismanurlaili7243"
-    }
-  ],
-  "skills": [
-    {
-      "name": "Excel",
-      "image": "https://img.icons8.com/color/144/null/microsoft-excel-2019.png",
-      "category": "Tools"
-    },
-    {
-      "name": "Google Sheets",
-      "image": "https://img.icons8.com/color/144/null/google-sheets.png",
-      "category": "Tools"
-    },
-    {
-      "name": "Streamlit",
-      "image": "https://img.icons8.com/color/144/null/streamlit.png",
-      "category": "Tools"
-    },  
-    {
-      "name": "Google Colab",
-      "image": "https://img.icons8.com/color/144/null/google-colab.png",
-      "category": "Tools"
-    },
-    {
-      "name": "Power BI",
-      "image": "https://img.icons8.com/color/144/null/power-bi.png",  
-      "category": "Tools"
-    },
-    {
-      "name": "Looker Studio",
-      "image": "https://img.icons8.com/color/144/null/google-data-studio.png",  
-      "category": "Tools"
-    },
-    {
-      "name": "Tableau",
-      "image": "https://img.icons8.com/color/144/null/tableau-software.png",
-      "category": "Tools"
-    },
-    {
-      "name": "Google Analytics",
-      "image": "https://img.icons8.com/color/144/null/google-analytics.png", 
-      "category": "Tools"
-    },
-    {
-      "name": "Python",
-      "image": "https://img.icons8.com/color/144/null/python.png", 
-      "category": "Programming"
-    },     
-    {
-      "name": "MySQL",
-      "image": "https://img.icons8.com/color/144/null/mysql.png",
-      "category": "Programming"
-    }, 
-    {
-      "name": "SQLite",
-      "image": "https://res.cloudinary.com/lifecodes/image/upload/v1677507436/Portfolio/w8ivbwm234wqiphhtldq.png",
-      "category": "Programming"
-    },        
-    {
-        "name": "Java",
-        "image": "https://img.icons8.com/color/144/null/java-coffee-cup-logo.png",
-        "category": "Programming"
-    },
-    {
-      "name": "PHP",
-      "image": "https://img.icons8.com/offices/160/null/php-logo.png",
-      "category": "Programming"
-    },     
-    {
-        "name": "HTML5",
-        "image": "https://img.icons8.com/color/144/null/html-5.png",
-        "category": "Programming"
-    },
-    {
-        "name": "CSS3",
-        "image": "https://img.icons8.com/color/144/null/css3.png",
-        "category": "Programming"
-    },
-    {
-        "name": "JavaScript",
-        "image": "https://img.icons8.com/color/144/null/javascript.png",
-        "category": "Programming"
-    },
-    {
-        "name": "Dart",
-        "image": "https://img.icons8.com/color/144/null/dart.png",
-        "category": "Programming"
-    },
-    {
-        "name": "NodeJS",
-        "image": "https://img.icons8.com/color/144/null/nodejs.png",
-        "category": "Programming"
-    },
-    {
-        "name": "ReactJS",
-        "image": "https://img.icons8.com/color/144/null/react-native.png",
-        "category": "Programming"
-    },   
-    {
-      "name": "Flutter",
-      "image": "https://img.icons8.com/color/144/null/flutter.png",
-      "category": "Application"
-    },
-    {
-      "name": "Firebase",
-      "image": "https://img.icons8.com/color/144/null/firebase.png",
-      "category": "Application"
-    },
-    {
-      "name": "AWS",
-      "image": "https://img.icons8.com/color/144/null/amazon-web-services.png",
-      "category": "Application"
-    },    
-    {
-      "name": "Git",
-      "image": "https://img.icons8.com/color/144/null/git.png",
-      "category": "Application"
-    },        
-    {
-      "name": "GitHub",
-      "image": "https://img.icons8.com/material-outlined/96/null/github.png",
-      "category": "Application"
-    }    
-  ],
-  "projects": [         
-    {
-      "name": "Belajar Dasar Visualisasi Data",
-      "techstack": "Google Sheets, Python, Matplotlib/Seaborn",
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-visualisasi-data.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://www.dicoding.com/certificates/53XENGD89XRN"
-      }
-    }, 
-    {
-      "name": "Belajar Dasar Structured Query Language (SQL)",
-      "techstack": "SQL",
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-structured-query-language.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://www.dicoding.com/certificates/0LZ04DL7NP65"
-      }
-    }, 
-    {
-      "name": "Belajar Dasar Data Science",
-      "techstack": "SQL, NoSQL, Excel/Spreadsheet, SPSS, Tableau, Python, R",
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-data-science.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://www.dicoding.com/certificates/JLX1414N6X72"
-      }
-    }, 
-    {
-      "name": "Memulai Pemrograman dengan Python",
-      "techstack": "Python, OOP",
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/memulai-pemrograman-dengan-python.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://www.dicoding.com/certificates/4EXG79YE1PRL"
-      }
-    }, 
-    {
-      "name": "Belajar Analisis Data dengan Python",
-      "techstack": "Streamlit, Python, Descriptive Statistics, Data Analysis, EDA, Data Wrangling, Data Visualization",
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-analisis-data-dengan-python.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://www.dicoding.com/certificates/QLZ9VOL92X5D"
-      }
-    }, 
-    {
-      "name": "Belajar Dasar AI",
-      "techstack": "Artificial Intelligence, Machine Learning, Deep Learning",
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-ai.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://www.dicoding.com/certificates/NVP74LJ9OPR0"
-      }
-    },
-    {
-      "name": "Python for Business - Kominfo",
-      "techstack": "Python, Django, Sqlite",
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/python-for-business.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://drive.google.com/file/d/1-TyEgjxCEQq05RoJq6DnKS2liDiPxOTg/view"
-      }
-    }, 
-    {
-      "name": "Microsoft Azure Data Fundamentals",
-      "techstack": "Azure, Database",
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/microsoft-azure-data.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://drive.google.com/file/d/1VF4P9itmFortluINEhTUDcUZyDI21ljt/view"
-      }
-    },
-    {
-      "name": "Internship Data Analyst",
-      "techstack": "Data Analysis, Analytical Skills, Market Research, Dashboards, Business Insights, Visualization",
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/intern-data-analyst.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://drive.google.com/file/d/1v_kp_khz5pZ4ALYv0DM73qZVlz7U2RST/view?usp=drive_link"
-      }
-    },    
-    {
-      "name": "AWS Knowledge: Cloud Essentials",
-      "techstack": "Amazon Web Services (AWS), AWS Cloud, AWS Compute, AWS Databases, AWS Networking, AWS Security, AWS storage",
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/aws-cloud-essentials.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://www.credly.com/badges/b73011d9-8535-48d7-917a-2942ccd0e97b/linked_in_profile"
-      }
-    },     
-    {
-      "name": "Cloud an Gen AI Machine Learning",
-      "techstack": "Amazon Web Services (AWS), Artificial Intelligence (AI), Machine Learning, Deep Learning, Cloud Computing",
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/revou.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://drive.google.com/file/d/1aatsfJuFsfMhI0e970qpPck-Lfo1kvMR/view?usp=drive_link"
-      }
-    }, 
-    {
-      "name": "Completion from Kampus Merdeka",
-      "techstack": "Amazon Web Services (AWS), Artificial Intelligence (AI), Machine Learning, Deep Learning, Cloud Computing",
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/kampus-merdeka.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://www.canva.com/design/DAGb_BorJ4U/QIyXz14owdgDP902Lb1hEQ/view?utm_content=DAGb_BorJ4U&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf788598b42"
-      }
-    },
-    {
-      "name": "SIKOPSI",
-      "techstack": "HTML, CSS, JavaScript, PHP, MySQL",
-      "category": "Application",
-      "image": "https://raw.githubusercontent.com/aismaanly/sikopsi/main/pkk.png",
-      "links": {
-        "code": "https://github.com/aismaanly/sikopsi",
-        "video": "",
-        "visit": ""
-      }
-    },    
-    {
-      "name": "Bookshelf App",
-      "techstack": "HTML, CSS, JavaScript",
-      "category": "Application",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/bookshelf-app.png",
-      "links": {
-        "code": "https://github.com/aismaanly/bookshelf-app",
-        "video": "",
-        "visit": "https://bookshelf-app-gamma-umber.vercel.app/"
-      }
-    },            
-    {
-      "name": "AISMACODE",
-      "techstack": "HTML, CSS, Javascript",
-      "category": "Application",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/aismacode.png",
-      "links": {
-        "code": "https://github.com/aismaanly/bookshelf-app",
-        "video": "",
-        "visit": "https://bootcamp-aismacode.vercel.app/"
-      }
-    },
-    {
-      "name": "Cookies Shop App",
-      "techstack": "Mobile Development, Dart, Flutter, Firebase",
-      "category": "Application",
-      "image": "https://raw.githubusercontent.com/aismaanly/cookies_shop/main/images/thumb.png",
-      "links": {
-        "code": "https://github.com/aismaanly/cookies_shop",
-        "video": "https://www.youtube.com/watch?v=MSLb5sH-YQE",
-        "visit": "https://www.canva.com/design/DAGbfLLh4D0/iLQCzcbvN6relyZoq4BaXg/view?utm_content=DAGbfLLh4D0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h192770331b"
-      }
-    },             
-    {
-      "name": "Chatbot Aetheria",
-      "techstack": "Python, EC2, Application Load Balancing, Auto Scaling Group, SQL Alchemy, Qween LLM",
-      "category": "Application",
-      "image": "https://raw.githubusercontent.com/aismaanly/capstone-aetheria/main/mainpage.gif",
-      "links": {
-        "code": "https://github.com/aismaanly/capstone-aetheria",
-        "video": "https://www.youtube.com/watch?si=wY_VbfiLlou8vCiy&v=kmVRFl5SslE&feature=youtu.be",
-        "visit": "https://www.canva.com/design/DAGaHC-APwM/SCuHEvNavNO32AQDL1MSeg/view?utm_content=DAGaHC-APwM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0b21f50050"
-      }
-    }, 
-    {
-      "name": "Order Report",
-      "techstack": "Looker Studio, Google Spreadsheet",
-      "category": "Data Analyst",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/order-report.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://lookerstudio.google.com/reporting/c3e7a532-3747-4cf9-9364-73d7555bcdf0/page/mFb2D"
-      }
-    },        
-    {
-      "name": "Credit Card",
-      "techstack": "Looker Studio, Excel",
-      "category": "Data Analyst",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/credit-card.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://lookerstudio.google.com/reporting/eb215ed1-f0d4-40be-a79c-00ef9e93e650"
-      }
-    }, 
-    {
-      "name": "Retail Transaction",
-      "techstack": "Looker Studio, Excel",
-      "category": "Data Analyst",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/retail-transaction.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://lookerstudio.google.com/reporting/b37aa9e9-ba64-40a6-b6bb-d5bf5bd239e6"
-      }
-    },    
-    {
-      "name": "US Flight Delay",
-      "techstack": "Tableau, Excel",
-      "category": "Data Analyst",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/US-flight-delay.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://public.tableau.com/app/profile/aisma.nurlaili/viz/USFlightDelay_17169101510000/USFlightDelay"
-      }
-    },     
-    {
-      "name": "Covid 19 In Indonesia",
-      "techstack": "Tableau, Excel",
-      "category": "Data Analyst",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/covid-19-in-indonesia.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://public.tableau.com/app/profile/aisma.nurlaili/viz/Covid19inIndonesia_17167034904440/Dashboard1"
-      }
-    },
-    {
-      "name": "Ecommerce Analysis",
-      "techstack": "Python, Google Colab, Streamlit",
-      "category": "Data Analyst",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/ecommerce-analysis.png",
-      "links": {
-        "code": "https://github.com/aismaanly/ecommerce_analysis",
-        "video": "",
-        "visit": ""
-      }
-    },        
-    {
-      "name": "Bike Sharing Analysis",
-      "techstack": "Python, Google Colab, Streamlit",
-      "category": "Data Analyst",
-      "image": "https://raw.githubusercontent.com/aismaanly/bikesharing-analysis/main/dashboard.gif",
-      "links": {
-        "code": "https://github.com/aismaanly/bikesharing-analysis",
-        "video": "",
-        "visit": "https://bikesharing-analysis-aismaanly.streamlit.app/"
-      }
-    }
-  ],
-  "educations": [
-    {
-      "institute": "RevoU",
-      "degree": "Cloud and Gen AI Machine Learning",
-      "duration": "Sep 2024 - Dec 2024",
-      "desc": [
-        "Studied Cloud Computing on AWS, basic Python, Machine Learning, and Generative AI as part of the Studi Independent - Kampus Merdeka program by the Ministry of Education.",
-        "Developed 'Aetheria', a career-focused chatbot integrated with AWS and using Streamlit, providing personalized resume tips, interview practice, and job suggestions based on user skills."
-      ]
-    },
-    {
-      "institute": "UPN Veteran Jawa Timur",
-      "degree": "Information System",
-      "duration": "Aug 2022 - Present",
-      "desc": [
-        "Current GPA: 3.85/4.00.",
-        "Relevant courses include Computational Statistics, Computational Mathematics, Software Engineering, Database Systems, Database Administration, and Information Systems Analysis and Design."
-      ]
-    }
-  ],
-  "experiences": [
-    {
-      "company": "Open Your Mind Indonesia",
-      "position": "Social Media Officer",
-      "duration": "Feb 2023 - Jul 2023",
-      "desc": [
-        "Identified trends that led to a 15% increase in audience engagement through targeted social media strategies.",
-        "Achieved a 10% boost in search traffic by refining SEO plans and optimizing keyword usage.",
-        "Delivered data-driven recommendations that enhanced overall social media performance, resulting in a 12% growth in follower base.",
-        "Improved the efficiency of social media reporting processes, reducing the time spent on data analysis by 20%."
-      ]
-    },
-    {
-      "company": "PT Paragon Technology and Innovation - Novo Club Batch 3",
-      "position": "Digital Campaign",
-      "duration": "Jan 2024 - Aug 2024",
-      "desc": [
-        "Increased environmental awareness among 2,000+ participants.",
-        "Achieved 500+ shares on campaign content, boosting engagement.",
-        "Inspired measurable actions, with 70% of viewers committing to small eco-friendly changes.",
-        "Expanded campaign reach through consistent posting on regional and personal accounts."
-      ]
-    },    
-    {
-      "company": "FYPMEDIA.ID",
-      "position": "Social Media Specialist",
-      "duration": "Mar 2024 - Aug 2024",
-      "desc": [
-        "Enhanced content performance and scheduling by conducting engagement analysis with Google Analytics, resulting in a 15% increase in engagement rates.",
-        "Developed and implemented social media strategies that consistently met KPIs by aligning content with audience preferences and industry trends.",
-        "Delivered data-driven reports to stakeholders, enhancing content strategy through actionable insights."
-      ]
-    },
-    {
-      "company": "PT Media Karya Prestige Internasional",
-      "position": "Data Analyst",
-      "duration": "Aug 2024 - Dec 2024",
-      "desc": [
-        "Conducted competitor analysis and market evaluations using Python and Excel, improving decision-making efficiency by 20% across regions.",
-        "Delivered detailed reports uncovering key market trends and hidden opportunities, supporting strategic company initiatives.",
-        "Managed multiple data analysis projects with a 90% on-time completion rate, showcasing strong time management and project coordination skills."
-      ]
     }
   ]
 }

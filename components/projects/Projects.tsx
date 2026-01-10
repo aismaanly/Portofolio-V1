@@ -10,36 +10,37 @@ interface Props {
 
 const Projects = ({ projectsData }: Props) => {
 
-    const [projects, setProjects] = useState([...projectsData].reverse() as project[])
-
-    // const categories = ['All', ...Array.from(new Set(projects.map((s) => s.category)))]
+    const [projects, setProjects] = useState(projectsData as project[])
     const categories = [...Array.from(new Set(projects.map((s) => s.category)))]
-
-    // const [category, setCategory] = useState(categories[0] || "All")
     const [category, setCategory] = useState(categories[0])
-
     const [filteredProjects, setFilteredProjects] = useState(projects as project[])
     const [viewAll, setViewAll] = useState(false)
 
     const filterProjects = (cat: string) => {
         setViewAll(false)
         setCategory(cat)
-        // cat === "All" ? setFilteredProjects(projects) :
         setFilteredProjects(projects.filter((p: project) => p.category.toLowerCase() === cat.toLowerCase()));
     }
 
     useEffect(() => {
         filterProjects(categories.includes('MERN Stack') ? "MERN Stack" : categories[0])
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
         <SectionWrapper id="projects" className="mx-4 md:mx-0 min-h-screen">
             <h2 className="text-4xl text-center">Projects</h2>
 
-            <div className="overflow-x-auto scroll-hide md:w-full max-w-screen-sm mx-auto mt-6 flex justify-between items-center gap-2 md:gap-3 bg-white dark:bg-grey-800 p-2 rounded-md">
+            <div className="overflow-x-auto scroll-hide w-full max-w-2xl mx-auto mt-6 flex justify-between items-center gap-2 md:gap-3 bg-white dark:bg-grey-800 p-2 rounded-md">
                 {categories.map((c: string = "", i: number) => (
-                    <span key={i} onClick={() => filterProjects(c)} className={`p-1.5 md:p-2 w-full text-sm md:text-base text-center capitalize rounded-md ${category.toLowerCase() === c.toLowerCase() ? "bg-violet-600 text-white" : "hover:bg-gray-100 hover:dark:bg-grey-900"} cursor-pointer transition-all`}>
+                    <span 
+                        key={i} 
+                        onClick={() => filterProjects(c)} 
+                        className={`p-1.5 md:p-2 flex-1 text-sm md:text-base text-center capitalize rounded-md whitespace-nowrap cursor-pointer transition-all ${
+                            category.toLowerCase() === c.toLowerCase() 
+                            ? "bg-violet-600 text-white" 
+                            : "hover:bg-gray-100 hover:dark:bg-grey-900"
+                        }`}
+                    >
                         {c}
                     </span>
                 ))}
@@ -50,7 +51,6 @@ const Projects = ({ projectsData }: Props) => {
                     <ProjectCard key={i} {...p} />
                 ))}
             </div>
-
 
             {filteredProjects.length > 6
                 &&

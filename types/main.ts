@@ -42,7 +42,7 @@ type main = {
 type about = {
     aboutImage: string,
     aboutImageCaption: string,
-    title: string,
+    title: string[],
     about: string,
     resumeUrl: string,
     callUrl: string

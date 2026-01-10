@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    qualities: [75, 100], // tambahkan quality yang dipakai
+    qualities: [75, 100],
     remotePatterns: [
       {
         protocol: 'https',
@@ -33,6 +33,16 @@ const nextConfig = {
         hostname: 'img.freepik.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.vectorlogo.zone',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.jsdelivr.net',
+        pathname: '/**',
+      },      
       {
         protocol: 'https',
         hostname: 'media.geeksforgeeks.org',

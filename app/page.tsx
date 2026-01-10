@@ -2,7 +2,6 @@ import { FaNodeJs } from "react-icons/fa"
 import HomePage from "./HomePage"
 
 async function getData() {
-
   const DB_URL = process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL + '/.json'
   const res = await fetch(DB_URL, { cache: 'no-store' })
   const data = res.json()
@@ -10,7 +9,6 @@ async function getData() {
 }
 
 export default async function page() {
-
   const data = await getData()
 
   return (

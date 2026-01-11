@@ -77,9 +77,9 @@
     "shortDesc": "I specialize in turning data into powerful insights, creating impactful dashboards, and optimizing strategies to drive business success.",
     "techStackImages": [
       "https://img.icons8.com/color/144/null/python.png",
+      "https://img.icons8.com/color/144/null/google-colab.png",
       "https://img.icons8.com/color/144/null/mysql-logo.png",
-      "https://img.icons8.com/color/144/null/tableau-software.png",
-      "https://img.icons8.com/color/144/null/microsoft-excel-2019.png"
+      "https://img.icons8.com/color/144/null/google-sheets.png"
     ],
     "titles": [
       "AI Engineer",
@@ -421,8 +421,8 @@
       "category": "Programming",
       "image": "https://img.icons8.com/color/144/null/java-coffee-cup-logo.png",
       "name": "Java"
-    },    
-{
+    },            
+    {
       "category": "AI Engineer",
       "image": "https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg",
       "name": "PyTorch"
@@ -454,12 +454,22 @@
     },
     {
       "category": "Application",
+      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768104194/fastapi_vg8vst.png",
+      "name": "FastAPI"
+    },
+    {
+      "category": "Application",
+      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768104662/flask_mtvjht.png",
+      "name": "Flask"
+    },    
+    {
+      "category": "Application",
       "image": "https://img.icons8.com/color/144/null/firebase.png",
       "name": "Firebase"
     },
     {
       "category": "Application",
-      "image": "https://img.icons8.com/color/144/null/amazon-web-services.png",
+      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768102869/aws_kq0tp3.png",
       "name": "AWS"
     },
     {
@@ -494,12 +504,12 @@
     },
     {
       "category": "Data Analyst",
-      "image": "https://img.icons8.com/color/144/null/power-bi.png",
+      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768103872/power_bi_cficbo.png",
       "name": "Power BI"
     },
     {
       "category": "Data Analyst",
-      "image": "https://img.icons8.com/color/144/null/google-data-studio.png",
+      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768102737/looker_upahne.png",
       "name": "Looker Studio"
     },
     {
@@ -509,7 +519,7 @@
     },
     {
       "category": "Data Analyst",
-      "image": "https://img.icons8.com/color/144/null/google-analytics.png",
+      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768103816/google_analytics_tqlmw2.png",
       "name": "Google Analytics"
     }    
   ],

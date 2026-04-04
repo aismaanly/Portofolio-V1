@@ -93,61 +93,6 @@
   },
   "projects": [
     {
-      "category": "Application",
-      "image": "https://raw.githubusercontent.com/aismaanly/cookies_shop/main/images/thumb.png",
-      "links": {
-        "code": "https://github.com/aismaanly/cookies_shop",
-        "video": "",
-        "visit": "https://www.canva.com/design/DAGbfLLh4D0/iLQCzcbvN6relyZoq4BaXg/view?utm_content=DAGbfLLh4D0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h192770331b"
-      },
-      "name": "Cookies Shop App",
-      "techstack": "Mobile Development, Dart, Flutter, Firebase"
-    },
-    {
-      "category": "Application",
-      "image": "https://raw.githubusercontent.com/aismaanly/SPK-SAW-LAPTOP/main/src/konsistensi.png",
-      "links": {
-        "code": "https://github.com/aismaanly/SPK-SAW-LAPTOP",
-        "video": "",
-        "visit": ""
-      },
-      "name": "Sistem Pendukung Keputusan - Rekomendasi Laptop",
-      "techstack": "HTML, CSS, JavaScript, PHP, MySQL"
-    },
-    {
-      "category": "Application",
-      "image": "https://raw.githubusercontent.com/aismaanly/sikopsi/main/pkk.png",
-      "links": {
-        "code": "https://github.com/aismaanly/sikopsi",
-        "video": "",
-        "visit": ""
-      },
-      "name": "SIKOPSI - Sistem Informasi Koperasi",
-      "techstack": "HTML, CSS, JavaScript, PHP, MySQL"
-    },
-    {
-      "category": "Application",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/bookshelf-app.png",
-      "links": {
-        "code": "https://github.com/aismaanly/bookshelf-app",
-        "video": "",
-        "visit": "https://bookshelf-app-gamma-umber.vercel.app/"
-      },
-      "name": "Bookshelf App",
-      "techstack": "HTML, CSS, JavaScript"
-    },
-    {
-      "category": "Application",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/aismacode.png",
-      "links": {
-        "code": "https://github.com/aismaanly/bookshelf-app",
-        "video": "",
-        "visit": "https://bootcamp-aismacode.vercel.app/"
-      },
-      "name": "AISMACODE",
-      "techstack": "HTML, CSS, Javascript"
-    },
-    {
       "category": "AI Engineer",
       "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/RAGsume.png",
       "links": {
@@ -269,6 +214,61 @@
       "techstack": "Tableau, Excel"
     },
     {
+      "category": "Application",
+      "image": "https://raw.githubusercontent.com/aismaanly/cookies_shop/main/images/thumb.png",
+      "links": {
+        "code": "https://github.com/aismaanly/cookies_shop",
+        "video": "",
+        "visit": "https://www.canva.com/design/DAGbfLLh4D0/iLQCzcbvN6relyZoq4BaXg/view?utm_content=DAGbfLLh4D0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h192770331b"
+      },
+      "name": "Cookies Shop App",
+      "techstack": "Mobile Development, Dart, Flutter, Firebase"
+    },
+    {
+      "category": "Application",
+      "image": "https://raw.githubusercontent.com/aismaanly/SPK-SAW-LAPTOP/main/src/konsistensi.png",
+      "links": {
+        "code": "https://github.com/aismaanly/SPK-SAW-LAPTOP",
+        "video": "",
+        "visit": ""
+      },
+      "name": "Sistem Pendukung Keputusan - Rekomendasi Laptop",
+      "techstack": "HTML, CSS, JavaScript, PHP, MySQL"
+    },
+    {
+      "category": "Application",
+      "image": "https://raw.githubusercontent.com/aismaanly/sikopsi/main/pkk.png",
+      "links": {
+        "code": "https://github.com/aismaanly/sikopsi",
+        "video": "",
+        "visit": ""
+      },
+      "name": "SIKOPSI - Sistem Informasi Koperasi",
+      "techstack": "HTML, CSS, JavaScript, PHP, MySQL"
+    },
+    {
+      "category": "Application",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/bookshelf-app.png",
+      "links": {
+        "code": "https://github.com/aismaanly/bookshelf-app",
+        "video": "",
+        "visit": "https://bookshelf-app-gamma-umber.vercel.app/"
+      },
+      "name": "Bookshelf App",
+      "techstack": "HTML, CSS, JavaScript"
+    },
+    {
+      "category": "Application",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/aismacode.png",
+      "links": {
+        "code": "https://github.com/aismaanly/bookshelf-app",
+        "video": "",
+        "visit": "https://bootcamp-aismacode.vercel.app/"
+      },
+      "name": "AISMACODE",
+      "techstack": "HTML, CSS, Javascript"
+    },
+    {
       "category": "Certification",
       "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-fundamental-deep-learning.png",
       "links": {
@@ -290,6 +290,17 @@
       "name": "Certified AI Engineering Masterclass",
       "techstack": "Python, TensorFlow, PyTorch, Machine Learning, Deep Learning, NLP, Model Deployment, AI System Design"
     },
+    {
+      "category": "Certification",
+      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/intern-ai-engineer.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/file/d/1LakWuU7zD6ZjPL-j6XEwnvBKyMjGwW5W/view?usp=drive_link"
+      },
+      "name": "Internship AI Engineer",
+      "techstack": "Artificial Intelligence, Fine-tuning, Analytical Skills, Business Insights, Visualization"
+    },    
     {
       "category": "Certification",
       "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/kampus-merdeka.png",
@@ -483,6 +494,11 @@
       "category": "AI Engineer",
       "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768063004/ollama_y3sjwy.png",
       "name": "Ollama"
+    },
+    {
+      "category": "AI Engineer",
+      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1774354638/chromadb_dbu7ad.png",
+      "name": "Chromadb"
     },
     {
       "category": "AI Engineer",

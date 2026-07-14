@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { MdClose, MdFileDownload } from "react-icons/md";
@@ -8,23 +8,63 @@ import { MdClose, MdFileDownload } from "react-icons/md";
 interface PdfModalProps {
     isOpen: boolean;
     onClose: () => void;
-    docId: string;
+    previewUrlEn: string;
+    previewUrlId: string;
+    downloadUrlEn: string;
+    downloadUrlId: string;
     title?: string;
 }
 
 const PdfModal = ({
     isOpen,
     onClose,
-    docId,
+    previewUrlEn,
+    previewUrlId,
+    downloadUrlEn,
+    downloadUrlId,
     title = "Curriculum Vitae"
 }: PdfModalProps) => {
     const [mounted, setMounted] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const [activeLanguage, setActiveLanguage] = useState<"id" | "en">("en");
+    const [containerWidth, setContainerWidth] = useState<number>(0);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         setMounted(true);
     }, []);
+
+    // Monitor container size for responsive scaling on mobile
+    useEffect(() => {
+        if (!isOpen) return;
+
+        const updateWidth = () => {
+            if (containerRef.current) {
+                setContainerWidth(containerRef.current.clientWidth);
+            }
+        };
+
+        // Delay slightly to ensure elements are rendered
+        const timer = setTimeout(updateWidth, 100);
+
+        // Listen for resize using ResizeObserver
+        const observer = new ResizeObserver(() => {
+            updateWidth();
+        });
+        
+        let targetEl = containerRef.current;
+        if (targetEl) {
+            observer.observe(targetEl);
+        }
+
+        window.addEventListener("resize", updateWidth);
+
+        return () => {
+            clearTimeout(timer);
+            observer.disconnect();
+            window.removeEventListener("resize", updateWidth);
+        };
+    }, [isOpen]);
 
     // Set loading state when switching language
     useEffect(() => {
@@ -47,19 +87,28 @@ const PdfModal = ({
 
     if (!mounted || !isOpen) return null;
 
-    // Map language to the document's specific tab IDs
-    const tabIds = {
-        id: "t.s9bi84n7qn7c",
-        en: "t.0"
-    };
+    const previewUrl = activeLanguage === "id" ? previewUrlId : previewUrlEn;
+    const downloadUrl = activeLanguage === "id" ? downloadUrlId : downloadUrlEn;
+    
+    // Calculate dynamic scaling style for the iframe.
+    // If the screen/container is narrow, we force a 1024px desktop viewport inside the iframe,
+    // and scale it down using CSS transform. This tricks Google Docs into rendering in standard
+    // desktop print layout instead of a reflowed/zoomed mobile view.
+    const targetWidth = 1024;
+    const isMobileView = containerWidth > 0 && containerWidth < 768;
+    const scale = isMobileView ? containerWidth / targetWidth : 1;
 
-    const currentTabId = tabIds[activeLanguage];
-    
-    // Direct PDF export URL — renders as native PDF inline, clean, fast, and has no Google Docs UI toolbars or pop-out glitches
-    const previewUrl = `https://docs.google.com/document/d/${docId}/export?format=pdf&tab=${currentTabId}`;
-    
-    // Direct PDF export URL for downloading the active tab only
-    const downloadUrl = `https://docs.google.com/document/d/${docId}/export?format=pdf&tab=${currentTabId}`;
+    const iframeStyle: React.CSSProperties = isMobileView ? {
+        width: `${targetWidth}px`,
+        height: `${100 / scale}%`,
+        transform: `scale(${scale})`,
+        transformOrigin: "top left",
+        border: "none",
+    } : {
+        width: "100%",
+        height: "100%",
+        border: "none",
+    };
 
     return createPortal(
         <AnimatePresence>
@@ -132,7 +181,10 @@ const PdfModal = ({
                     </div>
 
                     {/* PDF Frame Area */}
-                    <div className="relative flex-1 bg-neutral-100 dark:bg-[#0f0d14] overflow-hidden">
+                    <div 
+                        ref={containerRef}
+                        className="relative flex-1 bg-neutral-100 dark:bg-[#0f0d14] overflow-hidden w-full h-full"
+                    >
                         {isLoading && (
                             <div className="absolute inset-0 flex items-center justify-center bg-white dark:bg-[#18151f] z-10">
                                 <div className="flex flex-col items-center gap-3">
@@ -146,7 +198,7 @@ const PdfModal = ({
 
                         <iframe
                             src={previewUrl}
-                            className="w-full h-full border-none"
+                            style={iframeStyle}
                             title={title}
                             onLoad={() => setIsLoading(false)}
                             sandbox="allow-scripts allow-same-origin allow-forms"

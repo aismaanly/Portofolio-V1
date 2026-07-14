@@ -52,6 +52,7 @@ type about = {
     title: string[],
     about: string,
     resumeUrl: string,
+    resumeUrlId?: string,
     callUrl: string
 }
 

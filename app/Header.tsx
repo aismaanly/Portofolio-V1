@@ -185,7 +185,7 @@ export default function Header({ logo }: { logo: string }) {
                     )}
                     <button 
                         onClick={() => setNavCollapse(!navCollapse)}
-                        className="border border-neutral-300 dark:border-neutral-700 bg-transparent text-neutral-800 dark:text-neutral-200 rounded-lg px-3 py-1 text-[10px] font-mono tracking-widest uppercase hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors cursor-pointer font-bold"
+                        className="border border-neutral-300 dark:border-neutral-700 bg-transparent text-neutral-800 dark:text-neutral-200 rounded-lg px-3 py-1 text-[10px] font-sans tracking-widest uppercase hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors cursor-pointer font-bold"
                     >
                         MENU
                     </button>
@@ -200,7 +200,7 @@ export default function Header({ logo }: { logo: string }) {
                     {navs.map((e) => (
                         <ScrollLink
                             key={e}
-                            className="text-neutral-800 dark:text-neutral-200 hover:text-violet-600 dark:hover:text-violet-400 font-mono tracking-widest text-[11px] font-bold transition-colors uppercase cursor-pointer py-1.5"
+                            className="text-neutral-800 dark:text-neutral-200 hover:text-violet-600 dark:hover:text-violet-400 font-sans tracking-widest text-[11px] font-bold transition-colors uppercase cursor-pointer py-1.5"
                             to={e}
                             offset={-20}
                             smooth={true}
@@ -216,7 +216,7 @@ export default function Header({ logo }: { logo: string }) {
                             setNavCollapse(true);
                             scrollToContact();
                         }}
-                        className="text-neutral-800 dark:text-neutral-200 hover:text-violet-600 dark:hover:text-violet-400 font-mono tracking-widest text-[11px] font-bold transition-colors uppercase cursor-pointer py-1.5 text-left bg-transparent border-none text-inherit font-sans"
+                        className="text-neutral-800 dark:text-neutral-200 hover:text-violet-600 dark:hover:text-violet-400 font-sans tracking-widest text-[11px] font-bold transition-colors uppercase cursor-pointer py-1.5 text-left bg-transparent border-none"
                     >
                         contact
                     </button>

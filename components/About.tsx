@@ -23,17 +23,39 @@ export default function About({
     certificationsCount = 0,
     experienceCount = 0
 }: Props) {
-    const { aboutImage, aboutImageCaption, title, about, resumeUrl, callUrl } = aboutData;
+    const { aboutImage, aboutImageCaption, title, about, resumeUrl, resumeUrlId, callUrl } = aboutData;
     const displayImage = aboutImage || '/hero-about.jpg';
 
-    const getGoogleDocId = (url: string) => {
-        if (url && url.includes("docs.google.com/document/d/")) {
-            return url.split("/document/d/")[1]?.split("/")[0] || "";
+    const getUrls = (url: string) => {
+        if (!url) return { previewUrl: "", downloadUrl: "" };
+        
+        // 1. Google Drive PDF File
+        if (url.includes("drive.google.com/file/d/")) {
+            const fileId = url.split("/file/d/")[1]?.split("/")[0] || "";
+            return {
+                previewUrl: `https://drive.google.com/file/d/${fileId}/preview`,
+                downloadUrl: `https://drive.google.com/uc?id=${fileId}&export=download`
+            };
         }
-        return "";
+        
+        // 2. Google Doc
+        if (url.includes("docs.google.com/document/d/")) {
+            const docId = url.split("/document/d/")[1]?.split("/")[0] || "";
+            return {
+                previewUrl: `https://docs.google.com/document/d/${docId}/preview`,
+                downloadUrl: `https://docs.google.com/document/d/${docId}/export?format=pdf`
+            };
+        }
+        
+        // Default fallback (e.g. if they put a direct PDF link or local link)
+        return {
+            previewUrl: url,
+            downloadUrl: url
+        };
     };
 
-    const docId = getGoogleDocId(resumeUrl);
+    const { previewUrl: previewUrlEn, downloadUrl: downloadUrlEn } = getUrls(resumeUrl);
+    const { previewUrl: previewUrlId, downloadUrl: downloadUrlId } = getUrls(resumeUrlId || "");
     const sectionRef = useRef<HTMLElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
     const [isMobile, setIsMobile] = useState(false);
@@ -181,7 +203,10 @@ export default function About({
                                             <PdfModal
                                                 isOpen={isPdfOpen}
                                                 onClose={() => setIsPdfOpen(false)}
-                                                docId={docId}
+                                                previewUrlEn={previewUrlEn}
+                                                previewUrlId={previewUrlId}
+                                                downloadUrlEn={downloadUrlEn}
+                                                downloadUrlId={downloadUrlId}
                                             />
                                         </>
                                     )}

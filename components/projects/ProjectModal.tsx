@@ -47,31 +47,31 @@ const ProjectModal = ({
             onClick={onClose}
             className="fixed inset-0 bg-black/80 backdrop-blur-md z-[9999] flex items-center justify-center p-4 overflow-y-auto"
         >
-            {/* Previous Project Button (Outside the modal container) */}
+            {/* Previous Project Button (Outside the modal container) - Hidden on Mobile */}
             {onPrev && (
                 <button
                     onClick={(e: React.MouseEvent) => {
                         e.stopPropagation();
                         onPrev();
                     }}
-                    className="absolute left-2 md:left-6 lg:left-8 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-white/10 hover:bg-white/20 hover:scale-110 active:scale-95 text-white transition-all cursor-pointer z-30 shadow-lg border border-white/10"
+                    className="hidden md:flex absolute left-6 lg:left-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/20 hover:scale-110 active:scale-95 text-white transition-all cursor-pointer z-30 shadow-lg border border-white/10 items-center justify-center"
                     aria-label="Previous project"
                 >
-                    <MdChevronLeft size={30} className="md:w-8 md:h-8 w-6 h-6" />
+                    <MdChevronLeft size={32} />
                 </button>
             )}
 
-            {/* Next Project Button (Outside the modal container) */}
+            {/* Next Project Button (Outside the modal container) - Hidden on Mobile */}
             {onNext && (
                 <button
                     onClick={(e: React.MouseEvent) => {
                         e.stopPropagation();
                         onNext();
                     }}
-                    className="absolute right-2 md:right-6 lg:right-8 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-white/10 hover:bg-white/20 hover:scale-110 active:scale-95 text-white transition-all cursor-pointer z-30 shadow-lg border border-white/10"
+                    className="hidden md:flex absolute right-6 lg:right-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/20 hover:scale-110 active:scale-95 text-white transition-all cursor-pointer z-30 shadow-lg border border-white/10 items-center justify-center"
                     aria-label="Next project"
                 >
-                    <MdChevronRight size={30} className="md:w-8 md:h-8 w-6 h-6" />
+                    <MdChevronRight size={32} />
                 </button>
             )}
 
@@ -83,6 +83,37 @@ const ProjectModal = ({
                 onClick={(e: React.MouseEvent) => e.stopPropagation()}
                 className="relative w-full max-w-4xl bg-[#f5f5f5] dark:bg-[#1a1523] border border-black/10 dark:border-white/[0.08] rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh] my-auto"
             >
+                {/* Mobile Navigation Controls */}
+                {totalProjects && totalProjects > 1 && (
+                    <div className="absolute top-4 left-4 z-20 flex items-center gap-1.5 md:hidden bg-black/70 dark:bg-black/80 p-1 rounded-xl backdrop-blur-md border border-white/10">
+                        <button
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                if (onPrev) onPrev();
+                            }}
+                            className="p-1.5 rounded-lg text-white hover:bg-white/20 active:scale-90 transition-all cursor-pointer"
+                            aria-label="Previous project"
+                        >
+                            <MdChevronLeft size={16} />
+                        </button>
+                        {totalProjects && typeof currentIndex === "number" && (
+                            <span className="text-[10px] font-extrabold text-white/95 select-none px-1 tracking-wider">
+                                {currentIndex + 1}/{totalProjects}
+                            </span>
+                        )}
+                        <button
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                if (onNext) onNext();
+                            }}
+                            className="p-1.5 rounded-lg text-white hover:bg-white/20 active:scale-90 transition-all cursor-pointer"
+                            aria-label="Next project"
+                        >
+                            <MdChevronRight size={16} />
+                        </button>
+                    </div>
+                )}
+
                 {/* Close Button */}
                 <button
                     onClick={onClose}
@@ -148,14 +179,14 @@ const ProjectModal = ({
                     </div>
 
                     {/* Action buttons */}
-                    <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-black/5 dark:border-white/[0.05]">
+                    <div className="flex flex-nowrap items-center gap-1.5 md:gap-2 pt-4 border-t border-black/5 dark:border-white/[0.05] w-full overflow-x-auto scrollbar-none">
                         {project.links.code.trim() && (
                             <Link
                                 href={project.links.code}
                                 target="_blank"
-                                className="flex items-center gap-1.5 px-3 py-2 bg-black dark:bg-white text-white dark:text-black rounded-xl text-[11px] font-bold transition-all duration-300 hover:bg-violet-600 dark:hover:bg-violet-400 hover:text-white dark:hover:text-black cursor-pointer shadow-md hover:shadow-lg"
+                                className="flex items-center gap-1 px-2 py-1.5 md:gap-1.5 md:px-3 md:py-2 bg-black dark:bg-white text-white dark:text-black rounded-xl text-[10px] md:text-[11px] font-bold transition-all duration-300 hover:bg-violet-600 dark:hover:bg-violet-400 hover:text-white dark:hover:text-black cursor-pointer shadow-md hover:shadow-lg whitespace-nowrap flex-shrink-0"
                             >
-                                <FaGithub size={13} />
+                                <FaGithub size={12} className="md:w-[13px] md:h-[13px]" />
                                 <span>GitHub</span>
                             </Link>
                         )}
@@ -163,9 +194,9 @@ const ProjectModal = ({
                             <Link
                                 href={project.links.visit}
                                 target="_blank"
-                                className="flex items-center gap-1.5 px-3 py-2 bg-violet-600 dark:bg-violet-500 text-white rounded-xl text-[11px] font-bold transition-all duration-300 hover:bg-violet-700 dark:hover:bg-violet-600 cursor-pointer shadow-md hover:shadow-lg"
+                                className="flex items-center gap-1 px-2 py-1.5 md:gap-1.5 md:px-3 md:py-2 bg-violet-600 dark:bg-violet-500 text-white rounded-xl text-[10px] md:text-[11px] font-bold transition-all duration-300 hover:bg-violet-700 dark:hover:bg-violet-600 cursor-pointer shadow-md hover:shadow-lg whitespace-nowrap flex-shrink-0"
                             >
-                                <BiLinkExternal size={13} />
+                                <BiLinkExternal size={12} className="md:w-[13px] md:h-[13px]" />
                                 <span>Live Demo</span>
                             </Link>
                         )}
@@ -173,9 +204,9 @@ const ProjectModal = ({
                             <Link
                                 href={project.links.video}
                                 target="_blank"
-                                className="flex items-center gap-1.5 px-3 py-2 border border-black/25 dark:border-white/25 text-black dark:text-white rounded-xl text-[11px] font-bold transition-all duration-300 hover:border-violet-600 dark:hover:border-violet-400 hover:text-violet-600 dark:hover:text-violet-400 cursor-pointer"
+                                className="flex items-center gap-1 px-2 py-1.5 md:gap-1.5 md:px-3 md:py-2 border border-black/25 dark:border-white/25 text-black dark:text-white rounded-xl text-[10px] md:text-[11px] font-bold transition-all duration-300 hover:border-violet-600 dark:hover:border-violet-400 hover:text-violet-600 dark:hover:text-violet-400 cursor-pointer whitespace-nowrap flex-shrink-0"
                             >
-                                <FaVideo size={13} />
+                                <FaVideo size={12} className="md:w-[13px] md:h-[13px]" />
                                 <span>Watch Video</span>
                             </Link>
                         )}

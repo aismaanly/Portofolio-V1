@@ -1,6 +1,6 @@
 type skill = {
     name: string,
-    image: string,
+    image?: string,
     category: string
 }
 
@@ -9,6 +9,7 @@ type project = {
     image: string,
     techstack: string,
     category: string,
+    description?: string,
     links: {
         visit: string,
         code: string,
@@ -19,16 +20,22 @@ type project = {
 type experience = {
     company: string,
     position: string,
-    startDate: string,
-    endDate: string,
+    duration: string,
     desc: string[]
 }
 
+type volunteer = {
+    company: string,
+    position: string,
+    duration?: string,
+    desc?: string[]
+}
+
 type education = {
-    institute: string,
     degree: string,
-    startDate: string,
-    endDate: string,
+    institute: string,
+    duration: string,
+    desc?: string[]
 }
 
 type main = {
@@ -59,9 +66,12 @@ type data = {
     about: about,
     skills: skill[],
     projects: project[],
+    certifications?: project[],
     experiences: experience[],
-    educations: education[]
-    socials: social[]
+    educations?: education[],
+    volunteers?: volunteer[]
+    contact?: social[]
+    socials?: social[]
 }
 
-export type { data, main, about, skill, project, experience, education, social };
+export type { data, main, about, skill, project, experience, volunteer, education, social };

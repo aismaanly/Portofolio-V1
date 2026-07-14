@@ -1,7 +1,7 @@
 <!-- ![Portfolio](https://image.png) -->
 
 **Website Link:**  
-[https://portofolio-aisma-v1.vercel.app/](https://portofolio-aisma-v1.vercel.app/) 
+[aismanurlaili.my.id](https://www.aismanurlaili.my.id) 
 
 ## Introduction 👋
 

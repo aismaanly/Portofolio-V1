@@ -1,54 +1,93 @@
-import { MdSchool, MdWork } from 'react-icons/md'
+'use client';
+import { MdWork, MdGroups, MdSchool } from 'react-icons/md'
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 interface ExperienceProps {
-  index: number,
-  company: string,
-  position: string,
-  desc: string[],
-  institute: string,
-  degree: string,
-  duration: string,
+    index: number;
+    company?: string;
+    position?: string;
+    degree?: string;
+    institute?: string;
+    duration?: string;
+    desc?: string[];
+    isVolunteer?: boolean;
+    isEducation?: boolean;
 }
 
-const Experience = ({ index, company, position, desc, institute, degree, duration }: ExperienceProps) => {
+const ExperienceCard = ({ index, company, position, degree, institute, duration, desc, isVolunteer, isEducation }: ExperienceProps) => {
 
-  const [ref, inView] = useInView({
-    threshold: 0.5,
-    triggerOnce: true
-  });
+    const displayPosition = isEducation ? degree : position;
+    const displayCompany = isEducation ? institute : company;
 
-  const cardVariants = {
-    hidden: { x: index % 2 === 0 ? 20 : -20, opacity: 0 },
-    visible: { x: 0, opacity: 1, transition: { duration: 0.6, ease: 'easeInOut' } }
-  };
+    const [ref, inView] = useInView({
+        threshold: 0.2,
+        triggerOnce: true
+    });
 
-  return (
-    <div className={`mb-6 md:mb-8 flex md:justify-between items-center w-full ${index % 2 === 0 ? 'md:flex-row-reverse left-timeline' : 'right-timeline'}`}>
-      <div className="order-1 md:w-5/12"></div>
+    const isLeft = index % 2 === 0;
 
-      <span className="z-20 flex items-center order-1 justify-center w-6 h-6 md:w-9 md:h-9 bg-violet-200 rounded-full ring-4 md:ring-8 ring-white dark:ring-grey-800 dark:bg-violet-900">
-        {company && <MdWork className="text-base md:text-xl text-violet-600 dark:text-violet-400" />}
-        {institute && <MdSchool className="text-base md:text-xl text-violet-600 dark:text-violet-400" />}
-      </span>
+    const cardVariants = {
+        hidden: { x: isLeft ? 30 : -30, opacity: 0 },
+        visible: { x: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } }
+    };
 
-      <motion.div
-        ref={ref}
-        variants={cardVariants}
-        initial="hidden"
-        animate={inView ? 'visible' : 'hidden'}
-        className="order-1 rounded-lg w-full ml-3 md:ml-0 bg-white dark:bg-grey-800 md:w-5/12 p-3 md:px-4 md:py-4">
-        <h3 className="mb-2 font-medium text-lg md:text-xl">{company || institute}</h3>
-        <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">{position || degree} | {duration}</p>
-        <ul className="text-sm text-gray-400 mt-2 ml-4 list-disc">
-          {desc && desc.map((d, i) => (
-            <li key={i} className='mb-0.5'>{d}</li>
-          ))}
-        </ul>
-      </motion.div>
-    </div >
-  )
+    return (
+        <div className={`relative flex w-full ${isLeft ? 'md:justify-start' : 'md:justify-end'}`}>
+
+            {/* Timeline dot — absolutely centered on the vertical line */}
+            <div className="absolute left-4 md:left-1/2 top-0 z-10 -translate-x-1/2">
+                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-violet-100 dark:bg-violet-950 ring-8 ring-[#f5f5f5] dark:ring-[#120f16] border border-violet-200 dark:border-violet-700">
+                    {isEducation ? (
+                        <MdSchool className="text-sm text-violet-600 dark:text-violet-600" />
+                    ) : isVolunteer ? (
+                        <MdGroups className="text-sm text-violet-600 dark:text-violet-600" />
+                    ) : (
+                        <MdWork className="text-sm text-violet-600 dark:text-violet-600" />
+                    )}
+                </span>
+            </div>
+
+            {/* Card */}
+            <motion.div
+                ref={ref}
+                variants={cardVariants}
+                initial="hidden"
+                animate={inView ? 'visible' : 'hidden'}
+                className={`w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] p-5 md:p-6 rounded-xl border border-black/10 dark:border-white/[0.08]
+                    bg-white/60 dark:bg-white/[0.04] backdrop-blur-sm
+                    hover:border-violet-300/60 dark:hover:border-violet-700/50
+                    transition-all duration-300
+                    ml-12 md:ml-0
+                `}
+            >
+                {/* Duration badge */}
+                {duration && (
+                    <span className="inline-block mb-3 text-[10px] font-semibold tracking-[0.2em] uppercase text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-900/30 border border-violet-200 dark:border-violet-800/50 rounded-full px-3 py-0.5">
+                        {duration}
+                    </span>
+                )}
+
+                <h3 className="font-bold text-base md:text-lg text-black dark:text-white mb-1 leading-snug">
+                    {displayPosition}
+                </h3>
+                <p className="text-sm font-medium text-black/50 dark:text-white/50 mb-3">
+                    {displayCompany}
+                </p>
+
+                {desc && desc.length > 0 && (
+                    <ul className="space-y-1.5">
+                        {desc.map((d, i) => (
+                            <li key={i} className="text-sm text-black/65 dark:text-white/60 flex items-start gap-2">
+                                <span className="mt-[7px] w-1 h-1 rounded-full bg-violet-500 flex-shrink-0" />
+                                {d}
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </motion.div>
+        </div>
+    )
 }
 
-export default Experience
+export default ExperienceCard

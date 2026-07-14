@@ -16,7 +16,7 @@ export default function Head() {
       <meta name="application-name" content="Portfolio | Aisma Nurlaili" />
       <meta name="apple-mobile-web-app-title" content="Portfolio | Aisma Nurlaili" />
       <link rel="icon" href="/favicon.ico" />
-      <title>Portfolio | Aisma Nurlaili</title>
+      <title>Aisma Nurlaili | AI/Data</title>
     </>
   )
 }

@@ -1,69 +1,137 @@
 'use client';
-import Image from 'next/image'
-import { useTheme } from 'next-themes'
-import { Link as ScrollLink } from 'react-scroll'
+import { useTheme } from 'next-themes';
+import { Link as ScrollLink } from 'react-scroll';
 import Typewriter from 'typewriter-effect';
 import { IoIosArrowForward } from 'react-icons/io';
-import wavingHand from '@/public/waving-hand.gif';
 import { main } from '@/types/main';
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 interface HeroProps {
-    mainData: main
+    mainData: main;
+    visible?: boolean;
+    startAnimation?: boolean;
 }
 
-const Hero = ({ mainData }: HeroProps) => {
-    const { theme } = useTheme()
-    const { name, titles, heroImage, shortDesc, techStackImages } = mainData
-    const [mounted, setMounted] = useState(false)
+const Hero = ({ mainData, visible = true, startAnimation = true }: HeroProps) => {
+    const { resolvedTheme } = useTheme();
+    const { name, titles } = mainData;
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        setMounted(true)
-    }, [])
+        setMounted(true);
+    }, []);
 
-    const renderImage = (src: string, alt: string, sizeClass: string) => {
-        const isGif = src.toLowerCase().endsWith('.gif');
-        
-        return (
-            <Image
-                src={src}
-                alt={alt}
-                width={1000}
-                height={1000}
-                className={`${sizeClass} object-cover rounded-full`}
-                unoptimized={isGif} 
-            />
-        );
-    }
+    const nameParts = name.split(' ');
+    const firstName = nameParts[0] || 'Aisma';
+    const lastName = nameParts.slice(1).join(' ') || 'Nurlaili';
+
+    const isDark = mounted && resolvedTheme === 'dark';
 
     return (
-        <section 
-            id='home' 
-            className={`${mounted && theme === 'dark' ? "bg-grey-900" : ""} relative min-h-screen w-full mx-auto overflow-hidden`}
+        <section
+            id='home'
+            className={`sticky top-0 h-screen w-full mx-auto overflow-hidden will-change-transform flex flex-col justify-center ${isDark ? "bg-[#120f16]" : "bg-[#f5f5f5]"}`}
+            style={{
+                zIndex: visible ? 15 : 0,
+                opacity: visible ? 1 : 0,
+                pointerEvents: visible ? 'auto' : 'none',
+                transition: 'opacity 0.4s ease'
+            }}
         >
             {/* Background */}
-            <div className="absolute -z-10 min-h-screen h-full w-full">
-                <Image
-                    src="/herobgc.jpg"
-                    alt="Hero Background"
-                    fill
-                    style={{ objectFit: 'cover', objectPosition: 'bottom' }}
-                    quality={100}
-                    priority
-                />
+            <div className="absolute -z-10 h-full w-full">
+                <div className={`w-full h-full ${isDark ? 'bg-[#120f16]' : 'bg-[#f5f5f5]'}`}></div>
             </div>
 
-            <div className="py-16 lg:py-48 flex flex-col-reverse lg:flex-row justify-around gap-10 lg:gap-0">
+            {/* Mobile Hero View */}
+            <div className="flex md:hidden flex-col items-center justify-center h-full pt-[4vh] pb-[6vh] px-6 select-none text-center gap-6">
+                <motion.div 
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+                    transition={{ duration: 1.0, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                    className="relative w-48 h-48 flex justify-center items-end overflow-hidden"
+                >
+                    <img
+                        src="/hero-home.png"
+                        alt={name}
+                        className="w-full h-full object-contain object-bottom select-none pointer-events-none"
+                        style={{
+                            maskImage: 'radial-gradient(ellipse 150% 100% at 50% 0%, black 75%, transparent 100%)',
+                            WebkitMaskImage: 'radial-gradient(ellipse 150% 100% at 50% 0%, black 75%, transparent 100%)'
+                        }}
+                    />
+                </motion.div>
 
-                {/* Text */}
-                <div className="flex flex-col gap-4 md:gap-6 text-left lg:w-1/2 2xl:w-1/3 mx-4 md:mx-6 xl:mx-0">
-                    <div className="flex items-center gap-1">
-                        <Image unoptimized={true} alt='waving-hand' width={30} height={30} src={wavingHand} />
-                        <p className="text-lg md:text-xl mt-2 md:mt-1.5">Hello everyone</p>
-                    </div>
-                    <h1 className="text-4xl md:text-6xl font-bold relative">I&apos;m {name}</h1>
-                    <div className="flex flex-row items-start md:items-center gap-1.5">
-                        <h2 className="text-lg md:text-2xl">I am into</h2>
+                <motion.h1 
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                    transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+                    className="font-extrabold leading-[1.1] tracking-tight text-black dark:text-white text-4xl min-[360px]:text-5xl"
+                >
+                    <span className="font-serif italic font-normal text-violet-600 dark:text-violet-400 block mb-1">Hi, I'm</span>
+                    {firstName}<br />{lastName}
+                </motion.h1>
+
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                    className="flex flex-row items-center gap-1.5 justify-center"
+                >
+                    <span className="text-sm text-neutral-600 dark:text-neutral-300">I am into</span>
+                    <Typewriter
+                        options={{
+                            strings: titles,
+                            autoStart: true,
+                            loop: true,
+                            deleteSpeed: 50,
+                            delay: 50,
+                            wrapperClassName: "text-violet-700 dark:text-violet-600 text-sm font-medium",
+                            cursorClassName: "text-violet-700 dark:text-violet-600 text-sm"
+                        }}
+                    />
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                >
+                    <ScrollLink
+                        className="w-fit text-xs py-2 px-4 cursor-pointer flex items-center gap-1 rounded-md bg-violet-600 hover:bg-violet-700 dark:bg-violet-700 hover:dark:bg-violet-800 transition-colors group text-white"
+                        to={'about'}
+                        offset={-60}
+                        smooth={true}
+                        duration={500}
+                    >
+                        About Me
+                        <IoIosArrowForward className='group-hover:translate-x-1 transition-transform' />
+                    </ScrollLink>
+                </motion.div>
+            </div>
+
+            {/* Desktop Hero View */}
+            <div className="hidden md:grid grid-cols-[42%_58%] max-w-[1200px] mx-auto h-full w-full relative items-center">
+                {/* Left Column: Text */}
+                <div className="flex flex-col gap-5 text-left pl-8 lg:pl-16 pr-6 pt-20 pb-12">
+                    <motion.h1 
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                        transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+                        className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight text-black dark:text-white"
+                    >
+                        <span className="font-serif italic font-normal text-violet-600 dark:text-violet-400 block mb-2">Hi, I'm</span>
+                        {firstName}<br />{lastName}
+                    </motion.h1>
+
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                        transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                        className="flex flex-row items-center gap-1.5"
+                    >
+                        <h2 className="text-lg md:text-2xl text-neutral-800 dark:text-white">I am into</h2>
                         <Typewriter
                             options={{
                                 strings: titles,
@@ -75,58 +143,48 @@ const Hero = ({ mainData }: HeroProps) => {
                                 cursorClassName: "text-violet-700 dark:text-violet-600 text-lg md:text-2xl"
                             }}
                         />
-                    </div>
-                    <p className='text-sm md:text-base text-gray-600 dark:text-gray-300'>{shortDesc}</p>
-                    <ScrollLink
-                        className="w-fit text-sm md:text-base py-2 px-4 cursor-pointer flex items-center gap-1 rounded-md bg-violet-600 hover:bg-violet-700 dark:bg-violet-700 hover:dark:bg-violet-800 transition-colors group text-white"
-                        to={'about'}
-                        offset={-60}
-                        smooth={true}
-                        duration={500}
-                        isDynamic={true}
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                        transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
                     >
-                        About Me
-                        <IoIosArrowForward className='group-hover:translate-x-1 transition-transform' />
-                    </ScrollLink>
-                </div>
-
-                {/* Hero Image */}
-                <div className="relative mx-auto lg:mx-0 mt-12 md:mt-16 lg:mt-0">
-                    <div className="w-56 h-56 md:w-80 md:h-80 lg:-translate-x-16 rounded-full overflow-hidden">
-                        {renderImage(heroImage, 'Hero Image', 'w-full h-full')}
-                    </div>
-
-                    {/* Tech Stack */}
-                    {techStackImages.map((img, idx) => (
-                        <div
-                            key={idx}
-                            className={`absolute grid 
-                                ${idx === 0 ? '-top-6 -left-12 w-16 h-16 md:w-20 md:h-20' : ''}
-                                ${idx === 1 ? 'top-0 -right-12 lg:-right-4 w-14 h-14' : ''}
-                                ${idx === 2 ? 'bottom-[4rem] md:bottom-24 -right-16 md:-right-20 lg:bottom-[8.5rem] lg:-right-12 w-12 h-12 md:w-16 md:h-16' : ''}
-                                ${idx === 3 ? '-bottom-10 -right-8 lg:-bottom-0 lg:right-6 w-14 md:w-16 h-14 md:h-16' : ''}
-                                bg-white dark:bg-grey-800 rounded-full place-items-center hover:shadow-lg transition-shadow`}
+                        <ScrollLink
+                            className="w-fit text-sm md:text-base py-2.5 px-5 cursor-pointer flex items-center gap-1.5 rounded-md bg-violet-600 hover:bg-violet-700 dark:bg-violet-700 hover:dark:bg-violet-800 transition-colors group text-white shadow-md"
+                            to={'about'}
+                            offset={-60}
+                            smooth={true}
+                            duration={500}
                         >
-                            {renderImage(img, 'tech-stack', 'h-6 w-6 md:h-10 md:w-10')}
-                        </div>
-                    ))}
+                            About Me
+                            <IoIosArrowForward className='group-hover:translate-x-1 transition-transform' />
+                        </ScrollLink>
+                    </motion.div>
                 </div>
 
+                {/* Right Column: Image Cutout with bottom blur */}
+                <div className="relative w-full h-full flex items-center justify-center">
+                    <motion.div 
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+                        transition={{ duration: 1.0, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                        className="relative w-full h-[72%] max-h-[480px] lg:max-h-[530px] flex items-end justify-center overflow-hidden"
+                    >
+                        <img
+                            src="/hero-home.png"
+                            alt={name}
+                            className="object-contain object-bottom w-full h-full select-none pointer-events-none"
+                            style={{
+                                maskImage: 'radial-gradient(ellipse 150% 100% at 50% 0%, black 75%, transparent 100%)',
+                                WebkitMaskImage: 'radial-gradient(ellipse 150% 100% at 50% 0%, black 75%, transparent 100%)'
+                            }}
+                        />
+                    </motion.div>
+                </div>
             </div>
-
-            {/* SVG Decoration */}
-            <svg className="absolute hidden md:block right-0 bottom-0 translate-x-6 translate-y-4 opacity-25 lg:opacity-60" width="186" height="186" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M153.722 91.11c-1.137 0-2.085.948-2.085 2.148 0 1.138.948 2.085 2.149 2.085 1.2 0 2.084-.947 2.084-2.148 0-1.137-.947-2.085-2.148-2.085Z" fill="url(#a)"></path>
-                <defs>
-                    <linearGradient id="a" x1="56.392" y1="0" x2="189.028" y2="2.312" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#2D88E2"></stop>
-                        <stop offset="1" stopColor="#36EC74"></stop>
-                    </linearGradient>
-                </defs>
-            </svg>
-
         </section>
-    )
-}
+    );
+};
 
-export default Hero
+export default Hero;

@@ -1,0 +1,25 @@
+.scroll-reveal {
+  margin: 20px 0;
+}
+
+.scroll-reveal-text {
+  /* Styled using Tailwind via textClassName */
+}
+
+.word {
+  display: inline-block;
+  will-change: opacity, filter;
+  opacity: 0.1;
+}
+
+@media (max-width: 768px) {
+  .scroll-reveal {
+    transform: none !important;
+    rotate: none !important;
+  }
+  .word {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+}

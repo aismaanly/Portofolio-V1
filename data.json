@@ -1,7 +1,7 @@
 {
   "about": {
-    "about": "As an Information Systems undergraduate, I am passionate about building intelligent, data-driven solutions. With hands-on experience in Python, SQL, and machine learning workflows, I focus on developing AI-powered systems that transform data into actionable insights. My interests span AI engineering, model development, data processing, and system integration to support real-world business needs. I’m eager to contribute my analytical thinking and engineering skills to deliver scalable and impactful AI solutions.",
-    "aboutImage": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/hero-about.png",
+    "about": "Information Systems graduate with a 3.88/4.00 GPA, specializing in AI engineering and data-driven solutions from data ingestion to deployment. Experienced in Retrieval-Augmented Generation (RAG), LLM orchestration, prompt engineering, vector databases, and scalable AI systems. Strong foundation in data analytics and machine learning, with a proven ability to build AI solutions that transform complex data into actionable business insights.",
+    "aboutImage": "/hero-about.jpg",
     "aboutImageCaption": "I uncover insights 🔍",
     "callUrl": "https://www.canva.com/design/DAGGBmD3gaE/VCpAAgrMyUlUNI5AMzU_9w/view?utm_content=DAGGBmD3gaE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4abb49f2cf",
     "resumeUrl": "https://docs.google.com/document/d/1BAFN1BOAT8Tn_BX84n7pXQXrZBdaMXx1u8t6ashOp8k/edit?usp=sharing",
@@ -11,80 +11,106 @@
       "System Analyst"
     ]
   },
-  "educations": [
-    {
-      "degree": "Cloud and Gen AI Machine Learning",
-      "desc": [
-        "Studied Cloud Computing on AWS, basic Python, Machine Learning, and Generative AI as part of the Studi Independent - Kampus Merdeka program by the Ministry of Education.",
-        "Developed 'Aetheria', a career-focused chatbot integrated with AWS and using Streamlit, providing personalized resume tips, interview practice, and job suggestions based on user skills."
-      ],
-      "duration": "Sep 2024 - Dec 2024",
-      "institute": "RevoU"
-    },
-    {
-      "degree": "Information System",
-      "desc": [
-        "Current GPA: 3.85/4.00.",
-        "Relevant courses include Computational Statistics, Computational Mathematics, Software Engineering, Database Systems, Database Administration, and Information Systems Analysis and Design."
-      ],
-      "duration": "Aug 2022 - Present",
-      "institute": "UPN Veteran Jawa Timur"
-    }
-  ],
-  "experiences": [
+  "volunteers": [
     {
       "company": "Open Your Mind Indonesia",
+      "position": "Social Media Officer",
+      "duration": "Feb 2023 - Jul 2023",
       "desc": [
         "Identified trends that led to a 15% increase in audience engagement through targeted social media strategies.",
         "Achieved a 10% boost in search traffic by refining SEO plans and optimizing keyword usage.",
         "Delivered data-driven recommendations that enhanced overall social media performance, resulting in a 12% growth in follower base.",
         "Improved the efficiency of social media reporting processes, reducing the time spent on data analysis by 20%."
-      ],
-      "duration": "Feb 2023 - Jul 2023",
-      "position": "Social Media Officer"
+      ]
     },
     {
       "company": "PT Paragon Technology and Innovation - Novo Club Batch 3",
+      "position": "Digital Campaign",
+      "duration": "Jan 2024 - Aug 2024",
       "desc": [
         "Increased environmental awareness among 2,000+ participants.",
         "Achieved 500+ shares on campaign content, boosting engagement.",
         "Inspired measurable actions, with 70% of viewers committing to small eco-friendly changes.",
         "Expanded campaign reach through consistent posting on regional and personal accounts."
-      ],
-      "duration": "Jan 2024 - Aug 2024",
-      "position": "Digital Campaign"
+      ]
     },
     {
       "company": "FYPMEDIA.ID",
+      "position": "Social Media Specialist",
+      "duration": "Mar 2024 - Aug 2024",
       "desc": [
         "Enhanced content performance and scheduling by conducting engagement analysis with Google Analytics, resulting in a 15% increase in engagement rates.",
         "Developed and implemented social media strategies that consistently met KPIs by aligning content with audience preferences and industry trends.",
         "Delivered data-driven reports to stakeholders, enhancing content strategy through actionable insights."
-      ],
-      "duration": "Mar 2024 - Aug 2024",
-      "position": "Social Media Specialist"
+      ]
+    }
+  ],
+  "educations": [
+    {
+      "degree": "Cloud and Gen AI Machine Learning",
+      "institute": "RevoU",
+      "duration": "Sep 2024 - Dec 2024",
+      "desc": [
+        "GPA : 98/100",
+        "Studied Cloud Computing on AWS, Advance Python, Machine Learning, and Generative AI as part of the Studi Independent - Kampus Merdeka program by the Ministry of Education."
+      ]
     },
     {
+      "degree": "Information System",
+      "institute": "UPN Veteran Jawa Timur",
+      "duration": "Aug 2022 - Jul 2026",
+      "desc": [
+        "GPA: 3.88/4.00.",
+        "Relevant courses include Computational Statistics, Computational Mathematics, Software Engineering, Database Systems, Database Administration, and Information Systems Analysis and Design."
+      ]
+    }
+  ],
+  "experiences": [
+    {
       "company": "PT Media Karya Prestige Internasional",
+      "position": "Data Analyst",
+      "duration": "Aug 2024 - Dec 2024",
       "desc": [
         "Conducted competitor analysis and market evaluations using Python and Excel, improving decision-making efficiency by 80% across regions.",
         "Delivered detailed reports uncovering key market trends and hidden opportunities, supporting strategic company initiatives.",
         "Managed multiple data analysis projects with a 98% on-time completion rate, showcasing strong time management and project coordination skills."
-      ],
-      "duration": "Aug 2024 - Dec 2024",
-      "position": "Data Analyst"
+      ]
+    },
+    {
+      "company": "PT Revolusi Cita Edukasi",
+      "position": "Cloud and Gen AI Engineer",
+      "duration": "Sep 2024 - Dec 2024",
+      "desc": [
+        "Engineered an AI-powered career consultation chatbot using Python and the Qwen LLM, delivering personalized resume reviews, interview preparation, and career recommendations through natural language interactions.",
+        "Designed and deployed a highly available cloud architecture on AWS using EC2, Application Load Balancer, and Auto Scaling, ensuring fault tolerance and scalable application performance.",
+        "Developed an automated resume parsing application using PyMuPDF, extracting candidate information with 95% accuracy to reduce manual CV screening time by 75%."
+      ]
+    },
+    {
+      "company": "PT Minilemon Technology",
+      "position": "AI Engineer",
+      "duration": "Feb 2025 - Jun 2025",
+      "desc": [
+        "Engineered a low-latency Retrieval-Augmented Generation (RAG) pipeline using Next.js, Groq API, and Qdrant Cloud, delivering context-aware text generation with end-to-end response times below 2.5 seconds.",
+        "Optimized semantic retrieval by designing metadata-rich JSON schemas for character profiles, achieving a 90% evaluation pass rate for character consistency, contextual relevance, and response quality.",
+        "Developed a production-ready AI content ideation platform featuring automated context injection, intelligent query routing, and NextAuth-based access control, reducing manual content brainstorming time by 50%."
+      ]
+    },
+    {
+      "company": "UPA-TIK UPN Veteran Jawa Timur",
+      "position": "AI Engineer",
+      "duration": "Dec 2025 - May 2026",
+      "desc": [
+        "Engineered an end-to-end Retrieval-Augmented Generation pipeline using FastAPI, LangChain, and ChromaDB, parsing complex university regulations and achieving 89.5% Context Recall for accurate information retrieval.",
+        "Optimized retrieval performance by implementing Hybrid Search (Semantic + BM25), Reciprocal Rank Fusion (RRF), and a Cross-Encoder, achieving 80.9% Context Precision while improving contextual relevance across multiple document versions.",
+        "Implemented a high-precision OCR ingestion pipeline using Docling and regex-based text cleaning, automatically converting 50+ pages of scanned university regulations into structured Markdown for downstream retrieval and question answering."
+      ]
     }
   ],
   "main": {
-    "heroImage": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/hero-home.gif",
+    "heroImage": "/hero-home.png",
     "name": "Aisma Nurlaili",
     "shortDesc": "I specialize in turning data into powerful insights, creating impactful dashboards, and optimizing strategies to drive business success.",
-    "techStackImages": [
-      "https://img.icons8.com/color/144/null/python.png",
-      "https://img.icons8.com/color/144/null/google-colab.png",
-      "https://img.icons8.com/color/144/null/mysql-logo.png",
-      "https://img.icons8.com/color/144/null/google-sheets.png"
-    ],
     "titles": [
       "AI Engineer",
       "Data Analyst",
@@ -94,25 +120,39 @@
   "projects": [
     {
       "category": "AI Engineer",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/RAGsume.png",
+      "image": "/thumbs/chatbot-upn.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://tanya.upnjatim.ac.id/"
+      },
+      "name": "Chatbot UPN",
+      "techstack": "Python, NextJS, TypeScript, FastAPI, Langchain, ChromaDB, Ollama, Gemma3, Supabase",
+      "description": "An academic assistant chatbot utilizing Retrieval-Augmented Generation (RAG) to make complex university regulations interactive. It uses structure-aware OCR to parse legal documents and dynamically prioritizes the most recent applicable rules."
+    },
+    {
+      "category": "AI Engineer",
+      "image": "/thumbs/RAGsume.png",
       "links": {
         "code": "https://github.com/aismaanly/RAGsume",
         "video": "",
         "visit": "https://ragsume.streamlit.app/"
       },
       "name": "RAGsume",
-      "techstack": "Streamlit, Langchain, Groq, FAISS"
+      "techstack": "Streamlit, Langchain, Groq, FAISS",
+      "description": "A document intelligence application utilizing Retrieval-Augmented Generation (RAG) that allows users to upload their resumes, ask specific questions, extract key skills, summarize professional experience, and evaluate job fit against job descriptions."
     },
     {
       "category": "AI Engineer",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/chatbot-aetheria.png",
+      "image": "/thumbs/chatbot-aetheria.png",
       "links": {
         "code": "https://github.com/aismaanly/capstone-aetheria",
         "video": "https://github.com/aismaanly/capstone-aetheria/blob/main/mainpage.gif",
         "visit": "https://www.canva.com/design/DAGaHC-APwM/SCuHEvNavNO32AQDL1MSeg/view?utm_content=DAGaHC-APwM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0b21f50050"
       },
       "name": "Chatbot Aetheria",
-      "techstack": "Python, EC2, Application Load Balancing, Auto Scaling Group, SQL Alchemy, Qween LLM"
+      "techstack": "Python, EC2, Application Load Balancing, Auto Scaling Group, SQL Alchemy, Qween LLM",
+      "description": "A virtual mental health and wellness chatbot designed to classify emotional states and provide conversational support and guidance for user well-being."
     },
     {
       "category": "AI Engineer",
@@ -123,7 +163,8 @@
         "visit": ""
       },
       "name": "Data Warehouse OLAP & AI Chatbot",
-      "techstack": "Python, Dbeaver, Pentaho, Mondrian, MySQL, Ollama, Llama 3.2, NextJS"
+      "techstack": "Python, Dbeaver, Pentaho, Mondrian, MySQL, Ollama, Llama 3.2, NextJS",
+      "description": "A business intelligence system featuring a complete data warehouse pipeline with an OLAP interface for multi-dimensional sales analysis, integrated with a conversational chatbot for natural language queries."
     },
     {
       "category": "AI Engineer",
@@ -134,87 +175,95 @@
         "visit": ""
       },
       "name": "AI Comment Generator",
-      "techstack": "Python, Llama 3.2, Unsloth, SQLite, HTML, TailwindCSS, Flask"
+      "techstack": "Python, Llama 3.2, Unsloth, SQLite, HTML, TailwindCSS, Flask",
+      "description": "An automated writing tool that generates contextual and engaging comments for articles, blogs, or social media posts based on user input."
     },
     {
       "category": "Data Analyst",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/bikesharing-analysis.png",
+      "image": "/thumbs/bikesharing-analysis.png",
       "links": {
         "code": "https://github.com/aismaanly/bikesharing-analysis",
         "video": "https://github.com/aismaanly/bikesharing-analysis/blob/main/dashboard.gif",
         "visit": "https://bikesharing-analysis-aismaanly.streamlit.app/"
       },
       "name": "Bike Sharing Analysis",
-      "techstack": "Python, Google Colab, Streamlit"
+      "techstack": "Python, Google Colab, Streamlit, Pandas, Matplotlib, Seaborn, EDA",
+      "description": "A data analysis project analyzing bike-sharing usage patterns, seasonal trends, and casual vs registered user behavior to optimize resource allocation."
     },
     {
       "category": "Data Analyst",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/ecommerce-analysis.png",
+      "image": "https://raw.githubusercontent.com/aismaanly/ecommerce_analysis/main/dashboard.png",
       "links": {
         "code": "https://github.com/aismaanly/ecommerce_analysis",
         "video": "",
-        "visit": ""
+        "visit": "https://ecommerce-analysis-aismaanly.streamlit.app/"
       },
       "name": "Ecommerce Analysis",
-      "techstack": "Python, Google Colab, Streamlit"
+      "techstack": "Python, Streamlit, Google Colab, Pandas, Matplotlib, Seaborn, EDA",
+      "description": "An interactive sales performance dashboard analyzing transactional trends, order statuses, customer demographics, and product revenue patterns."
     },
     {
       "category": "Data Analyst",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/order-report.png",
+      "image": "/thumbs/order-report.png",
       "links": {
         "code": "",
         "video": "",
         "visit": "https://lookerstudio.google.com/reporting/c3e7a532-3747-4cf9-9364-73d7555bcdf0/page/mFb2D"
       },
       "name": "Order Report",
-      "techstack": "Looker Studio, Google Spreadsheet"
+      "techstack": "Looker Studio, Google Spreadsheet",
+      "description": "A business dashboard monitoring key transactional metrics such as total sales, average order value, and product performance trends."
     },
     {
       "category": "Data Analyst",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/credit-card.png",
+      "image": "/thumbs/credit-card.png",
       "links": {
         "code": "",
         "video": "",
         "visit": "https://lookerstudio.google.com/reporting/eb215ed1-f0d4-40be-a79c-00ef9e93e650"
       },
       "name": "Credit Card",
-      "techstack": "Looker Studio, Excel"
+      "techstack": "Looker Studio, Excel",
+      "description": "An analytical dashboard evaluating credit card usage, customer spending behaviors, credit limits, and delinquency patterns to identify customer segments."
     },
     {
       "category": "Data Analyst",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/retail-transaction.png",
+      "image": "/thumbs/retail-transaction.png",
       "links": {
         "code": "",
         "video": "",
         "visit": "https://lookerstudio.google.com/reporting/b37aa9e9-ba64-40a6-b6bb-d5bf5bd239e6"
       },
       "name": "Retail Transaction",
-      "techstack": "Looker Studio, Excel"
+      "techstack": "Looker Studio, Excel",
+      "description": "A business intelligence dashboard tracking retail store sales trends, profit margins, regional performance, and top-selling product categories."
     },
     {
       "category": "Data Analyst",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/US-flight-delay.png",
+      "image": "/thumbs/US-flight-delay.png",
       "links": {
         "code": "",
         "video": "",
         "visit": "https://public.tableau.com/app/profile/aisma.nurlaili/viz/USFlightDelay_17169101510000/USFlightDelay"
       },
       "name": "US Flight Delay",
-      "techstack": "Tableau, Excel"
+      "techstack": "Tableau, Excel",
+      "description": "An analytical visualization analyzing patterns, main causes, and frequencies of domestic flight delays to understand seasonal and regional travel disruptions."
     },
     {
       "category": "Data Analyst",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/covid-19-in-indonesia.png",
+      "image": "/thumbs/covid-19-in-indonesia.png",
       "links": {
         "code": "",
         "video": "",
         "visit": "https://public.tableau.com/app/profile/aisma.nurlaili/viz/Covid19inIndonesia_17167034904440/Dashboard1"
       },
       "name": "Covid 19 In Indonesia",
-      "techstack": "Tableau, Excel"
+      "techstack": "Tableau, Excel",
+      "description": "An epidemiology dashboard tracking the spread, active cases, recovery rates, and mortality statistics across various provinces in Indonesia."
     },
     {
-      "category": "Application",
+      "category": "Others",
       "image": "https://raw.githubusercontent.com/aismaanly/cookies_shop/main/images/thumb.png",
       "links": {
         "code": "https://github.com/aismaanly/cookies_shop",
@@ -222,55 +271,62 @@
         "visit": "https://www.canva.com/design/DAGbfLLh4D0/iLQCzcbvN6relyZoq4BaXg/view?utm_content=DAGbfLLh4D0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h192770331b"
       },
       "name": "Cookies Shop App",
-      "techstack": "Mobile Development, Dart, Flutter, Firebase"
+      "techstack": "Mobile Development, Dart, Flutter, Firebase",
+      "description": "A mobile e-commerce application for ordering cookies, featuring product listings, cart management, and a smooth checkout workflow."
     },
     {
-      "category": "Application",
+      "category": "Others",
       "image": "https://raw.githubusercontent.com/aismaanly/SPK-SAW-LAPTOP/main/src/konsistensi.png",
       "links": {
         "code": "https://github.com/aismaanly/SPK-SAW-LAPTOP",
         "video": "",
         "visit": ""
       },
-      "name": "Sistem Pendukung Keputusan - Rekomendasi Laptop",
-      "techstack": "HTML, CSS, JavaScript, PHP, MySQL"
+      "name": "Decision Support System Laptop",
+      "techstack": "HTML, CSS, JavaScript, PHP, MySQL",
+      "description": "A decision support web application using multi-criteria decision analysis to help users select the best laptop matching their budget and hardware requirements."
     },
     {
-      "category": "Application",
+      "category": "Others",
       "image": "https://raw.githubusercontent.com/aismaanly/sikopsi/main/pkk.png",
       "links": {
         "code": "https://github.com/aismaanly/sikopsi",
         "video": "",
         "visit": ""
       },
-      "name": "SIKOPSI - Sistem Informasi Koperasi",
-      "techstack": "HTML, CSS, JavaScript, PHP, MySQL"
+      "name": "Cooperative Information System",
+      "techstack": "HTML, CSS, JavaScript, PHP, MySQL",
+      "description": "A financial management system for savings and loans cooperatives to track member transactions, calculate interest, and manage savings reports."
     },
     {
-      "category": "Application",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/bookshelf-app.png",
+      "category": "Others",
+      "image": "/thumbs/bookshelf-app.png",
       "links": {
         "code": "https://github.com/aismaanly/bookshelf-app",
         "video": "",
         "visit": "https://bookshelf-app-gamma-umber.vercel.app/"
       },
       "name": "Bookshelf App",
-      "techstack": "HTML, CSS, JavaScript"
+      "techstack": "HTML, CSS, JavaScript",
+      "description": "A lightweight reading tracker application helping users organize their personal library by categorizing books into reading queues and completed shelves."
     },
     {
-      "category": "Application",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/thumbs/aismacode.png",
+      "category": "Others",
+      "image": "/thumbs/aismacode.png",
       "links": {
         "code": "https://github.com/aismaanly/bookshelf-app",
         "video": "",
         "visit": "https://bootcamp-aismacode.vercel.app/"
       },
       "name": "AISMACODE",
-      "techstack": "HTML, CSS, Javascript"
-    },
+      "techstack": "HTML, CSS, Javascript",
+      "description": "A learning platform showcase highlighting coding tutorials, developer training projects, and educational programming resources."
+    }
+  ],
+  "certifications": [
     {
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-fundamental-deep-learning.png",
+      "category": "Bootcamp",
+      "image": "/certificate/belajar-fundamental-deep-learning.png",
       "links": {
         "code": "",
         "video": "",
@@ -280,8 +336,8 @@
       "techstack": "Deep Learning, TensorFlow, NLP, Computer Vision, Time Series, Recommendation Systems, Generative AI"
     },
     {
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/ai-engineering-masterclass.jpg",
+      "category": "Bootcamp",
+      "image": "/certificate/ai-engineering-masterclass.jpg",
       "links": {
         "code": "",
         "video": "",
@@ -291,41 +347,41 @@
       "techstack": "Python, TensorFlow, PyTorch, Machine Learning, Deep Learning, NLP, Model Deployment, AI System Design"
     },
     {
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/intern-ai-engineer.png",
+      "category": "Internship",
+      "image": "/certificate/intern-ai-engineer-upatik.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/file/d/18hihKWQA00RjqDia0nEg5NsJrCNW4c_i/view?usp=drive_link"
+      },
+      "name": "Internship AI Engineer",
+      "techstack": "Artificial Intelligence, Analytical Skills, Business Insights, Visualization"
+    },
+    {
+      "category": "Internship",
+      "image": "/certificate/intern-ai-engineer-minilemon.png",
       "links": {
         "code": "",
         "video": "",
         "visit": "https://drive.google.com/file/d/1LakWuU7zD6ZjPL-j6XEwnvBKyMjGwW5W/view?usp=drive_link"
       },
       "name": "Internship AI Engineer",
-      "techstack": "Artificial Intelligence, Fine-tuning, Analytical Skills, Business Insights, Visualization"
-    },    
-    {
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/kampus-merdeka.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://www.canva.com/design/DAGb_BorJ4U/QIyXz14owdgDP902Lb1hEQ/view?utm_content=DAGb_BorJ4U&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf788598b42"
-      },
-      "name": "Completion from Kampus Merdeka",
-      "techstack": "Amazon Web Services (AWS), Artificial Intelligence (AI), Machine Learning, Deep Learning, Cloud Computing"
+      "techstack": "Artificial Intelligence, Analytical Skills, Business Insights, Visualization"
     },
     {
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/revou.png",
+      "category": "Internship",
+      "image": "/certificate/revou.png",
       "links": {
         "code": "",
         "video": "",
         "visit": "https://drive.google.com/file/d/1aatsfJuFsfMhI0e970qpPck-Lfo1kvMR/view?usp=drive_link"
       },
-      "name": "Cloud an Gen AI Machine Learning",
+      "name": "Cloud and Generative AI Engineer",
       "techstack": "Amazon Web Services (AWS), Artificial Intelligence (AI), Machine Learning, Deep Learning, Cloud Computing"
     },
     {
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/aws-cloud-essentials.png",
+      "category": "Bootcamp",
+      "image": "/certificate/aws-cloud-essentials.png",
       "links": {
         "code": "",
         "video": "",
@@ -335,8 +391,8 @@
       "techstack": "Amazon Web Services (AWS), AWS Cloud, AWS Compute, AWS Databases, AWS Networking, AWS Security, AWS storage"
     },
     {
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/intern-data-analyst.png",
+      "category": "Internship",
+      "image": "/certificate/intern-data-analyst.png",
       "links": {
         "code": "",
         "video": "",
@@ -346,8 +402,8 @@
       "techstack": "Data Analysis, Analytical Skills, Market Research, Dashboards, Business Insights, Visualization"
     },
     {
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/microsoft-azure-data.png",
+      "category": "Bootcamp",
+      "image": "/certificate/microsoft-azure-data.png",
       "links": {
         "code": "",
         "video": "",
@@ -357,8 +413,8 @@
       "techstack": "Azure, Database"
     },
     {
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/python-for-business.png",
+      "category": "Bootcamp",
+      "image": "/certificate/python-for-business.png",
       "links": {
         "code": "",
         "video": "",
@@ -368,8 +424,8 @@
       "techstack": "Python, Django, Sqlite"
     },
     {
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-ai.png",
+      "category": "Bootcamp",
+      "image": "/certificate/belajar-dasar-ai.png",
       "links": {
         "code": "",
         "video": "",
@@ -379,8 +435,8 @@
       "techstack": "Artificial Intelligence, Machine Learning, Deep Learning"
     },
     {
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-analisis-data-dengan-python.png",
+      "category": "Bootcamp",
+      "image": "/certificate/belajar-analisis-data-dengan-python.png",
       "links": {
         "code": "",
         "video": "",
@@ -390,8 +446,8 @@
       "techstack": "Streamlit, Python, Descriptive Statistics, Data Analysis, EDA, Data Wrangling, Data Visualization"
     },
     {
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/memulai-pemrograman-dengan-python.png",
+      "category": "Bootcamp",
+      "image": "/certificate/memulai-pemrograman-dengan-python.png",
       "links": {
         "code": "",
         "video": "",
@@ -401,8 +457,8 @@
       "techstack": "Python, OOP"
     },
     {
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-data-science.png",
+      "category": "Bootcamp",
+      "image": "/certificate/belajar-dasar-data-science.png",
       "links": {
         "code": "",
         "video": "",
@@ -412,8 +468,8 @@
       "techstack": "SQL, NoSQL, Excel/Spreadsheet, SPSS, Tableau, Python, R"
     },
     {
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-structured-query-language.png",
+      "category": "Bootcamp",
+      "image": "/certificate/belajar-dasar-structured-query-language.png",
       "links": {
         "code": "",
         "video": "",
@@ -423,8 +479,8 @@
       "techstack": "SQL"
     },
     {
-      "category": "Certification",
-      "image": "https://raw.githubusercontent.com/aismaanly/Portofolio-V1/main/public/certificate/belajar-dasar-visualisasi-data.png",
+      "category": "Bootcamp",
+      "image": "/certificate/belajar-dasar-visualisasi-data.png",
       "links": {
         "code": "",
         "video": "",
@@ -436,152 +492,131 @@
   ],
   "skills": [
     {
-      "category": "Programming",
-      "image": "https://img.icons8.com/color/144/null/python.png",
+      "category": "Languages",
       "name": "Python"
     },
     {
-      "category": "Programming",
-      "image": "https://img.icons8.com/color/144/null/mysql-logo.png",
-      "name": "MySQL"
+      "category": "Languages",
+      "name": "TypeScript"
     },
     {
-      "category": "Programming",
-      "image": "https://img.icons8.com/color/144/null/react-native.png",
-      "name": "ReactJS"
+      "category": "Languages",
+      "name": "SQL"
     },
     {
-      "category": "Programming",
-      "image": "https://img.icons8.com/color/144/null/nextjs.png",
+      "category": "Frontend & Mobile",
+      "name": "React"
+    },
+    {
+      "category": "Frontend & Mobile",
       "name": "NextJS"
     },
     {
-      "category": "Programming",
-      "image": "https://img.icons8.com/color/144/null/nodejs.png",
-      "name": "NodeJS"
-    },
-    {
-      "category": "Programming",
-      "image": "https://img.icons8.com/color/144/null/dart.png",
-      "name": "Dart"
-    },
-    {
-      "category": "AI Engineer",
-      "image": "https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg",
-      "name": "PyTorch"
-    },
-    {
-      "category": "AI Engineer",
-      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768061652/hf_uojsa8.png",
-      "name": "Hugging Face"
-    },
-    {
-      "category": "AI Engineer",
-      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768390191/unsloth_cr1anl.png",
-      "name": "Unsloth"
-    },
-    {
-      "category": "AI Engineer",
-      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768389969/gemini_rvlq4h.png",
-      "name": "Gemini"
-    },
-    {
-      "category": "AI Engineer",
-      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768063865/openai_uxyftd.png",
-      "name": "OpenAI"
-    },
-    {
-      "category": "AI Engineer",
-      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768063004/ollama_y3sjwy.png",
-      "name": "Ollama"
-    },
-    {
-      "category": "AI Engineer",
-      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1774354638/chromadb_dbu7ad.png",
-      "name": "Chromadb"
-    },
-    {
-      "category": "AI Engineer",
-      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768063860/langhain_aagwlo.png",
-      "name": "LangChain"
-    },
-    {
-      "category": "Application",
-      "image": "https://img.icons8.com/color/144/null/flutter.png",
+      "category": "Frontend & Mobile",
       "name": "Flutter"
     },
     {
-      "category": "Application",
-      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768104194/fastapi_vg8vst.png",
+      "category": "Backend & DevOps",
+      "name": "NodeJS"
+    },
+    {
+      "category": "Backend & DevOps",
       "name": "FastAPI"
     },
     {
-      "category": "Application",
-      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768104662/flask_mtvjht.png",
+      "category": "Backend & DevOps",
       "name": "Flask"
     },
     {
-      "category": "Application",
-      "image": "https://img.icons8.com/color/144/null/firebase.png",
-      "name": "Firebase"
+      "category": "Backend & DevOps",
+      "name": "SQLAlchemy"
     },
     {
-      "category": "Application",
-      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768102869/aws_kq0tp3.png",
-      "name": "AWS"
+      "category": "Backend & DevOps",
+      "name": "AWS (ALB & ASG)"
     },
     {
-      "category": "Application",
-      "image": "https://img.icons8.com/color/144/null/git.png",
+      "category": "Backend & DevOps",
+      "name": "Vercel"
+    },
+    {
+      "category": "Backend & DevOps",
       "name": "Git"
     },
     {
-      "category": "Application",
-      "image": "https://img.icons8.com/material-outlined/96/null/github.png",
-      "name": "GitHub"
+      "category": "Databases & Vectors",
+      "name": "PostgreSQL"
     },
     {
-      "category": "Data Analyst",
-      "image": "https://img.icons8.com/color/144/null/microsoft-excel-2019.png",
-      "name": "Excel"
+      "category": "Databases & Vectors",
+      "name": "MySQL"
     },
     {
-      "category": "Data Analyst",
-      "image": "https://img.icons8.com/color/144/null/google-sheets.png",
-      "name": "Google Sheets"
+      "category": "Databases & Vectors",
+      "name": "Firebase"
     },
     {
-      "category": "Data Analyst",
-      "image": "https://img.icons8.com/color/144/null/streamlit.png",
-      "name": "Streamlit"
+      "category": "Databases & Vectors",
+      "name": "ChromaDB"
     },
     {
-      "category": "Data Analyst",
-      "image": "https://img.icons8.com/color/144/null/google-colab.png",
-      "name": "Google Colab"
+      "category": "Databases & Vectors",
+      "name": "FAISS"
     },
     {
-      "category": "Data Analyst",
-      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768103872/power_bi_cficbo.png",
-      "name": "Power BI"
+      "category": "Generative AI",
+      "name": "PyTorch"
     },
     {
-      "category": "Data Analyst",
-      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768102737/looker_upahne.png",
+      "category": "Generative AI",
+      "name": "Scikit-learn"
+    },
+    {
+      "category": "Generative AI",
+      "name": "Unsloth"
+    },
+    {
+      "category": "Generative AI",
+      "name": "LangChain"
+    },
+    {
+      "category": "Generative AI",
+      "name": "Ollama"
+    },
+    {
+      "category": "Generative AI",
+      "name": "OpenAI API"
+    },
+    {
+      "category": "Generative AI",
+      "name": "Gemini API"
+    },
+    {
+      "category": "Generative AI",
+      "name": "RAGAS"
+    },
+    {
+      "category": "Data Analytics",
       "name": "Looker Studio"
     },
     {
-      "category": "Data Analyst",
-      "image": "https://img.icons8.com/color/144/null/tableau-software.png",
+      "category": "Data Analytics",
       "name": "Tableau"
     },
     {
-      "category": "Data Analyst",
-      "image": "https://res.cloudinary.com/dujmvigok/image/upload/v1768103816/google_analytics_tqlmw2.png",
-      "name": "Google Analytics"
+      "category": "Data Analytics",
+      "name": "PowerBI"
+    },
+    {
+      "category": "Data Analytics",
+      "name": "Google Colab"
+    },
+    {
+      "category": "Data Analytics",
+      "name": "Streamlit"
     }
   ],
-  "socials": [
+  "contact": [
     {
       "icon": "FaLinkedin",
       "link": "https://www.linkedin.com/in/aisma-nurlaili"

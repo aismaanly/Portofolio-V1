@@ -1,54 +1,240 @@
-import Image from "next/image"
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+import TiltedCard from './TiltedCard';
+import ScrollReveal from './ScrollReveal';
+import ScrollVelocity from './ScrollVelocity';
 import { about } from "@/types/main";
-import Link from "next/link";
-import SectionWrapper from "./SectionWrapper";
-import { BiLinkExternal } from "react-icons/bi";
+import PdfModal from './PdfModal';
 
 interface Props {
     aboutData: about,
-    name: string
+    name: string,
+    projectsCount?: number,
+    certificationsCount?: number,
+    experienceCount?: number
 }
 
-const About = ({ aboutData, name }: Props) => {
-    const { aboutImage, aboutImageCaption, title, about, resumeUrl, callUrl } = aboutData
+export default function About({
+    aboutData,
+    name,
+    projectsCount = 0,
+    certificationsCount = 0,
+    experienceCount = 0
+}: Props) {
+    const { aboutImage, aboutImageCaption, title, about, resumeUrl, callUrl } = aboutData;
+    const displayImage = aboutImage || '/hero-about.jpg';
+
+    const getGoogleDocId = (url: string) => {
+        if (url && url.includes("docs.google.com/document/d/")) {
+            return url.split("/document/d/")[1]?.split("/")[0] || "";
+        }
+        return "";
+    };
+
+    const docId = getGoogleDocId(resumeUrl);
+    const sectionRef = useRef<HTMLElement>(null);
+    const contentRef = useRef<HTMLDivElement>(null);
+    const [isMobile, setIsMobile] = useState(false);
+    const [isPdfOpen, setIsPdfOpen] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        // Animate stats numbers counting up when section is visible
+        const section = sectionRef.current;
+        const content = contentRef.current;
+        if (!section || !content) return;
+
+        const statNumbers = section.querySelectorAll<HTMLElement>('[data-count]');
+
+        const animateCount = (el: HTMLElement) => {
+            const target = parseInt(el.getAttribute('data-count') || '0', 10);
+            const suffix = el.getAttribute('data-suffix') || '';
+            const duration = 1800;
+            const start = performance.now();
+
+            const tick = (now: number) => {
+                const elapsed = now - start;
+                const progress = Math.min(elapsed / duration, 1);
+                // Ease out expo
+                const eased = 1 - Math.pow(1 - progress, 4);
+                el.textContent = Math.round(eased * target) + suffix;
+                if (progress < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+        };
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        statNumbers.forEach((el) => animateCount(el));
+                        observer.disconnect();
+                    }
+                });
+            },
+            { threshold: 0.3 }
+        );
+
+        observer.observe(section);
+        return () => {
+            observer.disconnect();
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const imgWidth = isMobile ? '195px' : '300px';
+    const imgHeight = isMobile ? '260px' : '400px';
 
     return (
-        <SectionWrapper id="about" className="min-h-[90vh] pt-12 bg-gradient-to-b from-white to-gray-100/20 dark:from-grey-900 dark:to-grey-900">
-            <h2 className="text-4xl text-center">About Me</h2>
+        <section
+            id="about"
+            ref={sectionRef}
+            className="about-section bg-[#ece8f5] text-black dark:bg-[#1a1523] dark:text-white transition-colors duration-300"
+            aria-label={`About ${name}`}
+        >
+            {/* Ghost background text */}
+            <div
+                aria-hidden="true"
+                style={{
+                    position: 'absolute',
+                    bottom: '0',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    fontSize: 'clamp(100px, 20vw, 280px)',
+                    fontWeight: 900,
+                    letterSpacing: '0.06em',
+                    color: 'rgba(0,0,0,0.045)',
+                    userSelect: 'none',
+                    pointerEvents: 'none',
+                    whiteSpace: 'nowrap',
+                    lineHeight: 1,
+                    zIndex: 0,
+                    fontFamily: 'inherit',
+                }}
+                className="about-ghost-text dark:!text-white/[0.045]"
+            >
+                ABOUT
+            </div>
 
-            <div className="w-full lg:w-11/12 2xl:w-4/5 mt-2 lg:mt-20 mx-auto flex flex-col md:gap-4 lg:flex-row justify-between items-center">
-                <div className="p-3 w-56 self-start md:w-2/5 lg:w-72 bg-white dark:bg-grey-800 flex flex-col gap-2 items-center rounded-2xl mx-auto lg:mx-16 hover:-translate-y-2 transition-transform duration-300 lg:-rotate-3">
-                    <Image alt="profile" width={1000} height={1000} loading={'lazy'} className="w-full h-60 md:h-80 rounded-2xl object-cover grayscale hover:grayscale-0 transition-all bg-violet-100" src={aboutImage} />
-                    <span className="font-medium font-sans">{aboutImageCaption || '< I Build Stuff 🚀 />'}</span>
-                </div>
+            <div className="about-inner">
+                <div className="container" ref={contentRef}>
+                    <div className="about-grid">
 
-                <div className="flex-1 text-left mx-4 mt-4 md:mt-0 md:mx-0 md:p-6">
-                    <div className="flex flex-col gap-2.5">
-                        <p className="text-3xl font-semibold">{name}</p>
-                        
-                        <div className="flex flex-wrap gap-2">
-                            {Array.isArray(title) ? (
-                                title.map((t, i) => (
-                                    <p key={i} className='text-violet-800 w-fit rounded py-1 px-2 text-sm dark:text-violet-400 bg-violet-50 dark:bg-violet-900/20 border border-violet-100 dark:border-violet-800'>
-                                        {t}
-                                    </p>
-                                ))
-                            ) : (
-                                <p className='text-violet-800 w-fit rounded py-1 px-2 text-sm dark:text-violet-600 bg-violet-50 dark:bg-violet-900/10'>{title}</p>
-                            )}
+                        <div className="about-label-col fade-up-init">
+                            <TiltedCard
+                                imageSrc={displayImage}
+                                altText={name}
+                                captionText={aboutImageCaption || "Hi guys"}
+                                containerWidth={imgWidth}
+                                containerHeight={imgHeight}
+                                imageWidth={imgWidth}
+                                imageHeight={imgHeight}
+                                rotateAmplitude={12}
+                                scaleOnHover={1.08}
+                                showMobileWarning={false}
+                                showTooltip={true}
+                            />
                         </div>
 
-                        <p className="text-sm md:text-base my-2 text-gray-600 dark:text-gray-300">{about}</p>
-                        
-                        <div className="flex items-center gap-4 md:mt-4">
-                            {resumeUrl.trim() && <Link href={resumeUrl} target="_blank" className="text-sm md:text-base bg-violet-600 dark:bg-violet-700 text-white w-fit rounded-md py-2 px-6 hover:shadow-xl transition-shadow">Resume</Link>}
-                            {callUrl.trim() && <Link href={callUrl} target="_blank" className="text-violet-600 flex items-center gap-1 hover:bg-violet-50 hover:dark:bg-violet-900/10 py-2 px-4 transition-colors rounded-md">PPT Portfolio <BiLinkExternal /> </Link>}
+                        <div className="about-content">
+                            <div className="space-y-3 md:space-y-4">
+                                <motion.h3 
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.8, ease: "easeOut" }}
+                                    className="font-serif italic font-bold text-violet-600 dark:text-violet-400 text-3xl md:text-4xl lg:text-5xl select-none"
+                                >
+                                    About me
+                                </motion.h3>
+
+                                <ScrollReveal
+                                    textClassName="text-[9.5px] min-[360px]:text-[10.5px] min-[480px]:text-[12px] md:text-[17px] lg:text-[20px] font-bold leading-[1.3] min-[360px]:leading-[1.35] min-[480px]:leading-[1.4] md:leading-[1.5] lg:leading-[1.55] text-black/85 dark:text-white/85 tracking-[-0.01em] text-justify [text-justify:inter-word] break-words [hyphens:auto] [-webkit-hyphens:auto] [-ms-hyphens:auto]"
+                                    baseOpacity={0.15}
+                                    enableBlur={true}
+                                    blurStrength={6}
+                                    baseRotation={0}
+                                    highlightWords={["intelligent", "data-driven", "AI-powered", "insights", "analytical", "scalable", "solutions"]}
+                                >
+                                    {about}
+                                </ScrollReveal>
+                            </div>
+
+                            <div className="about-stats fade-up-init">
+                                <div className="about-buttons justify-center flex flex-row flex-wrap gap-3 md:gap-4 md:flex-col md:flex-nowrap">
+                                    {resumeUrl?.trim() && (
+                                        <>
+                                            <button
+                                                onClick={() => setIsPdfOpen(true)}
+                                                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 border border-black/40 dark:border-white/40 bg-black/5 dark:bg-white/10 hover:bg-black dark:hover:bg-white hover:border-black dark:hover:border-white text-black dark:text-white hover:text-white dark:hover:text-black rounded-full text-xs font-semibold transition-all duration-300 group cursor-pointer w-auto md:w-full text-center whitespace-nowrap"
+                                            >
+                                                <svg className="w-3.5 h-3.5 text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                                <span>Download CV</span>
+                                            </button>
+                                            <PdfModal
+                                                isOpen={isPdfOpen}
+                                                onClose={() => setIsPdfOpen(false)}
+                                                docId={docId}
+                                            />
+                                        </>
+                                    )}
+                                    {callUrl?.trim() && (
+                                        <a
+                                            href={callUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-violet-600 hover:bg-black dark:hover:bg-white border border-violet-600 hover:border-black dark:hover:border-white text-white hover:text-white dark:hover:text-black rounded-full text-xs font-semibold transition-all duration-300 group cursor-pointer shadow-md hover:shadow-none w-auto md:w-full text-center whitespace-nowrap"
+                                        >
+                                            <svg className="w-3.5 h-3.5 flex-shrink-0 group-hover:stroke-white dark:group-hover:stroke-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                            </svg>
+                                            <span>PPT Portfolio</span>
+                                        </a>
+                                    )}
+                                </div>
+                                <div className="stat-item">
+                                    <span
+                                        className="stat-number"
+                                        data-count={projectsCount}
+                                        data-suffix="+"
+                                    >
+                                        0+
+                                    </span>
+                                    <span className="stat-label">Projects Delivered</span>
+                                </div>
+                                <div className="stat-item">
+                                    <span
+                                        className="stat-number"
+                                        data-count={experienceCount}
+                                        data-suffix="+"
+                                    >
+                                        0+
+                                    </span>
+                                    <span className="stat-label">Year Experience</span>
+                                </div>
+                                <div className="stat-item">
+                                    <span
+                                        className="stat-number"
+                                        data-count={certificationsCount}
+                                        data-suffix="+"
+                                    >
+                                        0+
+                                    </span>
+                                    <span className="stat-label">Certifications</span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </SectionWrapper>
-    )
+        </section>
+    );
 }
-
-export default About

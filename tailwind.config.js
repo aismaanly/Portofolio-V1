@@ -17,9 +17,7 @@ module.exports = {
           400: '#FEDE00',
         }
       },
-      backgroundImage: {
-        heropattern: "url(/herobgc.jpg)",
-      }
+
     },
   },
   plugins: [], 

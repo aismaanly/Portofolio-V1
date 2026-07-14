@@ -55,8 +55,8 @@ const PdfModal = ({
 
     const currentTabId = tabIds[activeLanguage];
     
-    // Preview URL using Google Docs PDF Viewer (GView) — forces Print Layout on mobile and correctly loads specific tabs from PDF export
-    const previewUrl = `https://docs.google.com/gview?url=https://docs.google.com/document/d/${docId}/export?format=pdf%26tab=${currentTabId}&embedded=true`;
+    // Direct PDF export URL — renders as native PDF inline, clean, fast, and has no Google Docs UI toolbars or pop-out glitches
+    const previewUrl = `https://docs.google.com/document/d/${docId}/export?format=pdf&tab=${currentTabId}`;
     
     // Direct PDF export URL for downloading the active tab only
     const downloadUrl = `https://docs.google.com/document/d/${docId}/export?format=pdf&tab=${currentTabId}`;

@@ -33,6 +33,10 @@ const Contact = ({ contact = [], resumeUrl, name, visible = false }: ContactProp
     // Filter out YouTube and Instagram from the contact list as requested
     const filteredContact = contact.filter(s => !s.icon.toLowerCase().includes('youtube') && !s.icon.toLowerCase().includes('instagram'));
 
+    // Get LinkedIn URL from social links, falling back to a default if not found
+    const linkedinSocial = contact.find(s => s.icon.toLowerCase().includes('linkedin'));
+    const connectUrl = linkedinSocial ? linkedinSocial.link : "https://www.linkedin.com/in/aisma-nurlaili";
+
     const isDark = mounted && resolvedTheme === 'dark';
 
     return (
@@ -85,7 +89,9 @@ const Contact = ({ contact = [], resumeUrl, name, visible = false }: ContactProp
                 >
                     <div className="inline-block">
                         <a
-                            href="mailto:aisma.nurlaili24@gmail.com"
+                            href={connectUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className={`inline-flex items-center justify-center connect-btn group relative w-40 h-40 md:w-48 md:h-48 ${isDark ? 'bg-white border-white' : 'bg-neutral-900 border-neutral-900'} border rounded-full overflow-hidden transition-all duration-500 shadow-xl`}
                         >
                             <span className={`relative z-10 text-xs md:text-sm font-bold uppercase tracking-[0.2em] ${isDark ? 'text-black group-hover:text-white' : 'text-white group-hover:text-white'} transition-colors duration-500 select-none`}>

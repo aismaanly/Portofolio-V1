@@ -6,7 +6,7 @@ type skill = {
 
 type project = {
     name: string,
-    image: string,
+    image: string | string[],
     techstack: string,
     category: string,
     description?: string,

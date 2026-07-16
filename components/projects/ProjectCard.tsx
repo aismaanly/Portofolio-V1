@@ -21,6 +21,10 @@ const Project = ({ name, image, category, techstack, links, onClick }: ProjectCa
         threshold: 0.2,
         triggerOnce: true
     });
+
+    const displayImage = Array.isArray(image) ? image[0] : image;
+    const hasImage = typeof displayImage === "string" && displayImage.trim() !== "";
+
     return (
         <motion.div
             ref={ref}
@@ -32,8 +36,14 @@ const Project = ({ name, image, category, techstack, links, onClick }: ProjectCa
             onClick={onClick}
             className="flex flex-col gap-2 bg-white/60 dark:bg-white/[0.04] backdrop-blur-sm rounded-xl p-4 border border-black/10 dark:border-white/[0.08] hover:border-violet-300/60 dark:hover:border-violet-700/50 shadow-sm hover:shadow-lg transition-colors duration-300 text-black dark:text-white cursor-pointer select-none">
 
-            <div className="relative group rounded-lg bg-violet-50 dark:bg-violet-950/40">
-                <Image alt={name} width={1000} height={1000} className="max-w-full h-48 max-h-full object-cover object-top rounded-lg" src={image} />
+            <div className="relative group rounded-lg bg-violet-50 dark:bg-violet-950/40 overflow-hidden">
+                {hasImage ? (
+                    <Image alt={name} width={1000} height={1000} className="max-w-full h-48 max-h-full object-cover object-top rounded-lg" src={displayImage} />
+                ) : (
+                    <div className="w-full h-48 rounded-lg bg-[#e5e0f0] dark:bg-[#130f1b] flex items-center justify-center text-black/40 dark:text-white/40 font-medium text-xs">
+                        No Image Available
+                    </div>
+                )}
                 {(links.visit.trim() || links.code.trim() || links.video.trim()) &&
                     <div 
                         onClick={(e) => e.stopPropagation()}

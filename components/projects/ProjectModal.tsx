@@ -1,5 +1,5 @@
 'use client';
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaVideo } from "react-icons/fa";
@@ -27,6 +27,15 @@ const ProjectModal = ({
     totalProjects
 }: ProjectModalProps) => {
     const [mounted, setMounted] = useState(false);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const rawImages = Array.isArray(project.image) ? project.image : [project.image];
+    const images = rawImages.filter((img): img is string => typeof img === "string" && img.trim() !== "");
+
+    // Handle out-of-bounds index during project transitions to prevent rendering undefined sources
+    const activeImageSrc = (currentImageIndex >= 0 && currentImageIndex < images.length)
+        ? images[currentImageIndex]
+        : (images[0] || null);
 
     // Lock body scroll when modal is open
     useEffect(() => {
@@ -36,6 +45,47 @@ const ProjectModal = ({
             document.body.style.overflow = "";
         };
     }, []);
+
+    // Reset active image index when project changes
+    useEffect(() => {
+        setCurrentImageIndex(0);
+    }, [project.name]);
+
+    // Handle keyboard navigation (Arrow keys & Escape key)
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "ArrowRight") {
+                if (currentImageIndex < images.length - 1) {
+                    setCurrentImageIndex((prev) => prev + 1);
+                } else if (onNext) {
+                    onNext();
+                }
+            } else if (e.key === "ArrowLeft") {
+                if (currentImageIndex > 0) {
+                    setCurrentImageIndex((prev) => prev - 1);
+                } else if (onPrev) {
+                    onPrev();
+                }
+            } else if (e.key === "Escape") {
+                onClose();
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [currentImageIndex, images.length, onNext, onPrev, onClose]);
+
+    const handlePrevImage = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+    };
+
+    const handleNextImage = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    };
 
     if (!mounted) return null;
 
@@ -123,17 +173,75 @@ const ProjectModal = ({
                     <MdClose size={20} />
                 </button>
 
-                {/* Left Column: Project Image */}
-                <div className="w-full md:w-1/2 bg-violet-100/30 dark:bg-violet-950/20 flex items-center justify-center p-6 border-b md:border-b-0 md:border-r border-black/5 dark:border-white/[0.05] min-h-[250px] md:min-h-0 relative">
-                    <div className="relative w-full h-full aspect-video md:aspect-[4/3] rounded-xl overflow-hidden shadow-md">
-                        <Image
-                            src={project.image}
-                            alt={project.name}
-                            fill
-                            className="object-contain w-full h-full hover:scale-[1.02] transition-transform duration-500 bg-[#e5e0f0] dark:bg-[#130f1b]"
-                            sizes="(max-w-768px) 100vw, 50vw"
-                            priority
-                        />
+                {/* Left Column: Project Image Slider */}
+                <div className="w-full md:w-1/2 bg-violet-100/30 dark:bg-violet-950/20 flex items-center justify-center p-6 border-b md:border-b-0 md:border-r border-black/5 dark:border-white/[0.05] min-h-[250px] md:min-h-0 relative select-none">
+                    <div className="relative w-full h-full aspect-video md:aspect-[4/3] rounded-xl overflow-hidden shadow-md group/slider flex items-center justify-center w-full">
+                        {activeImageSrc ? (
+                            <>
+                                <AnimatePresence mode="wait">
+                                    <motion.div
+                                        key={activeImageSrc}
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.2 }}
+                                        className="relative w-full h-full"
+                                    >
+                                        <Image
+                                            src={activeImageSrc}
+                                            alt={`${project.name} image`}
+                                            fill
+                                            className="object-contain w-full h-full hover:scale-[1.02] transition-transform duration-500 bg-[#e5e0f0] dark:bg-[#130f1b]"
+                                            sizes="(max-w-768px) 100vw, 50vw"
+                                            priority
+                                        />
+                                    </motion.div>
+                                </AnimatePresence>
+
+                                {/* Image Navigation Arrows */}
+                                {images.length > 1 && (
+                                    <>
+                                        <button
+                                            onClick={handlePrevImage}
+                                            className="absolute left-3 top-1/2 -translate-y-1/2 p-1.5 md:p-2 rounded-full bg-black/45 hover:bg-black/60 dark:bg-white/10 dark:hover:bg-white/20 text-white hover:scale-105 active:scale-95 transition-all cursor-pointer z-10 border border-white/10 shadow-md flex items-center justify-center"
+                                            aria-label="Previous image"
+                                        >
+                                            <MdChevronLeft size={20} />
+                                        </button>
+                                        <button
+                                            onClick={handleNextImage}
+                                            className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 md:p-2 rounded-full bg-black/45 hover:bg-black/60 dark:bg-white/10 dark:hover:bg-white/20 text-white hover:scale-105 active:scale-95 transition-all cursor-pointer z-10 border border-white/10 shadow-md flex items-center justify-center"
+                                            aria-label="Next image"
+                                        >
+                                            <MdChevronRight size={20} />
+                                        </button>
+
+                                        {/* Indicator Dots */}
+                                        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10 bg-black/30 dark:bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-full border border-white/5">
+                                            {images.map((_, idx) => (
+                                                <button
+                                                    key={idx}
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        setCurrentImageIndex(idx);
+                                                    }}
+                                                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                                                        idx === currentImageIndex 
+                                                            ? "bg-white w-4" 
+                                                            : "bg-white/50 hover:bg-white/80"
+                                                    }`}
+                                                    aria-label={`Go to image ${idx + 1}`}
+                                                />
+                                            ))}
+                                        </div>
+                                    </>
+                                )}
+                            </>
+                        ) : (
+                            <div className="text-black/40 dark:text-white/40 font-medium text-xs">
+                                No Image Available
+                            </div>
+                        )}
                     </div>
                 </div>
 

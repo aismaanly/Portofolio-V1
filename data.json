@@ -121,7 +121,11 @@
   "projects": [
     {
       "category": "AI Engineer",
-      "image": "/thumbs/chatbot-upn.png",
+      "image": [
+        "/thumbs/chatbot-upn.png",
+        "/thumbs/wisuda.png",
+        "/thumbs/chatbot-upn-poster"
+      ],
       "links": {
         "code": "",
         "video": "",
@@ -130,6 +134,18 @@
       "name": "Chatbot UPN",
       "techstack": "Python, NextJS, TypeScript, FastAPI, Langchain, ChromaDB, Ollama, Gemma3, Supabase",
       "description": "An academic assistant chatbot utilizing Retrieval-Augmented Generation (RAG) to make complex university regulations interactive. It uses structure-aware OCR to parse legal documents and dynamically prioritizes the most recent applicable rules."
+    },
+    {
+      "category": "AI Engineer",
+      "image": "https://raw.githubusercontent.com/aismaanly/alkesgo/main/ss-homepage.png",
+      "links": {
+        "code": "https://github.com/aismaanly/alkesgo",
+        "video": "",
+        "visit": ""
+      },
+      "name": "Alkesgo",
+      "techstack": "PHP, MySQL, Groq (LLM), Cohere, Supabase, pgvector, Chart.js",
+      "description": "An AI-powered healthcare e-commerce platform featuring a dual-agent architecture. It integrates an ultra-fast RAG chatbot for semantic customer support using Supabase pgvector, alongside a Text-to-SQL assistant that autonomously parses database schemas to render real-time business insights and charts for administrators."
     },
     {
       "category": "AI Engineer",
@@ -145,7 +161,10 @@
     },
     {
       "category": "AI Engineer",
-      "image": "/thumbs/chatbot-aetheria.png",
+      "image": [
+        "/thumbs/chatbot-aetheria.png",
+        "/thumbs/chatbot-aetheria-poster"
+      ],
       "links": {
         "code": "https://github.com/aismaanly/capstone-aetheria",
         "video": "https://github.com/aismaanly/capstone-aetheria/blob/main/mainpage.gif",

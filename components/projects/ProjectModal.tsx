@@ -28,6 +28,8 @@ const ProjectModal = ({
 }: ProjectModalProps) => {
     const [mounted, setMounted] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [touchStartX, setTouchStartX] = useState<number | null>(null);
+    const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
     const rawImages = Array.isArray(project.image) ? project.image : [project.image];
     const images = rawImages.filter((img): img is string => typeof img === "string" && img.trim() !== "");
@@ -87,6 +89,32 @@ const ProjectModal = ({
         setCurrentImageIndex((prev) => (prev + 1) % images.length);
     };
 
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setTouchStartX(e.targetTouches[0].clientX);
+        setTouchEndX(null);
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        setTouchEndX(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (touchStartX === null || touchEndX === null) return;
+        const diff = touchStartX - touchEndX;
+        const minSwipeDistance = 50; // pixels
+
+        if (diff > minSwipeDistance) {
+            // Swiped left -> next image
+            setCurrentImageIndex((prev) => (prev + 1) % images.length);
+        } else if (diff < -minSwipeDistance) {
+            // Swiped right -> prev image
+            setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+        }
+        
+        setTouchStartX(null);
+        setTouchEndX(null);
+    };
+
     if (!mounted) return null;
 
     return createPortal(
@@ -143,8 +171,13 @@ const ProjectModal = ({
                 </button>
 
                 {/* Left Column: Project Image Slider */}
-                <div className="w-full h-[35%] md:h-full md:w-[50%] bg-violet-100/30 dark:bg-violet-950/20 flex items-center justify-center border-b md:border-b-0 md:border-r border-black/5 dark:border-white/[0.05] relative select-none rounded-t-2xl md:rounded-tr-none md:rounded-l-2xl">
-                    <div className="relative w-full h-full overflow-hidden group/slider flex items-center justify-center rounded-t-2xl md:rounded-tr-none md:rounded-l-2xl">
+                <div className="w-full h-[35%] md:h-full md:w-[50%] bg-violet-100/30 dark:bg-violet-950/20 flex items-center justify-center border-b md:border-b-0 md:border-r border-black/10 dark:border-white/[0.05] relative select-none rounded-t-2xl md:rounded-tr-none md:rounded-l-2xl">
+                    <div 
+                        onTouchStart={handleTouchStart}
+                        onTouchMove={handleTouchMove}
+                        onTouchEnd={handleTouchEnd}
+                        className="relative w-full h-full overflow-hidden group/slider flex items-center justify-center rounded-t-2xl md:rounded-tr-none md:rounded-l-2xl cursor-grab active:cursor-grabbing"
+                    >
                         {activeImageSrc ? (
                             <>
                                 <AnimatePresence mode="wait">
@@ -217,11 +250,11 @@ const ProjectModal = ({
                 </div>
 
                 {/* Right Column: Project Details */}
-                <div className="w-full md:w-[50%] p-6 md:p-8 flex flex-col flex-1 gap-4 text-black dark:text-white min-h-0 bg-[#f5f5f5] dark:bg-[#1a1523] rounded-b-2xl md:rounded-bl-none md:rounded-r-2xl">
-                    <div className="flex-1 overflow-y-auto pr-1 flex flex-col gap-4">
+                <div className="w-full md:w-[50%] pl-6 pr-3 py-6 md:p-8 flex flex-col flex-1 gap-4 text-black dark:text-white min-h-0 bg-[#f5f5f5] dark:bg-[#1a1523] rounded-b-2xl md:rounded-bl-none md:rounded-r-2xl">
+                    <div className="flex-1 overflow-y-auto pr-3 flex flex-col gap-4">
                         {/* Category tag & Project Index */}
                         <div className="flex items-center gap-3">
-                            <span className="inline-block text-[10px] font-extrabold tracking-[0.25em] uppercase text-violet-600 dark:text-violet-400 bg-violet-100 dark:bg-violet-900/30 border border-violet-200 dark:border-violet-800/40 rounded-full px-3 py-1">
+                            <span className="inline-block text-[10px] font-extrabold tracking-[0.25em] uppercase text-violet-800 dark:text-violet-300 bg-violet-100 dark:bg-violet-900/30 border border-violet-200 dark:border-violet-800/40 rounded-full px-3 py-1">
                                 {project.category}
                             </span>
                             {totalProjects && typeof currentIndex === "number" && (
@@ -273,20 +306,30 @@ const ProjectModal = ({
                             <Link
                                 href={project.links.visit}
                                 target="_blank"
-                                className="flex items-center gap-1 px-2 py-1.5 md:gap-1.5 md:px-3 md:py-2 bg-violet-600 dark:bg-violet-500 text-white rounded-xl text-[10px] md:text-[11px] font-bold transition-all duration-300 hover:bg-violet-700 dark:hover:bg-violet-600 cursor-pointer shadow-md hover:shadow-lg whitespace-nowrap flex-shrink-0"
+                                className="flex items-center gap-1 px-2 py-1.5 md:gap-1.5 md:px-3 md:py-2 bg-violet-700 dark:bg-violet-700 text-white rounded-xl text-[10px] md:text-[11px] font-bold transition-all duration-300 hover:bg-violet-800 dark:hover:bg-violet-800 cursor-pointer shadow-md hover:shadow-lg whitespace-nowrap flex-shrink-0"
                             >
                                 <BiLinkExternal size={12} className="md:w-[13px] md:h-[13px]" />
-                                <span>Live Demo</span>
+                                <span>Go Live</span>
                             </Link>
                         )}
                         {project.links.video.trim() && (
                             <Link
                                 href={project.links.video}
                                 target="_blank"
-                                className="flex items-center gap-1 px-2 py-1.5 md:gap-1.5 md:px-3 md:py-2 border border-black/25 dark:border-white/25 text-black dark:text-white rounded-xl text-[10px] md:text-[11px] font-bold transition-all duration-300 hover:border-violet-600 dark:hover:border-violet-400 hover:text-violet-600 dark:hover:text-violet-400 cursor-pointer whitespace-nowrap flex-shrink-0"
+                                className="flex items-center gap-1 px-2 py-1.5 md:gap-1.5 md:px-3 md:py-2 bg-violet-100/50 dark:bg-violet-500/20 border border-violet-200 dark:border-violet-500/30 text-violet-800 dark:text-violet-300 rounded-xl text-[10px] md:text-[11px] font-bold transition-all duration-300 hover:bg-violet-200/60 dark:hover:bg-violet-500/30 cursor-pointer whitespace-nowrap flex-shrink-0"
                             >
                                 <FaVideo size={12} className="md:w-[13px] md:h-[13px]" />
-                                <span>Watch Video</span>
+                                <span>Video</span>
+                            </Link>
+                        )}
+                        {project.links.report && project.links.report.trim() && (
+                            <Link
+                                href={project.links.report}
+                                target="_blank"
+                                className="flex items-center gap-1 px-2 py-1.5 md:gap-1.5 md:px-3 md:py-2 border border-black/25 dark:border-white/25 text-black dark:text-white rounded-xl text-[10px] md:text-[11px] font-bold transition-all duration-300 hover:border-violet-600 dark:hover:border-violet-400 hover:text-violet-600 dark:hover:text-violet-400 cursor-pointer whitespace-nowrap flex-shrink-0"
+                            >
+                                <BiLinkExternal size={12} className="md:w-[13px] md:h-[13px]" />
+                                <span>Report</span>
                             </Link>
                         )}
                     </div>

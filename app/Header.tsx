@@ -133,7 +133,7 @@ export default function Header({ logo }: { logo: string }) {
         <header className={`transition-all duration-300 ${getHeaderClass()} z-30 min-w-full flex flex-col fixed`}>
             <nav className='lg:w-11/12 2xl:w-4/5 w-full md:px-6 2xl:px-0 mx-auto py-4 hidden sm:flex items-center justify-between'>
 
-                <Link href={'/'} className={`transition-colors duration-300`}>
+                <Link href={'/'} className="transition-colors duration-300 pl-4">
                     <span className='text-xl font-bold tracking-tighter text-violet-600 dark:text-violet-500'>AISMA</span>
                 </Link>
 
@@ -173,7 +173,7 @@ export default function Header({ logo }: { logo: string }) {
 
             {/* Mobile nav bar */}
             <nav className='p-4 flex sm:hidden items-center justify-between'>
-                <span className='text-xl font-bold tracking-tighter text-violet-600 dark:text-violet-500'>AISMA</span>
+                <span className='text-xl font-bold tracking-tighter text-violet-600 dark:text-violet-500 pl-4'>AISMA</span>
 
                 <div className='flex items-center gap-4'>
                     {mounted && (

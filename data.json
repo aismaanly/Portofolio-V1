@@ -129,10 +129,11 @@
       "links": {
         "code": "",
         "video": "",
-        "visit": "https://tanya.upnjatim.ac.id/"
+        "visit": "https://tanya.upnjatim.ac.id/",
+        "report": "https://canva.link/f4jgu60r34vu20z"
       },
       "name": "Chatbot UPN",
-      "techstack": "Python, NextJS, TypeScript, FastAPI, Langchain, ChromaDB, Ollama, Gemma3, Supabase",
+      "techstack": "Python, NextJS, TypeScript, FastAPI, Langchain, ChromaDB, Ollama, Gemma3, Supabase, Docling",
       "description": "An academic assistant chatbot utilizing Retrieval-Augmented Generation (RAG) to make complex university regulations interactive. It uses structure-aware OCR to parse legal documents and dynamically prioritizes the most recent applicable rules."
     },
     {
@@ -141,7 +142,8 @@
       "links": {
         "code": "https://github.com/aismaanly/alkesgo",
         "video": "",
-        "visit": ""
+        "visit": "",
+        "report": ""
       },
       "name": "Alkesgo",
       "techstack": "PHP, MySQL, Groq (LLM), Cohere, Supabase, pgvector, Chart.js",
@@ -153,7 +155,8 @@
       "links": {
         "code": "https://github.com/aismaanly/RAGsume",
         "video": "",
-        "visit": "https://ragsume.streamlit.app/"
+        "visit": "https://ragsume.streamlit.app/",
+        "report": ""
       },
       "name": "RAGsume",
       "techstack": "Streamlit, Langchain, Groq, FAISS",
@@ -168,7 +171,8 @@
       "links": {
         "code": "https://github.com/aismaanly/capstone-aetheria",
         "video": "https://github.com/aismaanly/capstone-aetheria/blob/main/mainpage.gif",
-        "visit": "https://www.canva.com/design/DAGaHC-APwM/SCuHEvNavNO32AQDL1MSeg/view?utm_content=DAGaHC-APwM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0b21f50050"
+        "visit": "https://www.canva.com/design/DAGaHC-APwM/SCuHEvNavNO32AQDL1MSeg/view?utm_content=DAGaHC-APwM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0b21f50050",
+        "report": "https://canva.link/1u6pbh4jdoalxcl"
       },
       "name": "Chatbot Aetheria",
       "techstack": "Python, EC2, Application Load Balancing, Auto Scaling Group, SQL Alchemy, Qween LLM",
@@ -180,7 +184,8 @@
       "links": {
         "code": "https://github.com/aismaanly/whadventure-dwo",
         "video": "",
-        "visit": ""
+        "visit": "",
+        "report": ""
       },
       "name": "Data Warehouse OLAP & AI Chatbot",
       "techstack": "Python, Dbeaver, Pentaho, Mondrian, MySQL, Ollama, Llama 3.2, NextJS",
@@ -192,7 +197,8 @@
       "links": {
         "code": "https://github.com/aismaanly/flask-comment-generator",
         "video": "",
-        "visit": ""
+        "visit": "",
+        "report": ""
       },
       "name": "AI Comment Generator",
       "techstack": "Python, Llama 3.2, Unsloth, SQLite, HTML, TailwindCSS, Flask",
@@ -204,7 +210,8 @@
       "links": {
         "code": "https://github.com/aismaanly/bikesharing-analysis",
         "video": "https://github.com/aismaanly/bikesharing-analysis/blob/main/dashboard.gif",
-        "visit": "https://bikesharing-analysis-aismaanly.streamlit.app/"
+        "visit": "https://bikesharing-analysis-aismaanly.streamlit.app/",
+        "report": ""
       },
       "name": "Bike Sharing Analysis",
       "techstack": "Python, Google Colab, Streamlit, Pandas, Matplotlib, Seaborn, EDA",
@@ -216,7 +223,8 @@
       "links": {
         "code": "https://github.com/aismaanly/ecommerce_analysis",
         "video": "",
-        "visit": "https://ecommerce-analysis-aismaanly.streamlit.app/"
+        "visit": "https://ecommerce-analysis-aismaanly.streamlit.app/",
+        "report": ""
       },
       "name": "Ecommerce Analysis",
       "techstack": "Python, Streamlit, Google Colab, Pandas, Matplotlib, Seaborn, EDA",
@@ -228,7 +236,8 @@
       "links": {
         "code": "",
         "video": "",
-        "visit": "https://lookerstudio.google.com/reporting/c3e7a532-3747-4cf9-9364-73d7555bcdf0/page/mFb2D"
+        "visit": "https://lookerstudio.google.com/reporting/c3e7a532-3747-4cf9-9364-73d7555bcdf0/page/mFb2D",
+        "report": ""
       },
       "name": "Order Report",
       "techstack": "Looker Studio, Google Spreadsheet",
@@ -240,7 +249,8 @@
       "links": {
         "code": "",
         "video": "",
-        "visit": "https://lookerstudio.google.com/reporting/eb215ed1-f0d4-40be-a79c-00ef9e93e650"
+        "visit": "https://lookerstudio.google.com/reporting/eb215ed1-f0d4-40be-a79c-00ef9e93e650",
+        "report": ""
       },
       "name": "Credit Card",
       "techstack": "Looker Studio, Excel",
@@ -252,7 +262,8 @@
       "links": {
         "code": "",
         "video": "",
-        "visit": "https://lookerstudio.google.com/reporting/b37aa9e9-ba64-40a6-b6bb-d5bf5bd239e6"
+        "visit": "https://lookerstudio.google.com/reporting/b37aa9e9-ba64-40a6-b6bb-d5bf5bd239e6",
+        "report": ""
       },
       "name": "Retail Transaction",
       "techstack": "Looker Studio, Excel",
@@ -264,7 +275,8 @@
       "links": {
         "code": "",
         "video": "",
-        "visit": "https://public.tableau.com/app/profile/aisma.nurlaili/viz/USFlightDelay_17169101510000/USFlightDelay"
+        "visit": "https://public.tableau.com/app/profile/aisma.nurlaili/viz/USFlightDelay_17169101510000/USFlightDelay",
+        "report": ""
       },
       "name": "US Flight Delay",
       "techstack": "Tableau, Excel",
@@ -276,7 +288,8 @@
       "links": {
         "code": "",
         "video": "",
-        "visit": "https://public.tableau.com/app/profile/aisma.nurlaili/viz/Covid19inIndonesia_17167034904440/Dashboard1"
+        "visit": "https://public.tableau.com/app/profile/aisma.nurlaili/viz/Covid19inIndonesia_17167034904440/Dashboard1",
+        "report": ""
       },
       "name": "Covid 19 In Indonesia",
       "techstack": "Tableau, Excel",
@@ -288,7 +301,8 @@
       "links": {
         "code": "https://github.com/aismaanly/cookies_shop",
         "video": "",
-        "visit": "https://www.canva.com/design/DAGbfLLh4D0/iLQCzcbvN6relyZoq4BaXg/view?utm_content=DAGbfLLh4D0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h192770331b"
+        "visit": "https://www.canva.com/design/DAGbfLLh4D0/iLQCzcbvN6relyZoq4BaXg/view?utm_content=DAGbfLLh4D0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h192770331b",
+        "report": ""
       },
       "name": "Cookies Shop App",
       "techstack": "Mobile Development, Dart, Flutter, Firebase",
@@ -300,7 +314,8 @@
       "links": {
         "code": "https://github.com/aismaanly/SPK-SAW-LAPTOP",
         "video": "",
-        "visit": ""
+        "visit": "",
+        "report": ""
       },
       "name": "Decision Support System Laptop",
       "techstack": "HTML, CSS, JavaScript, PHP, MySQL",
@@ -312,7 +327,8 @@
       "links": {
         "code": "https://github.com/aismaanly/sikopsi",
         "video": "",
-        "visit": ""
+        "visit": "",
+        "report": ""
       },
       "name": "Cooperative Information System",
       "techstack": "HTML, CSS, JavaScript, PHP, MySQL",
@@ -324,7 +340,8 @@
       "links": {
         "code": "https://github.com/aismaanly/bookshelf-app",
         "video": "",
-        "visit": "https://bookshelf-app-gamma-umber.vercel.app/"
+        "visit": "https://bookshelf-app-gamma-umber.vercel.app/",
+        "report": ""
       },
       "name": "Bookshelf App",
       "techstack": "HTML, CSS, JavaScript",
@@ -336,7 +353,8 @@
       "links": {
         "code": "https://github.com/aismaanly/bookshelf-app",
         "video": "",
-        "visit": "https://bootcamp-aismacode.vercel.app/"
+        "visit": "https://bootcamp-aismacode.vercel.app/",
+        "report": ""
       },
       "name": "AISMACODE",
       "techstack": "HTML, CSS, Javascript",

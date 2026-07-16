@@ -112,7 +112,7 @@ const HomePage = ({ data }: Props) => {
 
             {/* Floating Back To Top Button */}
             <AnimatePresence>
-                {!heroVisible && (
+                {!heroVisible && !footerRevealed && (
                     <motion.button
                         initial={{ opacity: 0, scale: 0.8, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}

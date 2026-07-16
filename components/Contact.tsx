@@ -56,56 +56,58 @@ const Contact = ({ contact = [], resumeUrl, name, visible = false }: ContactProp
             <div className={`absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[50vh] bg-gradient-to-b ${isDark ? 'from-violet-600/10' : 'from-violet-500/5'} to-transparent blur-[120px] pointer-events-none rounded-full`}></div>
 
             {/* Main content grid */}
-            <div className="lg:w-11/12 2xl:w-4/5 w-full px-6 md:px-6 2xl:px-0 mx-auto flex flex-col md:flex-row justify-between items-center z-10 gap-16 md:gap-0 mt-20">
-                <div className="flex flex-col w-full md:w-auto items-center md:items-start">
-                    <div className="overflow-hidden pb-4 pt-2 w-full flex justify-center md:justify-start">
-                        <motion.h2
-                            initial={{ y: "100%", opacity: 0 }}
-                            animate={{ y: visible ? 0 : "100%", opacity: visible ? 1 : 0 }}
-                            transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-                            className={`font-sans text-3xl min-[360px]:text-4xl min-[480px]:text-5xl md:text-[4.2vw] lg:text-[5vw] ${isDark ? 'text-white' : 'text-neutral-900'} font-extrabold tracking-tight leading-none whitespace-nowrap`}
-                        >
-                            Build Something
-                        </motion.h2>
+            <div className="flex-1 flex items-center z-10 w-full pb-16 md:pb-24">
+                <div className="container flex flex-col md:flex-row justify-between items-center gap-16 md:gap-0">
+                    <div className="flex flex-col w-full md:w-auto items-center md:items-start">
+                        <div className="overflow-hidden pb-4 pt-2 w-full flex justify-center md:justify-start">
+                            <motion.h2
+                                initial={{ y: "100%", opacity: 0 }}
+                                animate={{ y: visible ? 0 : "100%", opacity: visible ? 1 : 0 }}
+                                transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+                                className={`font-sans text-3xl min-[360px]:text-4xl min-[480px]:text-5xl md:text-[4.2vw] lg:text-[5vw] ${isDark ? 'text-white' : 'text-neutral-900'} font-extrabold tracking-tight leading-none whitespace-nowrap`}
+                            >
+                                Build Something
+                            </motion.h2>
+                        </div>
+                        <div className="overflow-hidden pb-4 pt-2 w-full flex justify-center md:justify-start">
+                            <motion.h2
+                                initial={{ y: "100%", opacity: 0 }}
+                                animate={{ y: visible ? 0 : "100%", opacity: visible ? 1 : 0 }}
+                                transition={{ duration: 0.8, delay: 0.1, ease: [0.76, 0, 0.24, 1] }}
+                                id="contact-cta"
+                                className={`font-serif italic font-normal text-violet-500 dark:text-violet-400 text-3xl min-[360px]:text-4xl min-[480px]:text-5xl md:text-[4.2vw] lg:text-[5vw] leading-none whitespace-nowrap`}
+                            >
+                                Impactful Together
+                            </motion.h2>
+                        </div>
                     </div>
-                    <div className="overflow-hidden pb-4 pt-2 w-full flex justify-center md:justify-start">
-                        <motion.h2
-                            initial={{ y: "100%", opacity: 0 }}
-                            animate={{ y: visible ? 0 : "100%", opacity: visible ? 1 : 0 }}
-                            transition={{ duration: 0.8, delay: 0.1, ease: [0.76, 0, 0.24, 1] }}
-                            id="contact-cta"
-                            className={`font-serif italic font-normal text-violet-500 dark:text-violet-400 text-3xl min-[360px]:text-4xl min-[480px]:text-5xl md:text-[4.2vw] lg:text-[5vw] leading-none whitespace-nowrap`}
-                        >
-                            Impactful Together
-                        </motion.h2>
-                    </div>
-                </div>
 
-                <motion.div
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ scale: visible ? 1 : 0.8, opacity: visible ? 1 : 0 }}
-                    transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
-                    className="flex justify-start md:justify-end"
-                >
-                    <div className="inline-block">
-                        <a
-                            href={connectUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={`inline-flex items-center justify-center connect-btn group relative w-40 h-40 md:w-48 md:h-48 ${isDark ? 'bg-white border-white' : 'bg-neutral-900 border-neutral-900'} border rounded-full overflow-hidden transition-all duration-500 shadow-xl`}
-                        >
-                            <span className={`relative z-10 text-xs md:text-sm font-bold uppercase tracking-[0.2em] ${isDark ? 'text-black group-hover:text-white' : 'text-white group-hover:text-white'} transition-colors duration-500 select-none`}>
-                                Let's Connect
-                            </span>
-                            {/* Hover fill: violet */}
-                            <div className="absolute inset-0 bg-violet-600 translate-y-full rounded-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]"></div>
-                        </a>
-                    </div>
-                </motion.div>
+                    <motion.div
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        animate={{ scale: visible ? 1 : 0.8, opacity: visible ? 1 : 0 }}
+                        transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
+                        className="flex justify-start md:justify-end"
+                    >
+                        <div className="inline-block">
+                            <a
+                                href={connectUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`inline-flex items-center justify-center connect-btn group relative w-40 h-40 md:w-48 md:h-48 ${isDark ? 'bg-white border-white' : 'bg-neutral-900 border-neutral-900'} border rounded-full overflow-hidden transition-all duration-500 shadow-xl`}
+                            >
+                                <span className={`relative z-10 text-xs md:text-sm font-bold uppercase tracking-[0.2em] ${isDark ? 'text-black group-hover:text-white' : 'text-white group-hover:text-white'} transition-colors duration-500 select-none`}>
+                                    Let's Connect
+                                </span>
+                                {/* Hover fill: violet */}
+                                <div className="absolute inset-0 bg-violet-600 translate-y-full rounded-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]"></div>
+                            </a>
+                        </div>
+                    </motion.div>
+                </div>
             </div>
 
             {/* Links and copyright section */}
-            <div className="lg:w-11/12 2xl:w-4/5 w-full px-6 md:px-6 2xl:px-0 mx-auto flex flex-col md:flex-row justify-between items-center z-10 border-t border-neutral-300 dark:border-neutral-800 pt-8 mt-auto gap-6 md:gap-0">
+            <div className="container flex flex-col md:flex-row justify-between items-center z-10 border-t border-neutral-300 dark:border-neutral-800 pt-8 md:pt-10 mt-auto gap-6 md:gap-0">
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-6 md:gap-8">
                     {filteredContact.map((s: social) => (
                         <div className="inline-block" key={s.icon}>

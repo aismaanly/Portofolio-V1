@@ -13,7 +13,8 @@ type project = {
     links: {
         visit: string,
         code: string,
-        video: string
+        video: string,
+        report?: string
     }
 }
 

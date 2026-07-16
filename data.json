@@ -124,7 +124,7 @@
       "image": [
         "/thumbs/chatbot-upn.png",
         "/thumbs/wisuda.png",
-        "/thumbs/chatbot-upn-poster"
+        "/thumbs/chatbot-upn-poster.png"
       ],
       "links": {
         "code": "",
@@ -163,7 +163,7 @@
       "category": "AI Engineer",
       "image": [
         "/thumbs/chatbot-aetheria.png",
-        "/thumbs/chatbot-aetheria-poster"
+        "/thumbs/chatbot-aetheria-poster.png"
       ],
       "links": {
         "code": "https://github.com/aismaanly/capstone-aetheria",

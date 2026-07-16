@@ -2,7 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaVideo } from "react-icons/fa";
+import { FaGithub, FaVideo, FaFileAlt } from "react-icons/fa";
 import { BiLinkExternal } from "react-icons/bi";
 import { MdClose, MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { project } from "@/types/main";
@@ -299,7 +299,7 @@ const ProjectModal = ({
                                 className="flex items-center gap-1 px-2 py-1.5 md:gap-1.5 md:px-3 md:py-2 bg-black dark:bg-white text-white dark:text-black rounded-xl text-[10px] md:text-[11px] font-bold transition-all duration-300 hover:bg-violet-600 dark:hover:bg-violet-400 hover:text-white dark:hover:text-black cursor-pointer shadow-md hover:shadow-lg whitespace-nowrap flex-shrink-0"
                             >
                                 <FaGithub size={12} className="md:w-[13px] md:h-[13px]" />
-                                <span>GitHub</span>
+                                <span>Code</span>
                             </Link>
                         )}
                         {project.links.visit.trim() && (
@@ -328,7 +328,7 @@ const ProjectModal = ({
                                 target="_blank"
                                 className="flex items-center gap-1 px-2 py-1.5 md:gap-1.5 md:px-3 md:py-2 border border-black/25 dark:border-white/25 text-black dark:text-white rounded-xl text-[10px] md:text-[11px] font-bold transition-all duration-300 hover:border-violet-600 dark:hover:border-violet-400 hover:text-violet-600 dark:hover:text-violet-400 cursor-pointer whitespace-nowrap flex-shrink-0"
                             >
-                                <BiLinkExternal size={12} className="md:w-[13px] md:h-[13px]" />
+                                <FaFileAlt size={12} className="md:w-[13px] md:h-[13px]" />
                                 <span>Report</span>
                             </Link>
                         )}

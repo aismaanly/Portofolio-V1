@@ -40,19 +40,19 @@ export default function Header({ logo }: { logo: string }) {
             const headerMidpoint = HEADER_H / 2
 
             // Detect all main sections
-            const aboutEl    = document.getElementById('about')
-            const skillsEl   = document.getElementById('skills')
+            const aboutEl = document.getElementById('about')
+            const skillsEl = document.getElementById('skills')
             const projectsEl = document.getElementById('project')
-            const expEl      = document.getElementById('experience')
-            const certEl     = document.getElementById('certification')
+            const expEl = document.getElementById('experience')
+            const certEl = document.getElementById('certification')
 
             const getRect = (el: HTMLElement | null) => el?.getBoundingClientRect()
 
-            const aboutRect    = getRect(aboutEl)
-            const skillsRect   = getRect(skillsEl)
+            const aboutRect = getRect(aboutEl)
+            const skillsRect = getRect(skillsEl)
             const projectsRect = getRect(projectsEl)
-            const expRect      = getRect(expEl)
-            const certRect     = getRect(certEl)
+            const expRect = getRect(expEl)
+            const certRect = getRect(certEl)
 
             // Helper: is the header inside this section?
             const inSection = (rect?: DOMRect) =>
@@ -137,7 +137,7 @@ export default function Header({ logo }: { logo: string }) {
                     <span className='text-xl font-bold tracking-tighter text-violet-600 dark:text-violet-500'>AISMA</span>
                 </Link>
 
-                <ul className='flex items-center gap-8'>
+                <ul className='flex items-center gap-8 pr-8'>
                     {navs.map((e, i) => (
                         <li key={i}>
                             <ScrollLink
@@ -172,10 +172,10 @@ export default function Header({ logo }: { logo: string }) {
             </nav>
 
             {/* Mobile nav bar */}
-            <nav className='p-4 flex sm:hidden items-center justify-between'>
-                <span className='text-xl font-bold tracking-tighter text-violet-600 dark:text-violet-500 pl-4'>AISMA</span>
+            <nav className='pl-6 pr-7 py-4 flex sm:hidden items-center justify-between'>
+                <span className='text-xl font-bold tracking-tighter text-violet-600 dark:text-violet-500'>AISMA</span>
 
-                <div className='flex items-center gap-4'>
+                <div className='flex items-center gap-2'>
                     {mounted && (
                         <span
                             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
@@ -183,7 +183,7 @@ export default function Header({ logo }: { logo: string }) {
                             {theme === 'dark' ? <FiSun /> : <FiMoon />}
                         </span>
                     )}
-                    <button 
+                    <button
                         onClick={() => setNavCollapse(!navCollapse)}
                         className="border border-neutral-300 dark:border-neutral-700 bg-transparent text-neutral-800 dark:text-neutral-200 rounded-lg px-3 py-1 text-[10px] font-sans tracking-widest uppercase hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors cursor-pointer font-bold"
                     >
@@ -193,9 +193,8 @@ export default function Header({ logo }: { logo: string }) {
             </nav>
 
             {/* Mobile Dropdown Menu */}
-            <div className={`sm:hidden bg-[#f5f5f5]/95 dark:bg-[#120f16]/95 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800 transition-all duration-300 ease-in-out overflow-hidden ${
-                !navCollapse ? 'max-h-[380px] opacity-100 border-t border-neutral-200 dark:border-neutral-800' : 'max-h-0 opacity-0 pointer-events-none'
-            }`}>
+            <div className={`sm:hidden bg-[#f5f5f5]/95 dark:bg-[#120f16]/95 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800 transition-all duration-300 ease-in-out overflow-hidden ${!navCollapse ? 'max-h-[380px] opacity-100 border-t border-neutral-200 dark:border-neutral-800' : 'max-h-0 opacity-0 pointer-events-none'
+                }`}>
                 <div className="flex flex-col p-6 gap-4">
                     {navs.map((e) => (
                         <ScrollLink

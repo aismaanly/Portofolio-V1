@@ -70,12 +70,12 @@ const Experiences = ({ experienceData, volunteerData, educationData }: Props) =>
                 </div>
 
                 {/* ── Toggle tabs ── */}
-                <div className="inline-flex items-center p-[3px] bg-violet-100/50 dark:bg-violet-900/20 border border-violet-300 dark:border-violet-700 rounded-full mb-6 overflow-x-auto max-w-full scroll-hide">
+                <div className="flex w-full sm:inline-flex sm:w-auto items-center p-[3px] bg-violet-100/50 dark:bg-violet-900/20 border border-violet-300 dark:border-violet-700 rounded-full mb-6 overflow-x-auto max-w-full scroll-hide">
                     {['Experience', 'Education', 'Volunteer'].map((e, i) => (
                         <button
                             key={i}
                             onClick={() => { setShow(e); setViewAll(false); }}
-                            className={`px-5 py-1.5 text-xs font-semibold tracking-wide uppercase rounded-full whitespace-nowrap cursor-pointer transition-all duration-300 ${show === e
+                            className={`flex-1 sm:flex-initial px-5 py-1.5 text-xs font-semibold tracking-wide uppercase rounded-full whitespace-nowrap cursor-pointer transition-all duration-300 ${show === e
                                     ? "bg-violet-600 text-white shadow-md"
                                     : "bg-transparent text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white"
                                 }`}

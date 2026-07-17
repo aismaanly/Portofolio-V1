@@ -133,8 +133,8 @@
         "report": "https://canva.link/f4jgu60r34vu20z"
       },
       "name": "Chatbot UPN",
-      "techstack": "Python, NextJS, TypeScript, FastAPI, Langchain, ChromaDB, Ollama, Gemma3, Supabase, Docling",
-      "description": "An academic assistant chatbot utilizing Retrieval-Augmented Generation (RAG) to make complex university regulations interactive. It uses structure-aware OCR to parse legal documents and dynamically prioritizes the most recent applicable rules."
+      "techstack": "Python, NextJS, TypeScript, FastAPI, Langchain, ChromaDB, Ollama, Supabase, OCR Docling, RAGAS",
+      "description": "Production-grade RAG platform resolving complex academic queries via hybrid search (BM25 & Semantic) and Reciprocal Rank Fusion. Built with Python, LangChain, ChromaDB, and a local Gemma 3 LLM (Ollama), it features Docling OCR with hierarchical chapter-based chunking and metadata versioning to ingest unstructured PDFs while preserving legal structures. Strictly guarantees factual responses, achieving 89.5% Context Recall and 80.9% Context Precision (RAGAS evaluation)."
     },
     {
       "category": "AI Engineer",
@@ -205,7 +205,7 @@
       "description": "An automated writing tool that generates contextual and engaging comments for articles, blogs, or social media posts based on user input."
     },
     {
-      "category": "Data Analyst",
+      "category": "Data/ML",
       "image": "/thumbs/bikesharing-analysis.png",
       "links": {
         "code": "https://github.com/aismaanly/bikesharing-analysis",
@@ -218,7 +218,7 @@
       "description": "A data analysis project analyzing bike-sharing usage patterns, seasonal trends, and casual vs registered user behavior to optimize resource allocation."
     },
     {
-      "category": "Data Analyst",
+      "category": "Data/ML",
       "image": "https://raw.githubusercontent.com/aismaanly/ecommerce_analysis/main/dashboard.png",
       "links": {
         "code": "https://github.com/aismaanly/ecommerce_analysis",
@@ -231,7 +231,7 @@
       "description": "An interactive sales performance dashboard analyzing transactional trends, order statuses, customer demographics, and product revenue patterns."
     },
     {
-      "category": "Data Analyst",
+      "category": "Data/ML",
       "image": "/thumbs/order-report.png",
       "links": {
         "code": "",
@@ -244,7 +244,7 @@
       "description": "A business dashboard monitoring key transactional metrics such as total sales, average order value, and product performance trends."
     },
     {
-      "category": "Data Analyst",
+      "category": "Data/ML",
       "image": "/thumbs/credit-card.png",
       "links": {
         "code": "",
@@ -257,7 +257,7 @@
       "description": "An analytical dashboard evaluating credit card usage, customer spending behaviors, credit limits, and delinquency patterns to identify customer segments."
     },
     {
-      "category": "Data Analyst",
+      "category": "Data/ML",
       "image": "/thumbs/retail-transaction.png",
       "links": {
         "code": "",
@@ -270,7 +270,7 @@
       "description": "A business intelligence dashboard tracking retail store sales trends, profit margins, regional performance, and top-selling product categories."
     },
     {
-      "category": "Data Analyst",
+      "category": "Data/ML",
       "image": "/thumbs/US-flight-delay.png",
       "links": {
         "code": "",
@@ -283,7 +283,7 @@
       "description": "An analytical visualization analyzing patterns, main causes, and frequencies of domestic flight delays to understand seasonal and regional travel disruptions."
     },
     {
-      "category": "Data Analyst",
+      "category": "Data/ML",
       "image": "/thumbs/covid-19-in-indonesia.png",
       "links": {
         "code": "",

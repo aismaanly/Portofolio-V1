@@ -80,12 +80,12 @@ const Certifications = ({ certificationsData }: Props) => {
 
                 {/* ── Category Filter Tabs ── */}
                 {categories.length > 0 && (
-                    <div className="inline-flex items-center p-[3px] bg-violet-100/50 dark:bg-violet-900/20 border border-violet-300 dark:border-violet-700 rounded-full mb-6 overflow-x-auto max-w-full scroll-hide">
+                    <div className="flex w-full sm:inline-flex sm:w-auto items-center p-[3px] bg-violet-100/50 dark:bg-violet-900/20 border border-violet-300 dark:border-violet-700 rounded-full mb-6 overflow-x-auto max-w-full scroll-hide">
                         {categories.map((c: string = "", i: number) => (
                             <button
                                 key={i}
                                 onClick={() => filterCertifications(c)}
-                                className={`px-5 py-1.5 text-xs font-semibold tracking-wide uppercase rounded-full whitespace-nowrap cursor-pointer transition-all duration-300 ${
+                                className={`flex-1 sm:flex-initial px-5 py-1.5 text-xs font-semibold tracking-wide uppercase rounded-full whitespace-nowrap cursor-pointer transition-all duration-300 ${
                                     category.toLowerCase() === c.toLowerCase()
                                         ? "bg-violet-600 text-white shadow-md"
                                         : "bg-transparent text-black/60 dark:text-white/60 hover:text-black dark:hover:text-white"

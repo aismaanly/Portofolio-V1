@@ -251,7 +251,8 @@ const ProjectModal = ({
 
                 {/* Right Column: Project Details */}
                 <div className="w-full md:w-[50%] pl-6 pr-3 py-6 md:p-8 flex flex-col flex-1 gap-4 text-black dark:text-white min-h-0 bg-[#f5f5f5] dark:bg-[#1a1523] rounded-b-2xl md:rounded-bl-none md:rounded-r-2xl">
-                    <div className="flex-1 overflow-y-auto pr-3 flex flex-col gap-4">
+                    {/* Header Area (Static) */}
+                    <div className="flex flex-col gap-3 flex-shrink-0">
                         {/* Category tag & Project Index */}
                         <div className="flex items-center gap-3">
                             <span className="inline-block text-[10px] font-extrabold tracking-[0.25em] uppercase text-violet-800 dark:text-violet-300 bg-violet-100 dark:bg-violet-900/30 border border-violet-200 dark:border-violet-800/40 rounded-full px-3 py-1">
@@ -268,7 +269,10 @@ const ProjectModal = ({
                         <h2 className="text-xl md:text-2xl font-extrabold leading-tight text-black dark:text-white">
                             {project.name}
                         </h2>
+                    </div>
 
+                    {/* Scrollable Content (Description & Tech Stack) */}
+                    <div className="flex-1 overflow-y-auto pr-3 flex flex-col gap-4 min-h-0">
                         {/* Description */}
                         <div className="text-sm text-black/70 dark:text-white/70 leading-relaxed">
                             {project.description || "No description available for this project."}

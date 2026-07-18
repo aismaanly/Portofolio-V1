@@ -313,7 +313,7 @@ const ProjectModal = ({
                                 className="flex items-center gap-1 px-2 py-1.5 md:gap-1.5 md:px-3 md:py-2 bg-violet-700 dark:bg-violet-700 text-white rounded-xl text-[10px] md:text-[11px] font-bold transition-all duration-300 hover:bg-violet-800 dark:hover:bg-violet-800 cursor-pointer shadow-md hover:shadow-lg whitespace-nowrap flex-shrink-0"
                             >
                                 <BiLinkExternal size={12} className="md:w-[13px] md:h-[13px]" />
-                                <span>Go Live</span>
+                                <span>Live</span>
                             </Link>
                         )}
                         {project.links.video.trim() && (

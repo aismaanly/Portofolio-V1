@@ -408,7 +408,7 @@
     },
     {
       "category": "Course",
-      "image": "/certificate/intermediate-data-science.jpg",
+      "image": "/certificate/intermediate-data-science.png",
       "links": {
         "code": "",
         "video": "",
@@ -569,7 +569,7 @@
         "visit": "https://drive.google.com/file/d/1Yr19DZJTx9FTDt2QElRcDQV3OSaP6XMJ/view?usp=drive_link"
       },
       "name": "Junior Web Programmer - BNSP",
-      "techstack": "Data Structures, Using Pre-Existing Libraries, Structured Programming, Software Debugging, Coding Guidelines and Best Practices, Creating Program Code Documents, Installing Programming Tools Software, Implementing User Interface"
+      "techstack": "Coding Guidelines and Best Practices, Software Debugging, Using Pre-Existing Libraries, Data Structures, Implementing User Interface"
     }
   ],
   "skills": [

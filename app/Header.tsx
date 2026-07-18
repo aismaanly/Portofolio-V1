@@ -17,7 +17,7 @@ export default function Header({ logo }: { logo: string }) {
     const [scrolled, setScrolled] = useState(false)
     const [activeNav, setActiveNav] = useState<string>('')
     const [currentSection, setCurrentSection] = useState<SectionType>('hero')
-    const { theme, setTheme } = useTheme()
+    const { theme, setTheme, resolvedTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
 
     useEffect(() => {
@@ -27,18 +27,15 @@ export default function Header({ logo }: { logo: string }) {
 
         const updateScroll = () => {
             // Check if contact footer is visible
-            const contactEl = document.getElementById('contact') as HTMLElement | null
-            if (contactEl) {
-                const contactRect = contactEl.getBoundingClientRect()
-                const inView = contactRect.top < window.innerHeight && contactRect.bottom > 0
-                if (inView) {
-                    setAtContact(true)
-                    setCurrentSection('contact')
-                    setActiveNav('contact')
-                } else {
-                    setAtContact(false)
-                }
+            // Since contact is a fixed parallax footer, we calculate its visibility based on the main scrollable container bottom boundary
+            let contactInView = false
+            const docHeight = document.documentElement.scrollHeight
+            const winHeight = window.innerHeight
+            // We are in the contact section only if we scroll to the very bottom area of the page (within 50px of the absolute bottom)
+            if (window.scrollY >= docHeight - winHeight - 50 && window.scrollY > 100) {
+                contactInView = true
             }
+            setAtContact(contactInView)
 
             const headerMidpoint = HEADER_H / 2
 
@@ -64,7 +61,9 @@ export default function Header({ logo }: { logo: string }) {
             let inHero = false
             let detected: string = ''
 
-            if (inSection(certRect)) {
+            if (contactInView) {
+                setCurrentSection('contact')
+            } else if (inSection(certRect)) {
                 setCurrentSection('warm')
                 detected = 'certification'
             } else if (inSection(expRect)) {
@@ -86,15 +85,18 @@ export default function Header({ logo }: { logo: string }) {
                 setCurrentSection('cool')
             }
 
-            if (atContact) {
+            if (!contactInView) {
+                if (detected) {
+                    setActiveNav(detected)
+                } else if (inHero) {
+                    setActiveNav('')
+                }
+            } else {
                 setActiveNav('contact')
-            } else if (detected) {
-                setActiveNav(detected)
             }
 
             // "scrolled" state — triggered as soon as user leaves the hero zone
-            // so the navbar pops out prominently while inside the page content.
-            setScrolled(window.scrollY > 20 && !inHero)
+            setScrolled(window.scrollY > 20)
         }
 
         window.addEventListener('scroll', updateScroll, { passive: true })
@@ -110,37 +112,25 @@ export default function Header({ logo }: { logo: string }) {
     }
 
     const getHeaderClass = () => {
-        // Transparent for hero, otherwise section-colored with slight opacity
-        if (!mounted) {
-            // Initial state during SSR hydration: subtle translucent background
-            return 'bg-white/20 dark:bg-black/20 backdrop-blur-xl border-b border-black/5 dark:border-neutral-800/50 text-black dark:text-white';
+        const isDark = resolvedTheme === 'dark';
+        
+        // Seamless state (no bg, no shadow, no border, no blur)
+        // when at the hero (top of page, not scrolled)
+        const isSeamless = !scrolled;
+        
+        if (isSeamless) {
+            return `bg-transparent backdrop-blur-none border-b border-transparent shadow-none text-black dark:text-white`;
         }
-        if (atContact) {
-            // Contact/footer: transparent to blend with footer, no border
-            return 'bg-transparent text-black dark:text-white border-transparent shadow-none';
-        }
-        if (scrolled) {
-            // General scrolled state adopts section color
-            if (currentSection === "warm") {
-                return 'bg-[#ece8f5]/80 dark:bg-[#1a1523]/80 backdrop-blur-xl border-b border-black/5 dark:border-neutral-800/50 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_20px_-2px_rgba(0,0,0,0.5)] text-black dark:text-white';
-            }
-            if (currentSection === "cool") {
-                return 'bg-[#f5f5f5]/80 dark:bg-[#120f16]/80 backdrop-blur-xl border-b border-black/5 dark:border-neutral-800/50 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_20px_-2px_rgba(0,0,0,0.5)] text-black dark:text-white';
-            }
-            // hero fallback
-            return 'bg-white/20 dark:bg-black/20 backdrop-blur-xl border-b border-black/5 dark:border-neutral-800/50 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_20px_-2px_rgba(0,0,0,0.5)] text-black dark:text-white';
-        }
-        // Not scrolled (hero zone)
-        return 'bg-transparent text-black dark:text-white border-transparent shadow-none';
+        
+        // Active scrolled state (glassmorphism: bg with transparency, blur, shadow, border)
+        const bgClass = isDark ? 'bg-[#120f16]/80' : 'bg-white/80';
+        
+        return `${bgClass} backdrop-blur-md border-b border-black/10 dark:border-white/10 shadow-lg text-black dark:text-white`;
     }
 
-    const navHoverClass = currentSection === 'warm'
-        ? 'hover:text-violet-600 dark:hover:text-violet-400'
-        : 'hover:text-violet-700 dark:hover:text-violet-500'
+    const navHoverClass = 'hover:text-violet-600 dark:hover:text-violet-400'
 
-    const themeToggleClass = currentSection === 'warm'
-        ? 'hover:bg-black/10 dark:hover:bg-white/20 p-1.5 rounded-full cursor-pointer transition-colors'
-        : 'hover:bg-black/10 dark:hover:bg-violet-700 p-1.5 rounded-full cursor-pointer transition-colors'
+    const themeToggleClass = 'hover:bg-black/10 dark:hover:bg-white/20 p-1.5 rounded-full cursor-pointer transition-colors'
 
     const getOffset = (section: string) => {
         if (section === 'about') return -20

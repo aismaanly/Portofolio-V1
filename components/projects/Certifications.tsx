@@ -11,7 +11,7 @@ interface Props {
 
 const Certifications = ({ certificationsData }: Props) => {
     const [certifications] = useState(certificationsData || []);
-    const rawCategories = [...new Set(certifications.map((s) => s.category))];
+    const rawCategories = Array.from(new Set(certifications.map((s) => s.category)));
     let categories = rawCategories;
     if (rawCategories.includes('Professional')) {
         categories = ['Professional', ...rawCategories.filter((c) => c !== 'Professional')];

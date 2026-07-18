@@ -14,6 +14,8 @@ type SectionType = 'hero' | 'warm' | 'cool' | 'contact'
 export default function Header({ logo }: { logo: string }) {
     const [navCollapse, setNavCollapse] = useState(true)
     const [atContact, setAtContact] = useState(false)
+    const [scrolled, setScrolled] = useState(false)
+    const [activeNav, setActiveNav] = useState<string>('')
     const [currentSection, setCurrentSection] = useState<SectionType>('hero')
     const { theme, setTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
@@ -24,17 +26,18 @@ export default function Header({ logo }: { logo: string }) {
         const HEADER_H = 64
 
         const updateScroll = () => {
-            // Check if contact footer is revealed
-            const scrollableDiv = document.querySelector('[data-scroll-content]') as HTMLElement
-            if (scrollableDiv) {
-                const rect = scrollableDiv.getBoundingClientRect()
-                // Only make header transparent when the main container is scrolled past the header height (80px)
-                if (rect.bottom <= 80) {
+            // Check if contact footer is visible
+            const contactEl = document.getElementById('contact') as HTMLElement | null
+            if (contactEl) {
+                const contactRect = contactEl.getBoundingClientRect()
+                const inView = contactRect.top < window.innerHeight && contactRect.bottom > 0
+                if (inView) {
                     setAtContact(true)
                     setCurrentSection('contact')
-                    return
+                    setActiveNav('contact')
+                } else {
+                    setAtContact(false)
                 }
-                setAtContact(false)
             }
 
             const headerMidpoint = HEADER_H / 2
@@ -58,27 +61,40 @@ export default function Header({ logo }: { logo: string }) {
             const inSection = (rect?: DOMRect) =>
                 rect && rect.top <= headerMidpoint && rect.bottom > headerMidpoint
 
+            let inHero = false
+            let detected: string = ''
+
             if (inSection(certRect)) {
-                // certification: warm (#ece8f5 / #1a1523)
                 setCurrentSection('warm')
+                detected = 'certification'
             } else if (inSection(expRect)) {
-                // experience: cool (#f5f5f5 / #120f16)
                 setCurrentSection('cool')
+                detected = 'experience'
             } else if (inSection(projectsRect)) {
-                // projects: warm (#ece8f5 / #1a1523)
                 setCurrentSection('warm')
+                detected = 'project'
             } else if (inSection(skillsRect)) {
-                // skills: cool (#f5f5f5 / #120f16)
                 setCurrentSection('cool')
+                detected = 'skills'
             } else if (inSection(aboutRect)) {
-                // about: warm (#ece8f5 / #1a1523)
                 setCurrentSection('warm')
+                detected = 'about'
             } else if (aboutRect && aboutRect.top > HEADER_H) {
-                // above about → hero zone
                 setCurrentSection('hero')
+                inHero = true
             } else {
                 setCurrentSection('cool')
             }
+
+            if (atContact) {
+                setActiveNav('contact')
+            } else if (detected) {
+                setActiveNav(detected)
+            }
+
+            // "scrolled" state — triggered as soon as user leaves the hero zone
+            // so the navbar pops out prominently while inside the page content.
+            setScrolled(window.scrollY > 20 && !inHero)
         }
 
         window.addEventListener('scroll', updateScroll, { passive: true })
@@ -94,26 +110,28 @@ export default function Header({ logo }: { logo: string }) {
     }
 
     const getHeaderClass = () => {
+        // Transparent for hero, otherwise section-colored with slight opacity
         if (!mounted) {
-            // Default blurred solid styling for server-side rendering and initial hydration
-            return 'bg-[#f5f5f5]/85 text-black backdrop-blur-xl shadow-[0_2px_20px_-8px_rgba(0,0,0,0.08)] dark:bg-[#120f16]/85 dark:text-white dark:shadow-[0_2px_20px_-8px_rgba(0,0,0,0.4)]'
+            // Initial state during SSR hydration: subtle translucent background
+            return 'bg-white/20 dark:bg-black/20 backdrop-blur-xl border-b border-black/5 dark:border-neutral-800/50 text-black dark:text-white';
         }
         if (atContact) {
-            // Use translucent blur matching the contact footer's color theme
-            return 'bg-[#f5f5f5]/85 text-black backdrop-blur-xl shadow-[0_2px_20px_-8px_rgba(0,0,0,0.08)] dark:bg-[#120f16]/85 dark:text-white dark:shadow-[0_2px_20px_-8px_rgba(0,0,0,0.4)]'
+            // Contact/footer: transparent to blend with footer, no border
+            return 'bg-transparent text-black dark:text-white border-transparent shadow-none';
         }
-        switch (currentSection) {
-            case 'hero':
-                return 'bg-transparent text-black dark:text-white'
-            case 'warm':
-                // about, projects, certification background: #ece8f5 (light) / #1a1523 (dark)
-                return 'bg-[#ece8f5]/80 text-black backdrop-blur-xl dark:bg-[#1a1523]/80 dark:text-white shadow-[0_2px_20px_-8px_rgba(0,0,0,0.06)] dark:shadow-[0_2px_20px_-8px_rgba(0,0,0,0.4)]'
-            case 'cool':
-                // skills & experience background: #f5f5f5 (light) / #120f16 (dark)
-                return 'bg-[#f5f5f5]/85 text-black backdrop-blur-xl shadow-[0_2px_20px_-8px_rgba(0,0,0,0.08)] dark:bg-[#120f16]/85 dark:text-white dark:shadow-[0_2px_20px_-8px_rgba(0,0,0,0.4)]'
-            default:
-                return 'bg-transparent text-black dark:text-white'
+        if (scrolled) {
+            // General scrolled state adopts section color
+            if (currentSection === "warm") {
+                return 'bg-[#ece8f5]/80 dark:bg-[#1a1523]/80 backdrop-blur-xl border-b border-black/5 dark:border-neutral-800/50 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_20px_-2px_rgba(0,0,0,0.5)] text-black dark:text-white';
+            }
+            if (currentSection === "cool") {
+                return 'bg-[#f5f5f5]/80 dark:bg-[#120f16]/80 backdrop-blur-xl border-b border-black/5 dark:border-neutral-800/50 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_20px_-2px_rgba(0,0,0,0.5)] text-black dark:text-white';
+            }
+            // hero fallback
+            return 'bg-white/20 dark:bg-black/20 backdrop-blur-xl border-b border-black/5 dark:border-neutral-800/50 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_20px_-2px_rgba(0,0,0,0.5)] text-black dark:text-white';
         }
+        // Not scrolled (hero zone)
+        return 'bg-transparent text-black dark:text-white border-transparent shadow-none';
     }
 
     const navHoverClass = currentSection === 'warm'
@@ -129,6 +147,13 @@ export default function Header({ logo }: { logo: string }) {
         return -20
     }
 
+    const getNavActiveClass = (nav: string) => {
+        const baseClass = 'transition-colors capitalize cursor-pointer'
+        const activeClass = 'text-violet-700 dark:text-violet-400' // removed bold to prevent shift
+        const inactiveClass = navHoverClass
+        return activeNav === nav ? `${baseClass} ${activeClass}` : `${baseClass} ${inactiveClass}`
+    }
+
     return (
         <header className={`transition-all duration-300 ${getHeaderClass()} z-30 min-w-full flex flex-col fixed`}>
             <nav className='lg:w-11/12 2xl:w-4/5 w-full md:px-6 2xl:px-0 mx-auto py-4 hidden sm:flex items-center justify-between'>
@@ -141,7 +166,7 @@ export default function Header({ logo }: { logo: string }) {
                     {navs.map((e, i) => (
                         <li key={i}>
                             <ScrollLink
-                                className={`${navHoverClass} transition-colors capitalize cursor-pointer`}
+                                className={getNavActiveClass(e)}
                                 to={e}
                                 offset={getOffset(e)}
                                 smooth={true}
@@ -155,7 +180,7 @@ export default function Header({ logo }: { logo: string }) {
                     <li>
                         <button
                             onClick={scrollToContact}
-                            className={`${navHoverClass} transition-colors capitalize cursor-pointer bg-transparent border-0 font-inherit text-inherit p-0`}
+                            className={getNavActiveClass('contact') + ' bg-transparent border-0 font-inherit text-inherit p-0'}
                         >
                             contact
                         </button>
@@ -172,7 +197,7 @@ export default function Header({ logo }: { logo: string }) {
             </nav>
 
             {/* Mobile nav bar */}
-            <nav className='pl-6 pr-7 py-4 flex sm:hidden items-center justify-between'>
+            <nav className='pl-6 pr-6 py-4 flex sm:hidden items-center justify-between'>
                 <span className='text-xl font-bold tracking-tighter text-violet-600 dark:text-violet-500'>AISMA</span>
 
                 <div className='flex items-center gap-2'>

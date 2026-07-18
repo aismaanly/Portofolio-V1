@@ -147,7 +147,7 @@
       },
       "name": "Alkesgo",
       "techstack": "PHP, MySQL, Groq (LLM), Cohere, Supabase, pgvector, Chart.js",
-      "description": "An AI-powered healthcare e-commerce platform featuring a dual-agent architecture. It integrates an ultra-fast RAG chatbot for semantic customer support using Supabase pgvector, alongside a Text-to-SQL assistant that autonomously parses database schemas to render real-time business insights and charts for administrators."
+      "description": "Built an intelligent healthcare e-commerce system integrated with a lightning-fast RAG virtual assistant to automate customer support using Groq and Supabase pgvector. Designed a conversational analytics dashboard that enables business admins to query sales data using natural language, instantly translating prompts into dynamic, visual Text-to-SQL reports."
     },
     {
       "category": "AI Engineer",
@@ -160,7 +160,7 @@
       },
       "name": "RAGsume",
       "techstack": "Streamlit, Langchain, Groq, FAISS",
-      "description": "A document intelligence application utilizing Retrieval-Augmented Generation (RAG) that allows users to upload their resumes, ask specific questions, extract key skills, summarize professional experience, and evaluate job fit against job descriptions."
+      "description": "RAGsume is an AI-powered career platform featuring a Retrieval-Augmented Generation (RAG) architecture built with LangChain, FAISS, and HuggingFace embeddings. It leverages dual LLM inference low-latency cloud routing via Groq (Llama 3) for rapid responses, and an offline local fallback via Ollama for strict data privacy. The system also includes an automated resume builder that dynamically compiles user data into ATS-optimized PDFs using ReportLab."
     },
     {
       "category": "AI Engineer",
@@ -176,7 +176,7 @@
       },
       "name": "Chatbot Aetheria",
       "techstack": "Python, EC2, Application Load Balancing, Auto Scaling Group, SQL Alchemy, Qween LLM",
-      "description": "A virtual mental health and wellness chatbot designed to classify emotional states and provide conversational support and guidance for user well-being."
+      "description": "AI-powered career assistant built to streamline job market preparation through automated resume creation, interview coaching, and personalized job matching. Developed with Streamlit and deployed on AWS EC2, the platform leverages language models alongside ReportLab and PyMuPDF to ingest user documents and dynamically generate optimized PDFs. The system efficiently handles multi-modal file uploads while maintaining context-aware session history for a seamless user experience."
     },
     {
       "category": "AI Engineer",
@@ -189,7 +189,7 @@
       },
       "name": "Data Warehouse OLAP & AI Chatbot",
       "techstack": "Python, Dbeaver, Pentaho, Mondrian, MySQL, Ollama, Llama 3.2, NextJS",
-      "description": "A business intelligence system featuring a complete data warehouse pipeline with an OLAP interface for multi-dimensional sales analysis, integrated with a conversational chatbot for natural language queries."
+      "description": "Engineered an end-to-end Data Warehouse and OLAP platform based on the AdventureWorks dataset, utilizing Pentaho for robust ETL pipelines and Mondrian for multidimensional data modeling. Built with Next.js, Node.js, and MySQL, the system features an integrated AI assistant (Groq API/Llama 3) that translates natural language queries into dynamic visual reports. This capstone project demonstrates the ability to automate drill-down analytics and streamline complex data exploration."
     },
     {
       "category": "AI Engineer",
@@ -202,7 +202,7 @@
       },
       "name": "AI Comment Generator",
       "techstack": "Python, Llama 3.2, Unsloth, SQLite, HTML, TailwindCSS, Flask",
-      "description": "An automated writing tool that generates contextual and engaging comments for articles, blogs, or social media posts based on user input."
+      "description": "Engineered an end-to-end web application to deploy a custom fine-tuned LLaMA 3 model for contextual social media comment generation. Built with Flask and SQLite, the system integrates local LLM inference with Hugging Face LoRA adapters, demonstrating practical AI architecture from raw model execution to persistent interaction logging."
     },
     {
       "category": "Data/ML",
@@ -363,7 +363,7 @@
   ],
   "certifications": [
     {
-      "category": "Bootcamp",
+      "category": "Course",
       "image": "/certificate/belajar-fundamental-deep-learning.png",
       "links": {
         "code": "",
@@ -374,7 +374,7 @@
       "techstack": "Deep Learning, TensorFlow, NLP, Computer Vision, Time Series, Recommendation Systems, Generative AI"
     },
     {
-      "category": "Bootcamp",
+      "category": "Course",
       "image": "/certificate/ai-engineering-masterclass.jpg",
       "links": {
         "code": "",
@@ -385,40 +385,7 @@
       "techstack": "Python, TensorFlow, PyTorch, Machine Learning, Deep Learning, NLP, Model Deployment, AI System Design"
     },
     {
-      "category": "Internship",
-      "image": "/certificate/intern-ai-engineer-upatik.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://drive.google.com/file/d/18hihKWQA00RjqDia0nEg5NsJrCNW4c_i/view?usp=drive_link"
-      },
-      "name": "Internship AI Engineer",
-      "techstack": "Artificial Intelligence, Analytical Skills, Business Insights, Visualization"
-    },
-    {
-      "category": "Internship",
-      "image": "/certificate/intern-ai-engineer-minilemon.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://drive.google.com/file/d/1LakWuU7zD6ZjPL-j6XEwnvBKyMjGwW5W/view?usp=drive_link"
-      },
-      "name": "Internship AI Engineer",
-      "techstack": "Artificial Intelligence, Analytical Skills, Business Insights, Visualization"
-    },
-    {
-      "category": "Internship",
-      "image": "/certificate/revou.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://drive.google.com/file/d/1aatsfJuFsfMhI0e970qpPck-Lfo1kvMR/view?usp=drive_link"
-      },
-      "name": "Cloud and Generative AI Engineer",
-      "techstack": "Amazon Web Services (AWS), Artificial Intelligence (AI), Machine Learning, Deep Learning, Cloud Computing"
-    },
-    {
-      "category": "Bootcamp",
+      "category": "Course",
       "image": "/certificate/aws-cloud-essentials.png",
       "links": {
         "code": "",
@@ -429,29 +396,29 @@
       "techstack": "Amazon Web Services (AWS), AWS Cloud, AWS Compute, AWS Databases, AWS Networking, AWS Security, AWS storage"
     },
     {
-      "category": "Internship",
-      "image": "/certificate/intern-data-analyst.png",
+      "category": "Course",
+      "image": "/certificate/fundamental-data-science.png",
       "links": {
         "code": "",
         "video": "",
-        "visit": "https://drive.google.com/file/d/1v_kp_khz5pZ4ALYv0DM73qZVlz7U2RST/view?usp=drive_link"
+        "visit": "https://drive.google.com/file/d/1ybBYk3oQjiQWu152cgIi9uHFC18Pyy5g/view?usp=drive_link"
       },
-      "name": "Internship Data Analyst",
-      "techstack": "Data Analysis, Analytical Skills, Market Research, Dashboards, Business Insights, Visualization"
+      "name": "Fundamental Data Science - Komdigi",
+      "techstack": "Data Scraping, Eksplorasi Data, Data Cleansing, Data Annotation"
     },
     {
-      "category": "Bootcamp",
-      "image": "/certificate/microsoft-azure-data.png",
+      "category": "Course",
+      "image": "/certificate/intermediate-data-science.jpg",
       "links": {
         "code": "",
         "video": "",
-        "visit": "https://drive.google.com/file/d/1VF4P9itmFortluINEhTUDcUZyDI21ljt/view"
+        "visit": "https://drive.google.com/file/d/1zqdyZ4X_SftVLa5-dDCSQwLtUqLnOgLw/view?usp=drive_link"
       },
-      "name": "Microsoft Azure Data Fundamentals",
-      "techstack": "Azure, Database"
+      "name": "Intermediate Data Science - Komdigi",
+      "techstack": "Data Screening, Fundamentals of Analysis, Model Implementation, Model Evaluation"
     },
     {
-      "category": "Bootcamp",
+      "category": "Course",
       "image": "/certificate/python-for-business.png",
       "links": {
         "code": "",
@@ -462,7 +429,18 @@
       "techstack": "Python, Django, Sqlite"
     },
     {
-      "category": "Bootcamp",
+      "category": "Course",
+      "image": "/certificate/data-science-dsarea.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/drive/u/0/folders/13BC5DkVFsB-oBA3DOSnyLNBIxy1wwzkq"
+      },
+      "name": "Data Science - Dsarea",
+      "techstack": "Advanced Excel, Data Analysis, SQL (Google BigQuery), Python, Pandas, Matplotlib, Machine Learning, R Programming, Statistical Analysis, SPSS."
+    },
+    {
+      "category": "Course",
       "image": "/certificate/belajar-dasar-ai.png",
       "links": {
         "code": "",
@@ -473,7 +451,7 @@
       "techstack": "Artificial Intelligence, Machine Learning, Deep Learning"
     },
     {
-      "category": "Bootcamp",
+      "category": "Course",
       "image": "/certificate/belajar-analisis-data-dengan-python.png",
       "links": {
         "code": "",
@@ -484,7 +462,7 @@
       "techstack": "Streamlit, Python, Descriptive Statistics, Data Analysis, EDA, Data Wrangling, Data Visualization"
     },
     {
-      "category": "Bootcamp",
+      "category": "Course",
       "image": "/certificate/memulai-pemrograman-dengan-python.png",
       "links": {
         "code": "",
@@ -495,7 +473,7 @@
       "techstack": "Python, OOP"
     },
     {
-      "category": "Bootcamp",
+      "category": "Course",
       "image": "/certificate/belajar-dasar-data-science.png",
       "links": {
         "code": "",
@@ -506,7 +484,7 @@
       "techstack": "SQL, NoSQL, Excel/Spreadsheet, SPSS, Tableau, Python, R"
     },
     {
-      "category": "Bootcamp",
+      "category": "Course",
       "image": "/certificate/belajar-dasar-structured-query-language.png",
       "links": {
         "code": "",
@@ -517,7 +495,7 @@
       "techstack": "SQL"
     },
     {
-      "category": "Bootcamp",
+      "category": "Course",
       "image": "/certificate/belajar-dasar-visualisasi-data.png",
       "links": {
         "code": "",
@@ -526,6 +504,72 @@
       },
       "name": "Introduction to Data Visualization",
       "techstack": "Google Sheets, Python, Matplotlib/Seaborn"
+    },
+    {
+      "category": "Course",
+      "image": "/certificate/microsoft-azure-data.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/53XENGD89XRN"
+      },
+      "name": "Microsoft Azure Data Engineering Learning Path - Foundational Data Engineering",
+      "techstack": ""
+    },
+    {
+      "category": "Professional",
+      "image": "/certificate/intern-ai-engineer-upatik.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/file/d/18hihKWQA00RjqDia0nEg5NsJrCNW4c_i/view?usp=drive_link"
+      },
+      "name": "Internship AI Engineer",
+      "techstack": "Artificial Intelligence, Analytical Skills, Business Insights, Visualization"
+    },
+    {
+      "category": "Professional",
+      "image": "/certificate/intern-ai-engineer-minilemon.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/file/d/1LakWuU7zD6ZjPL-j6XEwnvBKyMjGwW5W/view?usp=drive_link"
+      },
+      "name": "Internship AI Engineer",
+      "techstack": "Artificial Intelligence, Analytical Skills, Business Insights, Visualization"
+    },
+    {
+      "category": "Professional",
+      "image": "/certificate/revou.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/file/d/1aatsfJuFsfMhI0e970qpPck-Lfo1kvMR/view?usp=drive_link"
+      },
+      "name": "Cloud and Generative AI Engineer",
+      "techstack": "Amazon Web Services (AWS), Artificial Intelligence (AI), Machine Learning, Deep Learning, Cloud Computing"
+    },
+    {
+      "category": "Professional",
+      "image": "/certificate/intern-data-analyst.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/file/d/1v_kp_khz5pZ4ALYv0DM73qZVlz7U2RST/view?usp=drive_link"
+      },
+      "name": "Internship Data Analyst",
+      "techstack": "Data Analysis, Analytical Skills, Market Research, Dashboards, Business Insights, Visualization"
+    },
+    {
+      "category": "Professional",
+      "image": "/certificate/junior-web-programmer-bnsp.jpg",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://drive.google.com/file/d/1Yr19DZJTx9FTDt2QElRcDQV3OSaP6XMJ/view?usp=drive_link"
+      },
+      "name": "Junior Web Programmer - BNSP",
+      "techstack": "Data Structures, Using Pre-Existing Libraries, Structured Programming, Software Debugging, Coding Guidelines and Best Practices, Creating Program Code Documents, Installing Programming Tools Software, Implementing User Interface"
     }
   ],
   "skills": [

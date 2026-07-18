@@ -110,10 +110,9 @@ const Skills = ({ skillData }: Props) => {
                             return (
                                 <SkillCard
                                     key={cat}
+                                    index={i}
                                     cat={cat}
                                     names={names}
-                                    isFirstRow={isFirstRow}
-                                    isLastCol={isLastCol}
                                     containerMousePos={mousePos}
                                     isContainerHovering={isHovering}
                                 />
@@ -128,19 +127,17 @@ const Skills = ({ skillData }: Props) => {
 };
 
 interface SkillCardProps {
+    index: number;
     cat: string;
     names: string[];
-    isFirstRow: boolean;
-    isLastCol: boolean;
     containerMousePos: MousePos;
     isContainerHovering: boolean;
 }
 
 const SkillCard = ({
+    index,
     cat,
     names,
-    isFirstRow,
-    isLastCol,
 }: SkillCardProps) => {
     const cardRef = useRef<HTMLDivElement>(null);
     const [localMouse, setLocalMouse] = useState<MousePos>({ x: 0, y: 0 });
@@ -156,8 +153,12 @@ const SkillCard = ({
     }, []);
 
     const borderClasses = [
-        !isFirstRow ? 'border-t border-black/10 dark:border-white/[0.09]' : '',
-        !isLastCol ? 'border-r border-black/10 dark:border-white/[0.09]' : '',
+        'border-black/10 dark:border-white/[0.09]',
+        index !== 0 ? 'border-t' : '',
+        'sm:border-r',
+        index % 2 === 1 ? 'sm:border-r-0' : '',
+        'lg:border-r',
+        (index + 1) % 3 === 0 ? 'lg:border-r-0' : '',
     ].join(' ');
 
     return (

@@ -1,7 +1,7 @@
 import { project } from "@/types/main"
 import Image from "next/image"
 import Link from "next/link"
-import { FaGithub, FaVideo } from "react-icons/fa"
+import { FaGithub, FaVideo, FaFileAlt } from "react-icons/fa"
 import { BiLinkExternal } from "react-icons/bi"
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -62,6 +62,11 @@ const Project = ({ name, image, category, techstack, links, onClick }: ProjectCa
                         {links.video.trim() &&
                             <Link href={links.video} target="_blank" className="bg-white text-black p-2 rounded-lg hover:bg-black hover:text-white transition-all">
                                 <FaVideo size={20} />
+                            </Link>
+                        }
+                        {links.report?.trim() &&
+                            <Link href={links.report} target="_blank" className="bg-white text-black p-2 rounded-lg hover:bg-black hover:text-white transition-all">
+                                <FaFileAlt size={20} />
                             </Link>
                         }
                     </div>

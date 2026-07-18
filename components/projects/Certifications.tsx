@@ -11,10 +11,14 @@ interface Props {
 
 const Certifications = ({ certificationsData }: Props) => {
     const [certifications] = useState(certificationsData || []);
-    const rawCategories = [...Array.from(new Set(certifications.map((s) => s.category)))];
-    const categories = rawCategories.includes('Internship')
-        ? ['Internship', ...rawCategories.filter((c) => c !== 'Internship')]
-        : rawCategories;
+    const rawCategories = [...new Set(certifications.map((s) => s.category))];
+    let categories = rawCategories;
+    if (rawCategories.includes('Professional')) {
+        categories = ['Professional', ...rawCategories.filter((c) => c !== 'Professional')];
+    }
+    if (rawCategories.includes('Course')) {
+        categories = ['Course', ...categories.filter((c) => c !== 'Course')];
+    }
     const [category, setCategory] = useState(categories[0] || "");
     const [filteredCertifications, setFilteredCertifications] = useState(certifications);
     const [viewAll, setViewAll] = useState(false);

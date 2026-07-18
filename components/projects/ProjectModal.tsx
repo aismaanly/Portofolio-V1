@@ -171,7 +171,7 @@ const ProjectModal = ({
                 </button>
 
                 {/* Left Column: Project Image Slider */}
-                <div className="w-full h-[35%] md:h-full md:w-[50%] bg-violet-100/30 dark:bg-violet-950/20 flex items-center justify-center border-b md:border-b-0 md:border-r border-black/10 dark:border-white/[0.05] relative select-none rounded-t-2xl md:rounded-tr-none md:rounded-l-2xl">
+                <div className="w-full h-[35%] md:h-full md:w-[50%] bg-violet-100/30 dark:bg-violet-950/20 flex items-center justify-center relative select-none rounded-t-2xl md:rounded-tr-none md:rounded-l-2xl">
                     <div 
                         onTouchStart={handleTouchStart}
                         onTouchMove={handleTouchMove}
@@ -272,7 +272,7 @@ const ProjectModal = ({
                     </div>
 
                     {/* Scrollable Content (Description & Tech Stack) */}
-                    <div className="flex-1 overflow-y-auto pr-3 flex flex-col gap-4 min-h-0">
+                    <div className="flex-1 overflow-y-auto pr-3 flex flex-col gap-4 min-h-0 modal-scroll">
                         {/* Description */}
                         <div className="text-sm text-black/70 dark:text-white/70 leading-relaxed">
                             {project.description || "No description available for this project."}

@@ -12,12 +12,41 @@ html {
   scroll-behavior: smooth !important;
 }
 
+/* ── Global Scrollbar (seamless) ── */
 ::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.25);
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.45);
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #6565656a;
+/* ── Modal description scrollbar ── */
+.modal-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.modal-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.modal-scroll::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.15);
+  border-radius: 8px;
+}
+.modal-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.3);
+}
+
+/* Firefox */
+.modal-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100,100,100,0.15) transparent;
 }
 
 .scroll-hide::-webkit-scrollbar {

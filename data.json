@@ -1,11 +1,11 @@
 {
   "about": {
-    "about": "Information Systems graduate with a 3.88/4.00 GPA, specializing in AI engineering and data-driven solutions from data ingestion to deployment. Experienced in Retrieval-Augmented Generation (RAG), LLM orchestration, prompt engineering, vector databases, and scalable AI systems. Strong foundation in data analytics and machine learning, with a proven ability to build AI solutions that transform complex data into actionable business insights.",
+    "about": "Information Systems graduate (GPA: 3.88/4.00) with a strong focus on AI Engineer, Data Analyst, and System Analyst. Experienced in building end-to-end applications, including RAG, Text-to-SQL, and OCR pipelines from data processing to deployment. A Rector's Award recipient for AI chatbot development, combining proficiency in Python, LangChain, FastAPI, and vector databases to deliver scalable, data-driven business solutions.",
     "aboutImage": "/hero-about.jpg",
     "aboutImageCaption": "I uncover insights 🔍",
     "callUrl": "https://www.canva.com/design/DAGGBmD3gaE/VCpAAgrMyUlUNI5AMzU_9w/view?utm_content=DAGGBmD3gaE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4abb49f2cf",
-    "resumeUrl": "https://drive.google.com/file/d/12REQZwyJHee3g06j7BaqLHKbS7aih-u3/view?usp=drive_link",
-    "resumeUrlId": "https://drive.google.com/file/d/1CjvN1-j4SYYD1itnL9_W2Tx-QD8xaCiE/view?usp=drive_link",
+    "resumeUrl": "https://drive.google.com/file/d/1ouLHOqnGiEB8_EycWK74n9nW0CCS432e/view?usp=drive_link",
+    "resumeUrlId": "https://drive.google.com/file/d/1epwwNbjagCyN9AoICENcOWFgH3ASCG0w/view?usp=drive_link",
     "title": [
       "AI Engineer",
       "Data Analyst",
@@ -53,7 +53,7 @@
       "duration": "Sep 2024 - Dec 2024",
       "desc": [
         "GPA : 98/100",
-        "Studied Cloud Computing on AWS, Advance Python, Machine Learning, and Generative AI as part of the Studi Independent - Kampus Merdeka program by the Ministry of Education."
+        "Studied Cloud Computing on AWS, Advance Python, Machine Learning, and AI & ML as part of the Studi Independent - Kampus Merdeka program by the Ministry of Education."
       ]
     },
     {
@@ -62,7 +62,7 @@
       "duration": "Aug 2022 - Jul 2026",
       "desc": [
         "GPA: 3.88/4.00.",
-        "Relevant courses include Computational Statistics, Computational Mathematics, Software Engineering, Database Systems, Database Administration, and Information Systems Analysis and Design."
+        "Relevant courses include  Data Mining, Data Analytics, Big Data, Computational Statistics, Data Warehouse & OLAP, Machine Learning & Deep Learning, Enterprise Systems."
       ]
     }
   ],
@@ -72,9 +72,9 @@
       "position": "Data Analyst",
       "duration": "Aug 2024 - Dec 2024",
       "desc": [
-        "Conducted competitor analysis and market evaluations using Python and Excel, improving decision-making efficiency by 80% across regions.",
-        "Delivered detailed reports uncovering key market trends and hidden opportunities, supporting strategic company initiatives.",
-        "Managed multiple data analysis projects with a 98% on-time completion rate, showcasing strong time management and project coordination skills."
+        "Competitor analysis and market performance evaluation using Python, Excel, and data visualization to generate insights supporting business decision-making.",
+        "Compiled analytical reports that identify market trends, business patterns, and strategic opportunities as the foundation for corporate strategy formulation.",
+        "Managed multiple data analysis projects simultaneously, ensuring accurate analytical results and timely project completion."
       ]
     },
     {
@@ -82,9 +82,9 @@
       "position": "Cloud and Gen AI Engineer",
       "duration": "Sep 2024 - Dec 2024",
       "desc": [
-        "Engineered an AI-powered career consultation chatbot using Python and the Qwen LLM, delivering personalized resume reviews, interview preparation, and career recommendations through natural language interactions.",
-        "Designed and deployed a highly available cloud architecture on AWS using EC2, Application Load Balancer, and Auto Scaling, ensuring fault tolerance and scalable application performance.",
-        "Developed an automated resume parsing application using PyMuPDF, extracting candidate information with 95% accuracy to reduce manual CV screening time by 75%."
+        "Designed an AI-based career consulting chatbot using Python and Qwen LLM to provide personalized resume review services, interview simulations, and job recommendations through natural language interaction.",
+        "Designed and deployed a cloud architecture with High Availability on AWS using EC2, Application Load Balancer, and Auto Scaling to support fault tolerance and application performance scalability.",
+        "Developed an automated document processing feature using PyMuPDF to extract and analyze information from user resume files to accelerate the CV eligibility evaluation process."
       ]
     },
     {
@@ -92,9 +92,9 @@
       "position": "AI Engineer",
       "duration": "Feb 2025 - Jun 2025",
       "desc": [
-        "Engineered a low-latency Retrieval-Augmented Generation (RAG) pipeline using Next.js, Groq API, and Qdrant Cloud, delivering context-aware text generation with end-to-end response times below 2.5 seconds.",
-        "Optimized semantic retrieval by designing metadata-rich JSON schemas for character profiles, achieving a 90% evaluation pass rate for character consistency, contextual relevance, and response quality.",
-        "Developed a production-ready AI content ideation platform featuring automated context injection, intelligent query routing, and NextAuth-based access control, reducing manual content brainstorming time by 50%."
+        "Designed an end-to-end data pipeline from web scraping and Data Mining to extract organic data and generate LLM-based synthetic datasets, along with text processing to produce high-quality datasets.",
+        "Implemented parameter-efficient fine-tuning (PEFT) on the LLaMA model using QLoRA via Unsloth until the model achieved convergence with a stable validation loss in the range of 0.22–0.23.",
+        "Integrated the 4-bit quantized fine-tuned model into a local inference backend to improve memory efficiency and support the presentation of data trend visualizations."
       ]
     },
     {
@@ -102,9 +102,9 @@
       "position": "AI Engineer",
       "duration": "Dec 2025 - May 2026",
       "desc": [
-        "Engineered an end-to-end Retrieval-Augmented Generation pipeline using FastAPI, LangChain, and ChromaDB, parsing complex university regulations and achieving 89.5% Context Recall for accurate information retrieval.",
-        "Optimized retrieval performance by implementing Hybrid Search (Semantic + BM25), Reciprocal Rank Fusion (RRF), and a Cross-Encoder, achieving 80.9% Context Precision while improving contextual relevance across multiple document versions.",
-        "Implemented a high-precision OCR ingestion pipeline using Docling and regex-based text cleaning, automatically converting 50+ pages of scanned university regulations into structured Markdown for downstream retrieval and question answering."
+        "Developed a Retrieval-Augmented Generation (RAG)-based chatbot for academic regulation information services using FastAPI, LangChain, and ChromaDB, achieving a Context Recall of 89.5%.",
+        "Optimized chatbot response quality through Hybrid Search (Semantic Search + BM25), Reciprocal Rank Fusion (RRF), and Cross-Encoder, achieving a Context Precision of 80.9%.",
+        "Automated the processing of academic regulation documents into structured data for retrieval using OCR (Docling) and regular expressions."
       ]
     }
   ],
@@ -132,7 +132,7 @@
         "visit": "https://tanya.upnjatim.ac.id/",
         "report": "https://canva.link/f4jgu60r34vu20z"
       },
-      "name": "Chatbot UPN",
+      "name": "Tanya UPN",
       "techstack": "Python, NextJS, TypeScript, FastAPI, Langchain, ChromaDB, Ollama, Supabase, OCR Docling, RAGAS",
       "description": "Production-grade RAG platform resolving complex academic queries via hybrid search (BM25 & Semantic) and Reciprocal Rank Fusion. Built with Python, LangChain, ChromaDB, and a local Gemma 3 LLM (Ollama), it features Docling OCR with hierarchical chapter-based chunking and metadata versioning to ingest unstructured PDFs while preserving legal structures. Strictly guarantees factual responses, achieving 89.5% Context Recall and 80.9% Context Precision (RAGAS evaluation)."
     },
@@ -200,7 +200,7 @@
         "visit": "",
         "report": ""
       },
-      "name": "AI Comment Generator",
+      "name": "Brand Interaction Assistant",
       "techstack": "Python, Llama 3.2, Unsloth, SQLite, HTML, TailwindCSS, Flask",
       "description": "Engineered an end-to-end web application to deploy a custom fine-tuned LLaMA 3 model for contextual social media comment generation. Built with Flask and SQLite, the system integrates local LLM inference with Hugging Face LoRA adapters, demonstrating practical AI architecture from raw model execution to persistent interaction logging."
     },
@@ -371,18 +371,29 @@
         "visit": "https://www.dicoding.com/certificates/0LZ0Y91DNX65"
       },
       "name": "Fundamentals of Deep Learning",
-      "techstack": "Deep Learning, TensorFlow, NLP, Computer Vision, Time Series, Recommendation Systems, Generative AI"
+      "techstack": "Deep Learning, TensorFlow, NLP, Computer Vision, Time Series, Recommendation Systems, AI & ML"
     },
     {
       "category": "Course",
-      "image": "/certificate/ai-engineering-masterclass.jpg",
+      "image": "/certificate/fundamental-machine-learning.png",
       "links": {
         "code": "",
         "video": "",
-        "visit": "https://www.udemy.com/certificate/UC-ea1b9100-3ede-4b86-aea4-a7935927fab1"
+        "visit": "https://www.dicoding.com/certificates/JLX15QYW5Z72"
       },
-      "name": "Certified AI Engineering Masterclass",
-      "techstack": "Python, TensorFlow, PyTorch, Machine Learning, Deep Learning, NLP, Model Deployment, AI System Design"
+      "name": "Fundamentals of Machine Learning",
+      "techstack": "Machine Learning Workflow, Supervised Learning, Unsupervised Learning, Model Evaluation, Evaluation Metrics"
+    },
+    {
+      "category": "Course",
+      "image": "/certificate/memulai-pemrograman-dengan-python.png",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.dicoding.com/certificates/4EXG3VVJDZRL"
+      },
+      "name": "Getting Started with Python Programming",
+      "techstack": "Python, OOP, Unit Testing, Web Scraping, Data Processing, Machine Learning"
     },
     {
       "category": "Course",
@@ -394,6 +405,28 @@
       },
       "name": "AWS Knowledge: Cloud Essentials",
       "techstack": "Amazon Web Services (AWS), AWS Cloud, AWS Compute, AWS Databases, AWS Networking, AWS Security, AWS storage"
+    },
+    {
+      "category": "Course",
+      "image": "https://udemy-certificate.s3.amazonaws.com/image/UC-ea1b9100-3ede-4b86-aea4-a7935927fab1.jpg",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.udemy.com/certificate/UC-ea1b9100-3ede-4b86-aea4-a7935927fab1/"
+      },
+      "name": "AI Engineering Masterclass",
+      "techstack": "Python, TensorFlow, PyTorch, Machine Learning, Deep Learning, NLP, Model Deployment, AI System Design"
+    },
+    {
+      "category": "Course",
+      "image": "https://udemy-certificate.s3.amazonaws.com/image/UC-7c6e800e-839c-4143-8631-f8e274ba00e1.jpg",
+      "links": {
+        "code": "",
+        "video": "",
+        "visit": "https://www.udemy.com/certificate/UC-7c6e800e-839c-4143-8631-f8e274ba00e1/"
+      },
+      "name": "Ultimate RAG Bootcamp",
+      "techstack": "Retrieval-Augmented Generation, Agentic RAG, Hybrid Search Strategies, RAG Evaluation"
     },
     {
       "category": "Course",
@@ -460,17 +493,6 @@
       },
       "name": "Introduction Data Analysis with Python",
       "techstack": "Streamlit, Python, Descriptive Statistics, Data Analysis, EDA, Data Wrangling, Data Visualization"
-    },
-    {
-      "category": "Course",
-      "image": "/certificate/memulai-pemrograman-dengan-python.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://www.dicoding.com/certificates/4EXG79YE1PRL"
-      },
-      "name": "Getting Started with Python Programming",
-      "techstack": "Python, OOP"
     },
     {
       "category": "Course",
@@ -544,9 +566,9 @@
       "links": {
         "code": "",
         "video": "",
-        "visit": "https://drive.google.com/file/d/1aatsfJuFsfMhI0e970qpPck-Lfo1kvMR/view?usp=drive_link"
+        "visit": "https://certificates.revou.tech/?id=CMP-12-24-10706409&name=Aisma%2BNurlaili"
       },
-      "name": "Cloud and Generative AI Engineer",
+      "name": "Cloud and AI & ML Engineer",
       "techstack": "Amazon Web Services (AWS), Artificial Intelligence (AI), Machine Learning, Deep Learning, Cloud Computing"
     },
     {
@@ -615,7 +637,7 @@
     },
     {
       "category": "Backend & DevOps",
-      "name": "AWS (ALB & ASG)"
+      "name": "AWS"
     },
     {
       "category": "Backend & DevOps",
@@ -646,35 +668,39 @@
       "name": "FAISS"
     },
     {
-      "category": "Generative AI",
+      "category": "AI & ML",
       "name": "PyTorch"
     },
     {
-      "category": "Generative AI",
+      "category": "AI & ML",
+      "name": "TensorFlow"
+    },
+    {
+      "category": "AI & ML",
       "name": "Scikit-learn"
     },
     {
-      "category": "Generative AI",
+      "category": "AI & ML",
       "name": "Unsloth"
     },
     {
-      "category": "Generative AI",
+      "category": "AI & ML",
       "name": "LangChain"
     },
     {
-      "category": "Generative AI",
+      "category": "AI & ML",
       "name": "Ollama"
     },
     {
-      "category": "Generative AI",
+      "category": "AI & ML",
       "name": "OpenAI API"
     },
     {
-      "category": "Generative AI",
+      "category": "AI & ML",
       "name": "Gemini API"
     },
     {
-      "category": "Generative AI",
+      "category": "AI & ML",
       "name": "RAGAS"
     },
     {
@@ -706,14 +732,6 @@
     {
       "icon": "FaGithub",
       "link": "https://github.com/aismaanly"
-    },
-    {
-      "icon": "FaInstagram",
-      "link": "https://www.instagram.com/aismaanly"
-    },
-    {
-      "icon": "FaYoutube",
-      "link": "https://www.youtube.com/@aismanurlaili7243"
     }
   ]
 }

@@ -42,10 +42,15 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'cdn.jsdelivr.net',
         pathname: '/**',
-      },      
+      },
       {
         protocol: 'https',
         hostname: 'media.geeksforgeeks.org',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'udemy-certificate.s3.amazonaws.com',
         pathname: '/**',
       },
     ],

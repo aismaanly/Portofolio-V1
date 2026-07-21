@@ -408,18 +408,18 @@
     },
     {
       "category": "Course",
-      "image": "https://udemy-certificate.s3.amazonaws.com/image/UC-ea1b9100-3ede-4b86-aea4-a7935927fab1.jpg",
+      "image": "/certificate/udemy-certified-ai-engineering-masterclass.jpg",
       "links": {
         "code": "",
         "video": "",
         "visit": "https://www.udemy.com/certificate/UC-ea1b9100-3ede-4b86-aea4-a7935927fab1/"
       },
-      "name": "AI Engineering Masterclass",
+      "name": "Certified AI Engineering Masterclass",
       "techstack": "Python, TensorFlow, PyTorch, Machine Learning, Deep Learning, NLP, Model Deployment, AI System Design"
     },
     {
       "category": "Course",
-      "image": "https://udemy-certificate.s3.amazonaws.com/image/UC-7c6e800e-839c-4143-8631-f8e274ba00e1.jpg",
+      "image": "/certificate/udemy-ultimate-rag-bootcamp.jpg",
       "links": {
         "code": "",
         "video": "",
@@ -514,7 +514,7 @@
         "visit": "https://www.dicoding.com/certificates/0LZ04DL7NP65"
       },
       "name": "Introduction to Structured Query Language (SQL)",
-      "techstack": "SQL"
+      "techstack": "SQL, Relational Database, DBMS, Data Analysis"
     },
     {
       "category": "Course",
@@ -526,17 +526,6 @@
       },
       "name": "Introduction to Data Visualization",
       "techstack": "Google Sheets, Python, Matplotlib/Seaborn"
-    },
-    {
-      "category": "Course",
-      "image": "/certificate/microsoft-azure-data.png",
-      "links": {
-        "code": "",
-        "video": "",
-        "visit": "https://www.dicoding.com/certificates/53XENGD89XRN"
-      },
-      "name": "Microsoft Azure Data Engineering Learning Path - Foundational Data Engineering",
-      "techstack": ""
     },
     {
       "category": "Professional",

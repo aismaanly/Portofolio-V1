@@ -68,7 +68,7 @@ const ExperienceCard = ({ index, company, position, degree, institute, duration,
                     </span>
                 )}
 
-                <h3 className="font-bold text-base md:text-lg text-black dark:text-white mb-1 leading-snug">
+                <h3 className="font-bold text-base md:text-lg text-violet-600 dark:text-violet-400 mb-1 leading-snug">
                     {displayPosition}
                 </h3>
                 <p className="text-sm font-medium text-black/50 dark:text-white/50 mb-3">

@@ -87,8 +87,8 @@ const Hero = ({ mainData, visible = true, startAnimation = true }: HeroProps) =>
                             loop: true,
                             deleteSpeed: 50,
                             delay: 50,
-                            wrapperClassName: "text-violet-700 dark:text-violet-600 text-sm font-medium",
-                            cursorClassName: "text-violet-700 dark:text-violet-600 text-sm"
+                            wrapperClassName: "text-violet-600 dark:text-violet-400 text-sm font-medium",
+                            cursorClassName: "text-violet-600 dark:text-violet-400 text-sm"
                         }}
                     />
                 </motion.div>
@@ -139,8 +139,8 @@ const Hero = ({ mainData, visible = true, startAnimation = true }: HeroProps) =>
                                 loop: true,
                                 deleteSpeed: 50,
                                 delay: 50,
-                                wrapperClassName: "text-violet-700 dark:text-violet-600 text-lg md:text-2xl font-medium",
-                                cursorClassName: "text-violet-700 dark:text-violet-600 text-lg md:text-2xl"
+                                wrapperClassName: "text-violet-600 dark:text-violet-400 text-lg md:text-2xl font-medium",
+                                cursorClassName: "text-violet-600 dark:text-violet-400 text-lg md:text-2xl"
                             }}
                         />
                     </motion.div>

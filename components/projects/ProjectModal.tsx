@@ -255,7 +255,7 @@ const ProjectModal = ({
                     <div className="flex flex-col gap-3 flex-shrink-0">
                         {/* Category tag & Project Index */}
                         <div className="flex items-center gap-3">
-                            <span className="inline-block text-[10px] font-extrabold tracking-[0.25em] uppercase text-violet-800 dark:text-violet-300 bg-violet-100 dark:bg-violet-900/30 border border-violet-200 dark:border-violet-800/40 rounded-full px-3 py-1">
+                            <span className="inline-block text-[10px] font-extrabold tracking-[0.25em] uppercase text-violet-600 dark:text-violet-400 bg-violet-100 dark:bg-violet-900/30 border border-violet-200 dark:border-violet-800/40 rounded-full px-3 py-1">
                                 {project.category}
                             </span>
                             {totalProjects && typeof currentIndex === "number" && (
@@ -320,7 +320,7 @@ const ProjectModal = ({
                             <Link
                                 href={project.links.video}
                                 target="_blank"
-                                className="flex items-center gap-1 px-2 py-1.5 md:gap-1.5 md:px-3 md:py-2 bg-violet-100/50 dark:bg-violet-500/20 border border-violet-200 dark:border-violet-500/30 text-violet-800 dark:text-violet-300 rounded-xl text-[10px] md:text-[11px] font-bold transition-all duration-300 hover:bg-violet-200/60 dark:hover:bg-violet-500/30 cursor-pointer whitespace-nowrap flex-shrink-0"
+                                className="flex items-center gap-1 px-2 py-1.5 md:gap-1.5 md:px-3 md:py-2 bg-violet-100/50 dark:bg-violet-500/20 border border-violet-200 dark:border-violet-500/30 text-violet-600 dark:text-violet-400 rounded-xl text-[10px] md:text-[11px] font-bold transition-all duration-300 hover:bg-violet-200/60 dark:hover:bg-violet-500/30 cursor-pointer whitespace-nowrap flex-shrink-0"
                             >
                                 <FaVideo size={12} className="md:w-[13px] md:h-[13px]" />
                                 <span>Video</span>

@@ -206,10 +206,10 @@
     },
     {
       "category": "Data/ML",
-      "image": "https://raw.githubusercontent.com/aismaanly/Analisis_Sentimen_Duolingo/main/src/thumb.png",
+      "image": "https://raw.githubusercontent.com/aismaanly/analisis_sentimen_duolingo/main/src/thumb.png",
       "links": {
-        "code": "https://github.com/aismaanly/Analisis_Sentimen_Duolingo",
-        "video": "",
+        "code": "https://github.com/aismaanly/analisis_sentimen_duolingo",
+        "video": "https://github.com/aismaanly/analisis_sentimen_duolingo/blob/main/gif-dashboard.gif",
         "visit": "https://duolingo-sentiment.streamlit.app/",
         "report": ""
       },

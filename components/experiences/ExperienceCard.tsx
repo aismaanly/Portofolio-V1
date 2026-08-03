@@ -59,7 +59,7 @@ const ExperienceCard = ({ index, company, position, degree, institute, duration,
                     bg-white/80 dark:bg-[#201a2e]/80 backdrop-blur-sm
                     hover:border-violet-300 dark:hover:border-violet-700
                     shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.18)]
-                    dark:shadow-[0_8px_30px_rgba(0,0,0,0.8),_0_0_20px_rgba(139,92,246,0.18)] dark:hover:shadow-[0_16px_40px_rgba(0,0,0,0.95),_0_0_30px_rgba(139,92,246,0.3)]
+                    dark:shadow-[0_8px_30px_rgba(0,0,0,0.6),_0_2px_6px_rgba(168,85,247,0.1),_0_6px_12px_-3px_rgba(168,85,247,0.15)] dark:hover:shadow-[0_16px_40px_rgba(0,0,0,0.8),_0_4px_12px_rgba(168,85,247,0.2),_0_14px_24px_-4px_rgba(168,85,247,0.45)]
                     transition-[border-color,box-shadow,background-color] duration-200 ease-out
                     ml-12 md:ml-0
                 `}

@@ -159,7 +159,7 @@ const ProjectModal = ({
                 exit={{ scale: 0.95, opacity: 0, y: 20 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
                 onClick={(e: React.MouseEvent) => e.stopPropagation()}
-                className="relative w-full max-w-5xl bg-[#f5f5f5] dark:bg-[#1a1523] border border-black/10 dark:border-white/[0.08] rounded-2xl shadow-2xl flex flex-col md:flex-row h-[80vh] md:h-[480px] max-h-[90vh] my-auto"
+                className="relative w-full max-w-5xl bg-[#f5f5f5] dark:bg-[#1a1523] border border-black/20 dark:border-white/20 rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.2)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.9),_0_0_30px_rgba(139,92,246,0.25)] flex flex-col md:flex-row h-[80vh] md:h-[480px] max-h-[90vh] my-auto"
             >
                 {/* Close Button */}
                 <button

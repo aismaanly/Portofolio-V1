@@ -31,23 +31,22 @@ const Project = ({ name, image, category, techstack, links, onClick }: ProjectCa
             variants={cardVariants}
             initial='hidden'
             animate={inView ? 'visible' : 'hidden'}
-            whileHover={{ y: -8 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            whileHover={{ y: -8, transition: { duration: 0.2, ease: "easeOut" } }}
             onClick={onClick}
-            className="flex flex-col gap-2 bg-white/60 dark:bg-white/[0.04] backdrop-blur-sm rounded-xl p-4 border border-black/10 dark:border-white/[0.08] hover:border-violet-300/60 dark:hover:border-violet-700/50 shadow-sm hover:shadow-lg transition-colors duration-300 text-black dark:text-white cursor-pointer select-none">
+            className="flex flex-col gap-2 bg-white/80 dark:bg-[#201a2e]/80 backdrop-blur-sm rounded-2xl p-4 border border-black/20 dark:border-white/20 hover:border-violet-300 dark:hover:border-violet-700 shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.18)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.8),_0_0_20px_rgba(139,92,246,0.18)] dark:hover:shadow-[0_16px_40px_rgba(0,0,0,0.95),_0_0_30px_rgba(139,92,246,0.3)] transition-[border-color,box-shadow,background-color] duration-200 ease-out text-black dark:text-white cursor-pointer select-none">
 
-            <div className="relative group rounded-lg bg-violet-50 dark:bg-violet-950/40 overflow-hidden">
+            <div className="relative group rounded-xl bg-violet-50 dark:bg-violet-950/40 overflow-hidden">
                 {hasImage ? (
-                    <Image alt={name} width={1000} height={1000} className="max-w-full h-48 max-h-full object-cover object-top rounded-lg" src={displayImage} />
+                    <Image alt={name} width={1000} height={1000} className="max-w-full h-48 max-h-full object-cover object-top rounded-xl" src={displayImage} />
                 ) : (
-                    <div className="w-full h-48 rounded-lg bg-[#e5e0f0] dark:bg-[#130f1b] flex items-center justify-center text-black/40 dark:text-white/40 font-medium text-xs">
+                    <div className="w-full h-48 rounded-xl bg-[#e5e0f0] dark:bg-[#130f1b] flex items-center justify-center text-black/40 dark:text-white/40 font-medium text-xs">
                         No Image Available
                     </div>
                 )}
                 {(links.visit.trim() || links.code.trim() || links.video.trim()) &&
                     <div 
                         onClick={(e) => e.stopPropagation()}
-                        className="absolute top-0 scale-x-0 group-hover:scale-100 transition-transform origin-left duration-200 ease-linear bg-gray-800 bg-opacity-60 w-full h-full rounded-lg flex items-center gap-4 justify-center"
+                        className="absolute top-0 scale-x-0 group-hover:scale-100 transition-transform origin-left duration-200 ease-linear bg-gray-800 bg-opacity-60 w-full h-full rounded-xl flex items-center gap-4 justify-center"
                     >
                         {links.visit.trim() &&
                             <Link href={links.visit} target="_blank" className="bg-white text-black p-2 rounded-lg hover:bg-black hover:text-white transition-all">
@@ -75,7 +74,7 @@ const Project = ({ name, image, category, techstack, links, onClick }: ProjectCa
 
             <div className="my-2 flex flex-col gap-1.5">
                 <h3 className="text-base font-semibold leading-snug line-clamp-1">{name}</h3>
-                <p className="text-xs text-gray-400 line-clamp-2"> <span className="font-medium">Skills:</span> {techstack}</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2"> <span className="font-medium">Skills:</span> {techstack}</p>
             </div>
 
         </motion.div>

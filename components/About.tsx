@@ -28,7 +28,7 @@ export default function About({
 
     const getUrls = (url: string) => {
         if (!url) return { previewUrl: "", downloadUrl: "" };
-        
+
         // 1. Google Drive PDF File
         if (url.includes("drive.google.com/file/d/")) {
             const fileId = url.split("/file/d/")[1]?.split("/")[0] || "";
@@ -37,7 +37,7 @@ export default function About({
                 downloadUrl: `https://drive.google.com/uc?id=${fileId}&export=download`
             };
         }
-        
+
         // 2. Google Doc
         if (url.includes("docs.google.com/document/d/")) {
             const docId = url.split("/document/d/")[1]?.split("/")[0] || "";
@@ -46,7 +46,7 @@ export default function About({
                 downloadUrl: `https://docs.google.com/document/d/${docId}/export?format=pdf`
             };
         }
-        
+
         // Default fallback (e.g. if they put a direct PDF link or local link)
         return {
             previewUrl: url,
@@ -167,7 +167,7 @@ export default function About({
 
                         <div className="about-content">
                             <div className="space-y-3 md:space-y-4">
-                                <motion.h3 
+                                <motion.h3
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
@@ -183,7 +183,7 @@ export default function About({
                                     enableBlur={true}
                                     blurStrength={6}
                                     baseRotation={0}
-                                    highlightWords={["intelligent", "data-driven", "AI-powered", "insights", "analytical", "scalable", "solutions"]}
+                                    highlightWords={["Artificial Intelligence", "solve", "solutions"]}
                                 >
                                     {about}
                                 </ScrollReveal>

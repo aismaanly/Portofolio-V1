@@ -47,10 +47,10 @@ const Skills = ({ skillData }: Props) => {
 
                     {/* Left: strip + label + big heading */}
                     <motion.div 
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        initial={{ opacity: 0, filter: "blur(12px)", y: 18 }}
+                        whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                        viewport={{ once: true, margin: "-60px" }}
+                        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
                         className="flex flex-col gap-3"
                     >
                         <div className="flex items-center gap-3">
@@ -72,10 +72,10 @@ const Skills = ({ skillData }: Props) => {
 
                     {/* Right: subtitle */}
                     <motion.p 
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        initial={{ opacity: 0, filter: "blur(12px)", y: 18 }}
+                        whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                        viewport={{ once: true, margin: "-60px" }}
+                        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
                         className="text-sm md:text-base text-black/75 dark:text-white/75 max-w-xs md:max-w-[260px] md:text-right leading-relaxed flex-shrink-0"
                     >
                         Core technologies I build with. All production-tested.

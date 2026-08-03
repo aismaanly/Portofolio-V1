@@ -1,9 +1,9 @@
 {
   "about": {
-    "about": "Information Systems graduate (GPA: 3.88/4.00) with a strong focus on AI Engineer, Data Analyst, and System Analyst. Experienced in building end-to-end applications, including RAG, Text-to-SQL, and OCR pipelines from data processing to deployment. A Rector's Award recipient for AI chatbot development, combining proficiency in Python, LangChain, FastAPI, and vector databases to deliver scalable, data-driven business solutions.",
+    "about": "Information Systems graduate with a GPA of 3.88/4.00, specializing in developing Artificial Intelligence applications powered by Large Language Models (LLMs). Experienced in building AI solutions using Retrieval Augmented Generation (RAG), OCR pipelines, and backend technologies to solve complex information challenges. Passionate about building AI systems that make information more accessible and valuable for users.",
     "aboutImage": "/hero-about.jpg",
     "aboutImageCaption": "I uncover insights 🔍",
-    "callUrl": "https://www.canva.com/design/DAGGBmD3gaE/VCpAAgrMyUlUNI5AMzU_9w/view?utm_content=DAGGBmD3gaE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4abb49f2cf",
+    "callUrl": "https://canva.link/u4baeguadr9fppd",
     "resumeUrl": "https://drive.google.com/file/d/1QS9nxRS27wHK2WhnRPix1317lGqG61vs/view?usp=drive_link",
     "resumeUrlId": "https://drive.google.com/file/d/1QilB3Pi41Dd8IOgf2AR-RVLZCw_ojAnA/view?usp=drive_link",
     "title": [
@@ -346,32 +346,6 @@
       "name": "Cooperative Information System",
       "techstack": "HTML, CSS, JavaScript, PHP, MySQL",
       "description": "A financial management system for savings and loans cooperatives to track member transactions, calculate interest, and manage savings reports."
-    },
-    {
-      "category": "Others",
-      "image": "/thumbs/bookshelf-app.png",
-      "links": {
-        "code": "https://github.com/aismaanly/bookshelf-app",
-        "video": "",
-        "visit": "https://bookshelf-app-gamma-umber.vercel.app/",
-        "report": ""
-      },
-      "name": "Bookshelf App",
-      "techstack": "HTML, CSS, JavaScript",
-      "description": "A lightweight reading tracker application helping users organize their personal library by categorizing books into reading queues and completed shelves."
-    },
-    {
-      "category": "Others",
-      "image": "/thumbs/aismacode.png",
-      "links": {
-        "code": "https://github.com/aismaanly/bookshelf-app",
-        "video": "",
-        "visit": "https://bootcamp-aismacode.vercel.app/",
-        "report": ""
-      },
-      "name": "AISMACODE",
-      "techstack": "HTML, CSS, Javascript",
-      "description": "A learning platform showcase highlighting coding tutorials, developer training projects, and educational programming resources."
     }
   ],
   "certifications": [
@@ -614,6 +588,10 @@
     },
     {
       "category": "Languages",
+      "name": "JavaScript"
+    },
+    {
+      "category": "Languages",
       "name": "TypeScript"
     },
     {
@@ -622,7 +600,15 @@
     },
     {
       "category": "Frontend & Mobile",
-      "name": "React"
+      "name": "HTML"
+    },
+    {
+      "category": "Frontend & Mobile",
+      "name": "CSS"
+    },
+    {
+      "category": "Backend & DevOps",
+      "name": "PHP"
     },
     {
       "category": "Frontend & Mobile",

@@ -54,10 +54,13 @@ const ExperienceCard = ({ index, company, position, degree, institute, duration,
                 variants={cardVariants}
                 initial="hidden"
                 animate={inView ? 'visible' : 'hidden'}
-                className={`w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] p-5 md:p-6 rounded-xl border border-black/10 dark:border-white/[0.08]
-                    bg-white/60 dark:bg-white/[0.04] backdrop-blur-sm
-                    hover:border-violet-300/60 dark:hover:border-violet-700/50
-                    transition-all duration-300
+                whileHover={{ y: -4, transition: { duration: 0.2, ease: "easeOut" } }}
+                className={`w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] p-5 md:p-6 rounded-2xl border border-black/20 dark:border-white/20
+                    bg-white/80 dark:bg-[#201a2e]/80 backdrop-blur-sm
+                    hover:border-violet-300 dark:hover:border-violet-700
+                    shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.18)]
+                    dark:shadow-[0_8px_30px_rgba(0,0,0,0.8),_0_0_20px_rgba(139,92,246,0.18)] dark:hover:shadow-[0_16px_40px_rgba(0,0,0,0.95),_0_0_30px_rgba(139,92,246,0.3)]
+                    transition-[border-color,box-shadow,background-color] duration-200 ease-out
                     ml-12 md:ml-0
                 `}
             >
